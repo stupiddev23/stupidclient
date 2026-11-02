@@ -1,0 +1,46 @@
+=== what the port actually changed (port/applied_report.py)
+mio(2).jar -> out/mio-1.21.11.jar
+   entries identical=1567 modified=69 missing=0
+   MC member refs: renamed=0 descriptor-changed=0 untouched=3404
+mio-loader(2).jar -> out/mio-loader-1.21.11.jar
+   entries identical=94 modified=2 missing=0
+   accesswidener lines=3436 changed=2
+   MC member refs: renamed=0 descriptor-changed=0 untouched=0
+
+=== hierarchy-aware reference resolution against the real 1.21.11 client jar
+{
+  "payload": {
+    "class_ok": 4060,
+    "member_ok": 3243,
+    "member_missing": 161,
+    "annot_missing": 39,
+    "annot_ok": 84,
+    "class_missing": 31
+  },
+  "loader": {
+    "class_ok": 1
+  }
+}
+=== remap pass counters
+{
+  "classes_remapped": 1651,
+  "named_rewritten": 159,
+  "member_unresolved": 199,
+  "named_owner_unresolved": 4,
+  "named_unclassified": 13,
+  "named_member_unresolved": 34,
+  "desc_rewritten": 4,
+  "class_unresolved": 31,
+  "class_entry_unresolved": 32,
+  "named_method_unresolved": 19,
+  "class_renamed": 1,
+  "aw_unresolved": 201
+}
+=== independent re-parse of every class in the outputs
+dist-1.21.11/mio-1.21.11.jar: classes=1633 parse_errors=0
+dist-1.21.11/mio-loader-1.21.11.jar: classes=18 parse_errors=0
+
+=== archive integrity
+No errors detected in compressed data of dist-1.21.11/mio-1.21.11.jar.
+No errors detected in compressed data of dist-1.21.11/mio-loader-1.21.11.jar.
+both archives OK

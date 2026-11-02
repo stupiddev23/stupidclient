@@ -1,0 +1,1105 @@
+# kind	owner	name	desc	instances
+C	net/minecraft/class_1921$class_4688			4
+C	net/minecraft/class_4668			4
+C	net/minecraft/class_4668$class_4678			3
+C	net/minecraft/class_5294			3
+C	net/minecraft/class_1921$class_4687			2
+C	net/minecraft/class_4668$class_4675			2
+C	net/minecraft/class_5294$class_5401			2
+C	net/minecraft/class_8685$class_7920			2
+C	net/minecraft/class_1921$class_4688$class_4689			1
+C	net/minecraft/class_434			1
+C	net/minecraft/class_4668$class_4676			1
+C	net/minecraft/class_4668$class_4679			1
+C	net/minecraft/class_4668$class_4683			1
+C	net/minecraft/class_4668$class_5939			1
+C	net/minecraft/class_5294$class_5295			1
+C	net/minecraft/class_5294$class_5297			1
+C	net/minecraft/class_9958			1
+METHOD	net/minecraft/class_243	<init>	(DDD)V	51
+METHOD	net/minecraft/class_238	<init>	(Lnet/minecraft/class_2338;)V	34
+FIELD	net/minecraft/class_746	field_6012	I	22
+METHOD	net/minecraft/class_2338	equals	(Ljava/lang/Object;)Z	21
+FIELD	net/minecraft/class_746	field_7512	Lnet/minecraft/class_1703;	19
+METHOD	net/minecraft/class_238	<init>	(DDDDDD)V	13
+METHOD	net/minecraft/class_3965	<init>	(Lnet/minecraft/class_243;Lnet/minecraft/class_2350;Lnet/minecraft/class_2338;Z)V	13
+FIELD	net/minecraft/class_2848$class_2849	field_12984	Lnet/minecraft/class_2848$class_2849;	10
+FIELD	net/minecraft/class_746	field_7498	Lnet/minecraft/class_1723;	10
+METHOD	net/minecraft/class_2338$class_2339	<init>	()V	10
+FIELD	net/minecraft/class_2848$class_2849	field_12979	Lnet/minecraft/class_2848$class_2849;	9
+FIELD	net/minecraft/class_746	field_5969	D	9
+FIELD	net/minecraft/class_746	field_5976	Z	9
+FIELD	net/minecraft/class_746	field_6014	D	9
+FIELD	net/minecraft/class_746	field_6036	D	9
+METHOD	net/minecraft/class_4184	method_19326	()Lnet/minecraft/class_243;	9
+FIELD	net/minecraft/class_746	field_5992	Z	8
+METHOD	net/minecraft/class_2561	getString	()Ljava/lang/String;	8
+METHOD	net/minecraft/class_332	method_51452	()V	8
+METHOD	net/minecraft/class_238	<init>	(Lnet/minecraft/class_243;Lnet/minecraft/class_243;)V	7
+METHOD	net/minecraft/class_1921	method_62277	(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;	6
+METHOD	net/minecraft/class_3959	<init>	(Lnet/minecraft/class_243;Lnet/minecraft/class_243;Lnet/minecraft/class_3959$class_3960;Lnet/minecraft/class_3959$class_242;Lnet/minecraft/class_1297;)V	6
+METHOD	net/minecraft/class_437	<init>	(Lnet/minecraft/class_2561;)V	6
+METHOD	net/minecraft/class_2568$class_10613	<init>	(Lnet/minecraft/class_2561;)V	5
+METHOD	net/minecraft/class_2848	<init>	(Lnet/minecraft/class_1297;Lnet/minecraft/class_2848$class_2849;)V	5
+FIELD	net/minecraft/class_1657	field_5969	D	4
+FIELD	net/minecraft/class_1657	field_6014	D	4
+FIELD	net/minecraft/class_746	field_53039	F	4
+METHOD	net/minecraft/class_1799	<init>	(Lnet/minecraft/class_1935;)V	4
+METHOD	net/minecraft/class_241	<init>	(FF)V	4
+METHOD	net/minecraft/class_243	method_10214	()D	4
+METHOD	net/minecraft/class_243	method_10215	()D	4
+METHOD	net/minecraft/class_243	method_10216	()D	4
+METHOD	net/minecraft/class_2846	<init>	(Lnet/minecraft/class_2846$class_2847;Lnet/minecraft/class_2338;Lnet/minecraft/class_2350;)V	4
+METHOD	net/minecraft/class_410	<init>	(Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;Lnet/minecraft/class_2561;Lnet/minecraft/class_2561;)V	4
+METHOD	net/minecraft/class_9209	<init>	(I)V	4
+FIELD	net/minecraft/class_1511	field_6012	I	3
+FIELD	net/minecraft/class_1657	field_6036	D	3
+FIELD	net/minecraft/class_746	field_36331	Z	3
+FIELD	net/minecraft/class_746	field_5982	F	3
+METHOD	net/minecraft/class_1297	<init>	(Lnet/minecraft/class_1299;Lnet/minecraft/class_1937;)V	3
+METHOD	net/minecraft/class_1799	method_57826	(Lnet/minecraft/class_9331;)Z	3
+METHOD	net/minecraft/class_1921	method_51784	()Lnet/minecraft/class_1921;	3
+METHOD	net/minecraft/class_2382	<init>	(III)V	3
+METHOD	net/minecraft/class_2558$class_10609	<init>	(Ljava/lang/String;)V	3
+METHOD	net/minecraft/class_2558$class_10610	<init>	(Ljava/lang/String;)V	3
+METHOD	net/minecraft/class_2561	equals	(Ljava/lang/Object;)Z	3
+METHOD	net/minecraft/class_2680	method_26204	()Lnet/minecraft/class_2248;	3
+METHOD	net/minecraft/class_2815	<init>	(I)V	3
+METHOD	net/minecraft/class_2886	<init>	(Lnet/minecraft/class_1268;IFF)V	3
+METHOD	net/minecraft/class_3298	<init>	(Lnet/minecraft/class_3262;Lnet/minecraft/class_7367;)V	3
+METHOD	net/minecraft/class_442	<init>	()V	3
+METHOD	net/minecraft/class_500	<init>	(Lnet/minecraft/class_437;)V	3
+METHOD	net/minecraft/class_7833	rotationDegrees	(F)Lorg/joml/Quaternionf;	3
+FIELD	net/minecraft/class_1657	field_42108	Lnet/minecraft/class_8080;	2
+FIELD	net/minecraft/class_1657	field_6241	F	2
+FIELD	net/minecraft/class_1657	field_6283	F	2
+FIELD	net/minecraft/class_332	field_44658	Lnet/minecraft/class_4597$class_4598;	2
+FIELD	net/minecraft/class_746	field_6004	F	2
+FIELD	net/minecraft/class_746	field_6212	F	2
+FIELD	net/minecraft/class_746	field_6250	F	2
+FIELD	net/minecraft/class_746	field_6251	F	2
+FIELD	net/minecraft/class_746	field_6279	I	2
+FIELD	net/minecraft/class_8685$class_7920	field_41123	Lnet/minecraft/class_8685$class_7920;	2
+METHOD	net/minecraft/class_10090	<init>	()V	2
+METHOD	net/minecraft/class_1293	<init>	(Lnet/minecraft/class_6880;II)V	2
+METHOD	net/minecraft/class_1657	<init>	(Lnet/minecraft/class_1937;Lnet/minecraft/class_2338;FLcom/mojang/authlib/GameProfile;)V	2
+METHOD	net/minecraft/class_1799	<init>	(Lnet/minecraft/class_1935;I)V	2
+METHOD	net/minecraft/class_1921	method_23580	(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;	2
+METHOD	net/minecraft/class_1923	<init>	(II)V	2
+METHOD	net/minecraft/class_1923	equals	(Ljava/lang/Object;)Z	2
+METHOD	net/minecraft/class_2338	<init>	(III)V	2
+METHOD	net/minecraft/class_238	equals	(Ljava/lang/Object;)Z	2
+METHOD	net/minecraft/class_243	equals	(Ljava/lang/Object;)Z	2
+METHOD	net/minecraft/class_2540	<init>	(Lio/netty/buffer/ByteBuf;)V	2
+METHOD	net/minecraft/class_2680	method_26215	()Z	2
+METHOD	net/minecraft/class_2846	<init>	(Lnet/minecraft/class_2846$class_2847;Lnet/minecraft/class_2338;Lnet/minecraft/class_2350;I)V	2
+METHOD	net/minecraft/class_2868	<init>	(I)V	2
+METHOD	net/minecraft/class_2879	<init>	(Lnet/minecraft/class_1268;)V	2
+METHOD	net/minecraft/class_2960	equals	(Ljava/lang/Object;)Z	2
+METHOD	net/minecraft/class_332	<init>	(Lnet/minecraft/class_310;Lnet/minecraft/class_4587;Lnet/minecraft/class_4597$class_4598;)V	2
+METHOD	net/minecraft/class_342	<init>	(Lnet/minecraft/class_327;IIIILnet/minecraft/class_2561;)V	2
+METHOD	net/minecraft/class_342	method_25370	()Z	2
+METHOD	net/minecraft/class_437	method_25394	(Lnet/minecraft/class_332;IIF)V	2
+METHOD	net/minecraft/class_5250	getString	()Ljava/lang/String;	2
+METHOD	net/minecraft/class_5702	<init>	(Lnet/minecraft/class_243;Lnet/minecraft/class_243;Ljava/util/function/Predicate;)V	2
+METHOD	net/minecraft/class_6374	<init>	(I)V	2
+METHOD	net/minecraft/class_6880$class_6883	comp_349	()Ljava/lang/Object;	2
+METHOD	net/minecraft/class_744	<init>	()V	2
+METHOD	net/minecraft/class_745	<init>	(Lnet/minecraft/class_638;Lcom/mojang/authlib/GameProfile;)V	2
+METHOD	net/minecraft/class_745	method_52814	()Lnet/minecraft/class_8685;	2
+METHOD	net/minecraft/class_746	method_36454	()F	2
+METHOD	net/minecraft/class_746	method_36455	()F	2
+METHOD	net/minecraft/class_746	method_5998	(Lnet/minecraft/class_1268;)Lnet/minecraft/class_1799;	2
+METHOD	net/minecraft/class_746	method_6047	()Lnet/minecraft/class_1799;	2
+METHOD	net/minecraft/class_746	method_6079	()Lnet/minecraft/class_1799;	2
+METHOD	net/minecraft/class_746	method_7334	()Lcom/mojang/authlib/GameProfile;	2
+METHOD	net/minecraft/class_8685	<init>	(Lnet/minecraft/class_2960;Ljava/lang/String;Lnet/minecraft/class_2960;Lnet/minecraft/class_2960;Lnet/minecraft/class_8685$class_7920;Z)V	2
+METHOD	net/minecraft/class_9799	<init>	(I)V	2
+FIELD	net/minecraft/class_10017	field_53324	Lnet/minecraft/class_10017$class_10018;	1
+FIELD	net/minecraft/class_10055	field_53334	Z	1
+FIELD	net/minecraft/class_10055	field_53403	F	1
+FIELD	net/minecraft/class_10055	field_53410	Z	1
+FIELD	net/minecraft/class_10055	field_53448	F	1
+FIELD	net/minecraft/class_10055	field_53453	F	1
+FIELD	net/minecraft/class_10055	field_53458	Z	1
+FIELD	net/minecraft/class_10055	field_53459	Z	1
+FIELD	net/minecraft/class_10789	field_56741	Lnet/minecraft/class_10789;	1
+FIELD	net/minecraft/class_10789	field_56743	Lnet/minecraft/class_10789;	1
+FIELD	net/minecraft/class_10789	field_56745	Lnet/minecraft/class_10789;	1
+FIELD	net/minecraft/class_10799	field_56849	Lcom/mojang/blaze3d/pipeline/RenderPipeline$Snippet;	1
+FIELD	net/minecraft/class_1542	field_5969	D	1
+FIELD	net/minecraft/class_1542	field_6014	D	1
+FIELD	net/minecraft/class_1542	field_6036	D	1
+FIELD	net/minecraft/class_1657	field_6012	I	1
+FIELD	net/minecraft/class_1657	field_6212	F	1
+FIELD	net/minecraft/class_1657	field_6213	I	1
+FIELD	net/minecraft/class_1657	field_6250	F	1
+FIELD	net/minecraft/class_1714	field_7763	I	1
+FIELD	net/minecraft/class_1723	field_7763	I	1
+FIELD	net/minecraft/class_1728	field_7763	I	1
+FIELD	net/minecraft/class_1921	field_25643	Lnet/minecraft/class_4668$class_4678;	1
+FIELD	net/minecraft/class_4668	field_21359	Lnet/minecraft/class_4668$class_4678;	1
+FIELD	net/minecraft/class_4668	field_21383	Lnet/minecraft/class_4668$class_4676;	1
+FIELD	net/minecraft/class_4668	field_21385	Lnet/minecraft/class_4668$class_4679;	1
+FIELD	net/minecraft/class_4668	field_22241	Lnet/minecraft/class_4668$class_4675;	1
+FIELD	net/minecraft/class_498	field_40425	[Ljava/lang/String;	1
+FIELD	net/minecraft/class_498	field_40428	I	1
+FIELD	net/minecraft/class_5294$class_5401	field_25639	Lnet/minecraft/class_5294$class_5401;	1
+FIELD	net/minecraft/class_591	field_27433	Lnet/minecraft/class_630;	1
+FIELD	net/minecraft/class_591	field_3392	Lnet/minecraft/class_630;	1
+FIELD	net/minecraft/class_591	field_3397	Lnet/minecraft/class_630;	1
+FIELD	net/minecraft/class_591	field_3398	Lnet/minecraft/class_630;	1
+FIELD	net/minecraft/class_591	field_3401	Lnet/minecraft/class_630;	1
+FIELD	net/minecraft/class_620	field_27529	Lnet/minecraft/class_630;	1
+FIELD	net/minecraft/class_622	field_52945	Lnet/minecraft/class_630;	1
+FIELD	net/minecraft/class_742	field_6220	F	1
+FIELD	net/minecraft/class_742	field_6283	F	1
+FIELD	net/minecraft/class_746	field_42108	Lnet/minecraft/class_8080;	1
+FIELD	net/minecraft/class_746	field_53038	F	1
+FIELD	net/minecraft/class_746	field_5994	F	1
+FIELD	net/minecraft/class_746	field_6229	F	1
+FIELD	net/minecraft/class_746	field_6252	Z	1
+FIELD	net/minecraft/class_746	field_6266	Lnet/minecraft/class_1268;	1
+FIELD	net/minecraft/class_746	field_6273	I	1
+FIELD	net/minecraft/class_746	field_7513	Lnet/minecraft/class_1536;	1
+FIELD	net/minecraft/class_758$class_4596	field_20945	Lnet/minecraft/class_758$class_4596;	1
+FIELD	net/minecraft/class_758$class_4596	field_20946	Lnet/minecraft/class_758$class_4596;	1
+FIELD	net/minecraft/class_8685$class_7920	field_41122	Lnet/minecraft/class_8685$class_7920;	1
+FIELD	net/minecraft/class_9958	field_53065	Lnet/minecraft/class_9958;	1
+METHOD	net/minecraft/class_10207	execute	(Ljava/lang/Runnable;)V	1
+METHOD	net/minecraft/class_1043	<init>	(Ljava/util/function/Supplier;Lnet/minecraft/class_1011;)V	1
+METHOD	net/minecraft/class_1044	close	()V	1
+METHOD	net/minecraft/class_1049	<init>	(Lnet/minecraft/class_2960;)V	1
+METHOD	net/minecraft/class_1101	<init>	(Lnet/minecraft/class_3414;Lnet/minecraft/class_3419;Lnet/minecraft/class_5819;)V	1
+METHOD	net/minecraft/class_1102	<init>	(Lnet/minecraft/class_2960;Lnet/minecraft/class_3419;Lnet/minecraft/class_5819;)V	1
+METHOD	net/minecraft/class_1277	<init>	([Lnet/minecraft/class_1799;)V	1
+METHOD	net/minecraft/class_1297	method_16914	()Z	1
+METHOD	net/minecraft/class_1297	method_19538	()Lnet/minecraft/class_243;	1
+METHOD	net/minecraft/class_1308	<init>	(Lnet/minecraft/class_1299;Lnet/minecraft/class_1937;)V	1
+METHOD	net/minecraft/class_1309	<init>	(Lnet/minecraft/class_1299;Lnet/minecraft/class_1937;)V	1
+METHOD	net/minecraft/class_1309	equals	(Ljava/lang/Object;)Z	1
+METHOD	net/minecraft/class_1309	method_36454	()F	1
+METHOD	net/minecraft/class_1309	method_36455	()F	1
+METHOD	net/minecraft/class_1309	method_5631	(FF)Lnet/minecraft/class_243;	1
+METHOD	net/minecraft/class_1309	method_5762	(DDD)V	1
+METHOD	net/minecraft/class_1309	method_5765	()Z	1
+METHOD	net/minecraft/class_1309	method_5828	(F)Lnet/minecraft/class_243;	1
+METHOD	net/minecraft/class_1309	method_60491	(Lnet/minecraft/class_243;)V	1
+METHOD	net/minecraft/class_1511	<init>	(Lnet/minecraft/class_1299;Lnet/minecraft/class_1937;)V	1
+METHOD	net/minecraft/class_1511	method_19538	()Lnet/minecraft/class_243;	1
+METHOD	net/minecraft/class_1538	<init>	(Lnet/minecraft/class_1299;Lnet/minecraft/class_1937;)V	1
+METHOD	net/minecraft/class_1657	method_41328	(Lnet/minecraft/class_4050;)Z	1
+METHOD	net/minecraft/class_1657	method_64397	(Lnet/minecraft/class_3218;Lnet/minecraft/class_1282;F)Z	1
+METHOD	net/minecraft/class_1671	<init>	(Lnet/minecraft/class_1937;Lnet/minecraft/class_1799;Lnet/minecraft/class_1309;)V	1
+METHOD	net/minecraft/class_1733	<init>	(ILnet/minecraft/class_1661;Lnet/minecraft/class_1263;)V	1
+METHOD	net/minecraft/class_1799	method_58695	(Lnet/minecraft/class_9331;Ljava/lang/Object;)Ljava/lang/Object;	1
+METHOD	net/minecraft/class_1842	<init>	(Ljava/lang/String;[Lnet/minecraft/class_1293;)V	1
+METHOD	net/minecraft/class_1921	method_23572	(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;	1
+METHOD	net/minecraft/class_1921	method_24048	(Ljava/lang/String;ILcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/class_1921$class_4688;)Lnet/minecraft/class_1921$class_4687;	1
+METHOD	net/minecraft/class_1921	method_24049	(Ljava/lang/String;IZZLcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/class_1921$class_4688;)Lnet/minecraft/class_1921$class_4687;	1
+METHOD	net/minecraft/class_1921$class_4688	method_23598	()Lnet/minecraft/class_1921$class_4688$class_4689;	1
+METHOD	net/minecraft/class_1921$class_4688$class_4689	method_23607	(Lnet/minecraft/class_4668$class_4675;)Lnet/minecraft/class_1921$class_4688$class_4689;	1
+METHOD	net/minecraft/class_1921$class_4688$class_4689	method_23608	(Lnet/minecraft/class_4668$class_4676;)Lnet/minecraft/class_1921$class_4688$class_4689;	1
+METHOD	net/minecraft/class_1921$class_4688$class_4689	method_23611	(Lnet/minecraft/class_4668$class_4679;)Lnet/minecraft/class_1921$class_4688$class_4689;	1
+METHOD	net/minecraft/class_1921$class_4688$class_4689	method_23617	(Z)Lnet/minecraft/class_1921$class_4688;	1
+METHOD	net/minecraft/class_1921$class_4688$class_4689	method_34577	(Lnet/minecraft/class_4668$class_5939;)Lnet/minecraft/class_1921$class_4688$class_4689;	1
+METHOD	net/minecraft/class_1923	<init>	(Lnet/minecraft/class_2338;)V	1
+METHOD	net/minecraft/class_1937	method_18026	(Lnet/minecraft/class_238;)Z	1
+METHOD	net/minecraft/class_2338	method_10262	(Lnet/minecraft/class_2382;)D	1
+METHOD	net/minecraft/class_2338$class_2339	method_10260	()I	1
+METHOD	net/minecraft/class_2338$class_2339	method_10263	()I	1
+METHOD	net/minecraft/class_2338$class_2339	method_10264	()I	1
+METHOD	net/minecraft/class_2350	values	()[Lnet/minecraft/class_2350;	1
+METHOD	net/minecraft/class_239	<init>	(Lnet/minecraft/class_243;)V	1
+METHOD	net/minecraft/class_243	<init>	(Lnet/minecraft/class_2382;)V	1
+METHOD	net/minecraft/class_243	<init>	(Lorg/joml/Vector3f;)V	1
+METHOD	net/minecraft/class_243	method_24457	(I)Lnet/minecraft/class_243;	1
+METHOD	net/minecraft/class_2487	<init>	()V	1
+METHOD	net/minecraft/class_2558$class_10608	<init>	(Ljava/net/URI;)V	1
+METHOD	net/minecraft/class_2663	<init>	(Lnet/minecraft/class_1297;B)V	1
+METHOD	net/minecraft/class_268	method_1197	()Ljava/lang/String;	1
+METHOD	net/minecraft/class_2680	method_26165	(Lnet/minecraft/class_1657;Lnet/minecraft/class_1922;Lnet/minecraft/class_2338;)F	1
+METHOD	net/minecraft/class_2680	method_26220	(Lnet/minecraft/class_1922;Lnet/minecraft/class_2338;)Lnet/minecraft/class_265;	1
+METHOD	net/minecraft/class_276	<init>	(Ljava/lang/String;Z)V	1
+METHOD	net/minecraft/class_2805	<init>	(ILjava/lang/String;)V	1
+METHOD	net/minecraft/class_2824	<init>	(Lnet/minecraft/class_2540;)V	1
+METHOD	net/minecraft/class_2827	<init>	(J)V	1
+METHOD	net/minecraft/class_2828$class_2829	<init>	(DDDZZ)V	1
+METHOD	net/minecraft/class_2828$class_2830	<init>	(DDDFFZZ)V	1
+METHOD	net/minecraft/class_2828$class_2831	<init>	(FFZZ)V	1
+METHOD	net/minecraft/class_2828$class_5911	<init>	(ZZ)V	1
+METHOD	net/minecraft/class_2848	<init>	(Lnet/minecraft/class_1297;Lnet/minecraft/class_2848$class_2849;I)V	1
+METHOD	net/minecraft/class_2856	<init>	(Ljava/util/UUID;Lnet/minecraft/class_2856$class_2857;)V	1
+METHOD	net/minecraft/class_2859	<init>	(Lnet/minecraft/class_2859$class_2860;Lnet/minecraft/class_2960;)V	1
+METHOD	net/minecraft/class_2863	<init>	(I)V	1
+METHOD	net/minecraft/class_287	<init>	(Lnet/minecraft/class_9799;Lcom/mojang/blaze3d/vertex/VertexFormat$class_5596;Lcom/mojang/blaze3d/vertex/VertexFormat;)V	1
+METHOD	net/minecraft/class_287	method_1336	(IIII)Lnet/minecraft/class_4588;	1
+METHOD	net/minecraft/class_287	method_22912	(FFF)Lnet/minecraft/class_4588;	1
+METHOD	net/minecraft/class_287	method_22913	(FF)Lnet/minecraft/class_4588;	1
+METHOD	net/minecraft/class_287	method_22914	(FFF)Lnet/minecraft/class_4588;	1
+METHOD	net/minecraft/class_287	method_22918	(Lorg/joml/Matrix4f;FFF)Lnet/minecraft/class_4588;	1
+METHOD	net/minecraft/class_287	method_22921	(II)Lnet/minecraft/class_4588;	1
+METHOD	net/minecraft/class_287	method_60796	(II)Lnet/minecraft/class_4588;	1
+METHOD	net/minecraft/class_2877	<init>	(Lnet/minecraft/class_2338;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	1
+METHOD	net/minecraft/class_2885	<init>	(Lnet/minecraft/class_1268;Lnet/minecraft/class_3965;I)V	1
+METHOD	net/minecraft/class_2960	<init>	(Ljava/lang/String;Ljava/lang/String;)V	1
+METHOD	net/minecraft/class_2960	toString	()Ljava/lang/String;	1
+METHOD	net/minecraft/class_310	method_1517	()Z	1
+METHOD	net/minecraft/class_3169	<init>	(Lnet/minecraft/class_1297;)V	1
+METHOD	net/minecraft/class_332	method_51737	(IIIIII)V	1
+METHOD	net/minecraft/class_3414	equals	(Ljava/lang/Object;)Z	1
+METHOD	net/minecraft/class_342	method_25364	()I	1
+METHOD	net/minecraft/class_342	method_25365	(Z)V	1
+METHOD	net/minecraft/class_342	method_25368	()I	1
+METHOD	net/minecraft/class_342	method_46426	()I	1
+METHOD	net/minecraft/class_342	method_46427	()I	1
+METHOD	net/minecraft/class_3966	<init>	(Lnet/minecraft/class_1297;)V	1
+METHOD	net/minecraft/class_4071	<init>	()V	1
+METHOD	net/minecraft/class_408	<init>	(Ljava/lang/String;)V	1
+METHOD	net/minecraft/class_4185	method_25355	(Lnet/minecraft/class_2561;)V	1
+METHOD	net/minecraft/class_4185	method_25365	(Z)V	1
+METHOD	net/minecraft/class_4185	method_46419	(I)V	1
+METHOD	net/minecraft/class_4185	method_46421	(I)V	1
+METHOD	net/minecraft/class_4185	method_48229	(II)V	1
+METHOD	net/minecraft/class_4185$class_7840	<init>	(Lnet/minecraft/class_2561;Lnet/minecraft/class_4185$class_4241;)V	1
+METHOD	net/minecraft/class_4228	<init>	(Ljava/io/InputStream;)V	1
+METHOD	net/minecraft/class_4325	<init>	(Lnet/minecraft/class_437;)V	1
+METHOD	net/minecraft/class_437	method_25400	(CI)Z	1
+METHOD	net/minecraft/class_437	method_25401	(DDDD)Z	1
+METHOD	net/minecraft/class_437	method_25402	(DDI)Z	1
+METHOD	net/minecraft/class_437	method_25404	(III)Z	1
+METHOD	net/minecraft/class_437	method_25406	(DDI)Z	1
+METHOD	net/minecraft/class_4587	<init>	()V	1
+METHOD	net/minecraft/class_4597$class_4598	getBuffer	(Lnet/minecraft/class_1921;)Lnet/minecraft/class_4588;	1
+METHOD	net/minecraft/class_4618	<init>	(Lnet/minecraft/class_4597$class_4598;)V	1
+METHOD	net/minecraft/class_4668$class_4683	<init>	(Lnet/minecraft/class_2960;Lnet/minecraft/class_9851;Z)V	1
+METHOD	net/minecraft/class_4668$class_5939	<init>	(Ljava/lang/Runnable;Ljava/lang/Runnable;)V	1
+METHOD	net/minecraft/class_4761	<init>	(Lnet/minecraft/class_2394;F)V	1
+METHOD	net/minecraft/class_4761	method_24369	()Lnet/minecraft/class_2394;	1
+METHOD	net/minecraft/class_495	<init>	(Lnet/minecraft/class_1733;Lnet/minecraft/class_1661;Lnet/minecraft/class_2561;)V	1
+METHOD	net/minecraft/class_495	method_25394	(Lnet/minecraft/class_332;IIF)V	1
+METHOD	net/minecraft/class_495	method_25404	(III)Z	1
+METHOD	net/minecraft/class_5225	<init>	(Lnet/minecraft/class_5225$class_5231;)V	1
+METHOD	net/minecraft/class_5294	<init>	(FZLnet/minecraft/class_5294$class_5401;ZZ)V	1
+METHOD	net/minecraft/class_5294	method_29993	()Z	1
+METHOD	net/minecraft/class_5294$class_5295	<init>	()V	1
+METHOD	net/minecraft/class_5294$class_5297	<init>	()V	1
+METHOD	net/minecraft/class_5481	accept	(Lnet/minecraft/class_5224;)Z	1
+METHOD	net/minecraft/class_583	method_62100	(Lnet/minecraft/class_4587;Lnet/minecraft/class_4588;III)V	1
+METHOD	net/minecraft/class_634	method_52787	(Lnet/minecraft/class_2596;)V	1
+METHOD	net/minecraft/class_6367	<init>	(Ljava/lang/String;IIZ)V	1
+METHOD	net/minecraft/class_637	<init>	(Lnet/minecraft/class_634;Lnet/minecraft/class_310;)V	1
+METHOD	net/minecraft/class_638	method_27983	()Lnet/minecraft/class_5321;	1
+METHOD	net/minecraft/class_638	method_30349	()Lnet/minecraft/class_5455;	1
+METHOD	net/minecraft/class_638	method_8320	(Lnet/minecraft/class_2338;)Lnet/minecraft/class_2680;	1
+METHOD	net/minecraft/class_638	method_8428	()Lnet/minecraft/class_269;	1
+METHOD	net/minecraft/class_642	<init>	(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/class_642$class_8678;)V	1
+METHOD	net/minecraft/class_742	<init>	(Lnet/minecraft/class_638;Lcom/mojang/authlib/GameProfile;)V	1
+METHOD	net/minecraft/class_742	method_5773	()V	1
+METHOD	net/minecraft/class_742	method_5784	(Lnet/minecraft/class_1313;Lnet/minecraft/class_243;)V	1
+METHOD	net/minecraft/class_742	method_6104	(Lnet/minecraft/class_1268;)V	1
+METHOD	net/minecraft/class_745	method_5773	()V	1
+METHOD	net/minecraft/class_745	method_5814	(DDD)V	1
+METHOD	net/minecraft/class_745	method_6033	(F)V	1
+METHOD	net/minecraft/class_7450	<init>	(Ljava/util/List;)V	1
+METHOD	net/minecraft/class_746	method_20448	()Z	1
+METHOD	net/minecraft/class_746	method_32326	(Lnet/minecraft/class_1799;)Lnet/minecraft/class_1304;	1
+METHOD	net/minecraft/class_746	method_37908	()Lnet/minecraft/class_1937;	1
+METHOD	net/minecraft/class_746	method_5628	()I	1
+METHOD	net/minecraft/class_746	method_5715	()Z	1
+METHOD	net/minecraft/class_746	method_5799	()Z	1
+METHOD	net/minecraft/class_746	method_5854	()Lnet/minecraft/class_1297;	1
+METHOD	net/minecraft/class_746	method_6030	()Lnet/minecraft/class_1799;	1
+METHOD	net/minecraft/class_746	method_6068	()Lnet/minecraft/class_1306;	1
+METHOD	net/minecraft/class_746	method_6115	()Z	1
+METHOD	net/minecraft/class_746	method_6128	()Z	1
+METHOD	net/minecraft/class_746	method_7261	(F)F	1
+METHOD	net/minecraft/class_7469	<init>	([B)V	1
+METHOD	net/minecraft/class_7469	equals	(Ljava/lang/Object;)Z	1
+METHOD	net/minecraft/class_7591	<init>	(ILnet/minecraft/class_7591$class_7592;Lnet/minecraft/class_2561;Ljava/lang/String;)V	1
+METHOD	net/minecraft/class_7635$class_7636	<init>	(ILjava/util/BitSet;B)V	1
+METHOD	net/minecraft/class_7922	method_10204	()I	1
+METHOD	net/minecraft/class_7922	method_10220	()Ljava/util/stream/Stream;	1
+METHOD	net/minecraft/class_8667	method_25364	()I	1
+METHOD	net/minecraft/class_8685	comp_1911	()Ljava/lang/String;	1
+METHOD	net/minecraft/class_8709	<init>	(Ljava/lang/String;)V	1
+METHOD	net/minecraft/class_8710$class_9154	equals	(Ljava/lang/Object;)Z	1
+METHOD	net/minecraft/class_898	method_24197	()Lorg/joml/Quaternionf;	1
+METHOD	net/minecraft/class_898	method_62424	(Lnet/minecraft/class_1297;DDDFLnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V	1
+METHOD	net/minecraft/class_922	<init>	(Lnet/minecraft/class_5617$class_5618;Lnet/minecraft/class_583;F)V	1
+METHOD	net/minecraft/class_922	method_4038	()Lnet/minecraft/class_583;	1
+METHOD	net/minecraft/class_9224	<init>	(Ljava/lang/String;Lnet/minecraft/class_2561;Lnet/minecraft/class_5352;Ljava/util/Optional;)V	1
+METHOD	net/minecraft/class_9284	<init>	(ILjava/util/List;)V	1
+METHOD	net/minecraft/class_9449	<init>	(Ljava/lang/String;Ljava/time/Instant;JLnet/minecraft/class_7450;Lnet/minecraft/class_7635$class_7636;)V	1
+METHOD	net/minecraft/class_9837	<init>	(II)V	1
+METHOD	net/minecraft/class_9909	<init>	()V	1
+FIELD	net/minecraft/class_310	field_1724	Lnet/minecraft/class_746;	282	DESC-CHANGED-> field_1724field_1724
+FIELD	net/minecraft/class_310	field_1687	Lnet/minecraft/class_638;	166	DESC-CHANGED-> field_1687field_1687
+FIELD	net/minecraft/class_243	field_1351	D	54	DESC-CHANGED-> field_1351field_1351
+FIELD	net/minecraft/class_1268	field_5808	Lnet/minecraft/class_1268;	51	DESC-CHANGED-> field_5808field_5808
+FIELD	net/minecraft/class_243	field_1350	D	41	DESC-CHANGED-> field_1350field_1350
+FIELD	net/minecraft/class_243	field_1352	D	41	DESC-CHANGED-> field_1352field_1352
+FIELD	net/minecraft/class_310	field_1761	Lnet/minecraft/class_636;	40	DESC-CHANGED-> field_1761field_1761
+FIELD	net/minecraft/class_310	field_1690	Lnet/minecraft/class_315;	39	DESC-CHANGED-> field_1690field_1690
+FIELD	net/minecraft/class_310	field_1755	Lnet/minecraft/class_437;	38	DESC-CHANGED-> field_1755field_1755
+FIELD	net/minecraft/class_310	field_1773	Lnet/minecraft/class_757;	37	DESC-CHANGED-> field_1773field_1773
+FIELD	net/minecraft/class_746	field_3944	Lnet/minecraft/class_634;	34	DESC-CHANGED-> field_3944field_3944
+FIELD	net/minecraft/class_746	field_3913	Lnet/minecraft/class_744;	29	DESC-CHANGED-> field_3913field_3913
+FIELD	net/minecraft/class_124	field_1061	Lnet/minecraft/class_124;	25	DESC-CHANGED-> field_1061field_1061
+METHOD	net/minecraft/class_310	method_1551	()Lnet/minecraft/class_310;	25	DESC-CHANGED-> method_1551method_1551
+FIELD	net/minecraft/class_1268	field_5810	Lnet/minecraft/class_1268;	21	DESC-CHANGED-> field_5810field_5810
+FIELD	net/minecraft/class_238	field_1322	D	21	DESC-CHANGED-> field_1322field_1322
+FIELD	net/minecraft/class_744	field_54155	Lnet/minecraft/class_10185;	20	DESC-CHANGED-> field_54155field_54155
+FIELD	net/minecraft/class_310	field_1772	Lnet/minecraft/class_327;	18	DESC-CHANGED-> field_1772field_1772
+METHOD	net/minecraft/class_332	method_51448	()Lnet/minecraft/class_4587;	18	DESC-CHANGED-> method_51448None
+FIELD	net/minecraft/class_2350	field_11036	Lnet/minecraft/class_2350;	17	DESC-CHANGED-> field_11036field_11036
+METHOD	net/minecraft/class_310	method_22683	()Lnet/minecraft/class_1041;	17	DESC-CHANGED-> method_22683method_22683
+METHOD	net/minecraft/class_4587	method_22903	()V	17	DESC-CHANGED-> method_22903method_22903
+METHOD	net/minecraft/class_4587	method_22909	()V	17	DESC-CHANGED-> method_22909method_22909
+FIELD	net/minecraft/class_2350$class_2351	field_11052	Lnet/minecraft/class_2350$class_2351;	16	DESC-CHANGED-> field_11052field_11052
+FIELD	net/minecraft/class_238	field_1325	D	15	DESC-CHANGED-> field_1325field_1325
+FIELD	net/minecraft/class_239$class_240	field_1333	Lnet/minecraft/class_239$class_240;	15	DESC-CHANGED-> field_1333field_1333
+FIELD	net/minecraft/class_642	field_3761	Ljava/lang/String;	15	DESC-CHANGED-> field_3761field_3761
+FIELD	net/minecraft/class_2246	field_10124	Lnet/minecraft/class_2248;	14	DESC-CHANGED-> field_10124field_10124
+METHOD	net/minecraft/class_4587	method_46416	(FFF)V	14	DESC-CHANGED-> method_46416method_46416
+FIELD	net/minecraft/class_124	field_1080	Lnet/minecraft/class_124;	13	DESC-CHANGED-> field_1080field_1080
+FIELD	net/minecraft/class_2350	field_11033	Lnet/minecraft/class_2350;	13	DESC-CHANGED-> field_11033field_11033
+FIELD	net/minecraft/class_310	field_1765	Lnet/minecraft/class_239;	13	DESC-CHANGED-> field_1765field_1765
+FIELD	net/minecraft/class_9334	field_50075	Lnet/minecraft/class_9331;	13	DESC-CHANGED-> field_50075field_50075
+METHOD	net/minecraft/class_3532	method_15363	(FFF)F	13	DESC-CHANGED-> method_15363method_15363
+FIELD	net/minecraft/class_124	field_1068	Lnet/minecraft/class_124;	12	DESC-CHANGED-> field_1068field_1068
+FIELD	net/minecraft/class_1802	field_8288	Lnet/minecraft/class_1792;	12	DESC-CHANGED-> field_8288field_8288
+FIELD	net/minecraft/class_1703	field_7763	I	11	DESC-CHANGED-> field_7763field_7763
+FIELD	net/minecraft/class_1713	field_7791	Lnet/minecraft/class_1713;	11	DESC-CHANGED-> field_7791field_7791
+FIELD	net/minecraft/class_1802	field_8833	Lnet/minecraft/class_1792;	11	DESC-CHANGED-> field_8833field_8833
+FIELD	net/minecraft/class_2338	field_10980	Lnet/minecraft/class_2338;	11	DESC-CHANGED-> field_10980field_10980
+FIELD	net/minecraft/class_2846$class_2847	field_12973	Lnet/minecraft/class_2846$class_2847;	11	DESC-CHANGED-> field_12973field_12973
+METHOD	net/minecraft/class_1041	method_4486	()I	11	DESC-CHANGED-> method_4486method_4486
+FIELD	net/minecraft/class_124	field_1054	Lnet/minecraft/class_124;	10	DESC-CHANGED-> field_1054field_1054
+FIELD	net/minecraft/class_1703	field_7761	Lnet/minecraft/class_2371;	10	DESC-CHANGED-> field_7761field_7761
+FIELD	net/minecraft/class_290	field_1576	Lcom/mojang/blaze3d/vertex/VertexFormat;	10	DESC-CHANGED-> field_1576field_1576
+FIELD	net/minecraft/class_9334	field_54196	Lnet/minecraft/class_9331;	10	DESC-CHANGED-> field_54196field_54196
+METHOD	net/minecraft/class_1041	method_4502	()I	10	DESC-CHANGED-> method_4502method_4502
+METHOD	net/minecraft/class_757	method_19418	()Lnet/minecraft/class_4184;	10	DESC-CHANGED-> method_19418method_19418
+FIELD	net/minecraft/class_1713	field_7790	Lnet/minecraft/class_1713;	9	DESC-CHANGED-> field_7790field_7790
+FIELD	net/minecraft/class_2846$class_2847	field_12968	Lnet/minecraft/class_2846$class_2847;	9	DESC-CHANGED-> field_12968field_12968
+METHOD	net/minecraft/class_4587	method_22905	(FFF)V	9	DESC-CHANGED-> method_22905method_22905
+FIELD	net/minecraft/class_1713	field_7794	Lnet/minecraft/class_1713;	8	DESC-CHANGED-> field_7794field_7794
+FIELD	net/minecraft/class_238	field_1320	D	8	DESC-CHANGED-> field_1320field_1320
+FIELD	net/minecraft/class_238	field_1321	D	8	DESC-CHANGED-> field_1321field_1321
+FIELD	net/minecraft/class_238	field_1323	D	8	DESC-CHANGED-> field_1323field_1323
+FIELD	net/minecraft/class_238	field_1324	D	8	DESC-CHANGED-> field_1324field_1324
+FIELD	net/minecraft/class_2846$class_2847	field_12971	Lnet/minecraft/class_2846$class_2847;	8	DESC-CHANGED-> field_12971field_12971
+FIELD	net/minecraft/class_3959$class_242	field_1348	Lnet/minecraft/class_3959$class_242;	8	DESC-CHANGED-> field_1348field_1348
+METHOD	net/minecraft/class_2338	method_10062	()Lnet/minecraft/class_2338;	8	DESC-CHANGED-> method_10062method_10062
+METHOD	net/minecraft/class_2561	method_43470	(Ljava/lang/String;)Lnet/minecraft/class_5250;	8	DESC-CHANGED-> method_43470method_43470
+METHOD	net/minecraft/class_310	method_1507	(Lnet/minecraft/class_437;)V	8	DESC-CHANGED-> method_1507method_1507
+METHOD	net/minecraft/class_4587	method_23760	()Lnet/minecraft/class_4587$class_4665;	8	DESC-CHANGED-> method_23760method_23760
+METHOD	net/minecraft/class_4587$class_4665	method_23761	()Lorg/joml/Matrix4f;	8	DESC-CHANGED-> method_23761method_23761
+FIELD	net/minecraft/class_1802	field_8281	Lnet/minecraft/class_1792;	7	DESC-CHANGED-> field_8281field_8281
+FIELD	net/minecraft/class_1802	field_8639	Lnet/minecraft/class_1792;	7	DESC-CHANGED-> field_8639field_8639
+FIELD	net/minecraft/class_310	field_1705	Lnet/minecraft/class_329;	7	DESC-CHANGED-> field_1705field_1705
+FIELD	net/minecraft/class_310	field_1774	Lnet/minecraft/class_309;	7	DESC-CHANGED-> field_1774field_1774
+FIELD	net/minecraft/class_315	field_1904	Lnet/minecraft/class_304;	7	DESC-CHANGED-> field_1904field_1904
+FIELD	net/minecraft/class_3959$class_3960	field_17558	Lnet/minecraft/class_3959$class_3960;	7	DESC-CHANGED-> field_17558field_17558
+FIELD	net/minecraft/class_744	field_55868	Lnet/minecraft/class_241;	7	DESC-CHANGED-> field_55868field_55868
+FIELD	net/minecraft/class_7923	field_41178	Lnet/minecraft/class_7922;	7	DESC-CHANGED-> field_41178field_41178
+METHOD	net/minecraft/class_1041	method_4490	()J	7	DESC-CHANGED-> method_4490method_4490
+FIELD	net/minecraft/class_1802	field_8301	Lnet/minecraft/class_1792;	6	DESC-CHANGED-> field_8301field_8301
+FIELD	net/minecraft/class_2246	field_10343	Lnet/minecraft/class_2248;	6	DESC-CHANGED-> field_10343field_10343
+FIELD	net/minecraft/class_2246	field_9987	Lnet/minecraft/class_2248;	6	DESC-CHANGED-> field_9987field_9987
+FIELD	net/minecraft/class_2350	field_11035	Lnet/minecraft/class_2350;	6	DESC-CHANGED-> field_11035field_11035
+FIELD	net/minecraft/class_2350	field_11043	Lnet/minecraft/class_2350;	6	DESC-CHANGED-> field_11043field_11043
+FIELD	net/minecraft/class_243	field_1353	Lnet/minecraft/class_243;	6	DESC-CHANGED-> field_1353field_1353
+FIELD	net/minecraft/class_2848$class_2849	field_12981	Lnet/minecraft/class_2848$class_2849;	6	DESC-CHANGED-> field_12981field_12981
+FIELD	net/minecraft/class_2848$class_2849	field_12985	Lnet/minecraft/class_2848$class_2849;	6	DESC-CHANGED-> field_12985field_12985
+FIELD	net/minecraft/class_124	field_1060	Lnet/minecraft/class_124;	5	DESC-CHANGED-> field_1060field_1060
+FIELD	net/minecraft/class_1297	field_5969	D	5	DESC-CHANGED-> field_5969field_5969
+FIELD	net/minecraft/class_1297	field_6014	D	5	DESC-CHANGED-> field_6014field_6014
+FIELD	net/minecraft/class_1299	field_6110	Lnet/minecraft/class_1299;	5	DESC-CHANGED-> field_6110field_6110
+FIELD	net/minecraft/class_1656	field_7479	Z	5	DESC-CHANGED-> field_7479field_7479
+FIELD	net/minecraft/class_1713	field_7795	Lnet/minecraft/class_1713;	5	DESC-CHANGED-> field_7795field_7795
+FIELD	net/minecraft/class_2246	field_10036	Lnet/minecraft/class_2248;	5	DESC-CHANGED-> field_10036field_10036
+FIELD	net/minecraft/class_2246	field_10540	Lnet/minecraft/class_2248;	5	DESC-CHANGED-> field_10540field_10540
+FIELD	net/minecraft/class_2350	field_11034	Lnet/minecraft/class_2350;	5	DESC-CHANGED-> field_11034field_11034
+FIELD	net/minecraft/class_2350	field_11039	Lnet/minecraft/class_2350;	5	DESC-CHANGED-> field_11039field_11039
+FIELD	net/minecraft/class_2350$class_2353	field_11062	Lnet/minecraft/class_2350$class_2353;	5	DESC-CHANGED-> field_11062field_11062
+FIELD	net/minecraft/class_315	field_1886	Lnet/minecraft/class_304;	5	DESC-CHANGED-> field_1886field_1886
+FIELD	net/minecraft/class_315	field_1903	Lnet/minecraft/class_304;	5	DESC-CHANGED-> field_1903field_1903
+METHOD	net/minecraft/class_1799	method_31574	(Lnet/minecraft/class_1792;)Z	5	DESC-CHANGED-> method_31574method_31574
+METHOD	net/minecraft/class_1799	method_7909	()Lnet/minecraft/class_1792;	5	DESC-CHANGED-> method_7909method_7909
+METHOD	net/minecraft/class_2960	method_60655	(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/class_2960;	5	DESC-CHANGED-> method_60655method_60655
+METHOD	net/minecraft/class_332	method_51421	()I	5	DESC-CHANGED-> method_51421method_51421
+METHOD	net/minecraft/class_332	method_51443	()I	5	DESC-CHANGED-> method_51443method_51443
+METHOD	net/minecraft/class_4588	method_39415	(I)Lnet/minecraft/class_4588;	5	DESC-CHANGED-> method_39415method_39415
+FIELD	net/minecraft/class_1294	field_5902	Lnet/minecraft/class_6880;	4	DESC-CHANGED-> field_5902field_5902
+FIELD	net/minecraft/class_1294	field_5906	Lnet/minecraft/class_6880;	4	DESC-CHANGED-> field_5906field_5906
+FIELD	net/minecraft/class_1297	field_5971	D	4	DESC-CHANGED-> field_5971field_5971
+FIELD	net/minecraft/class_1297	field_5989	D	4	DESC-CHANGED-> field_5989field_5989
+FIELD	net/minecraft/class_1297	field_6012	I	4	DESC-CHANGED-> field_6012field_6012
+FIELD	net/minecraft/class_1297	field_6036	D	4	DESC-CHANGED-> field_6036field_6036
+FIELD	net/minecraft/class_1297	field_6038	D	4	DESC-CHANGED-> field_6038field_6038
+FIELD	net/minecraft/class_1297$class_5529	field_26998	Lnet/minecraft/class_1297$class_5529;	4	DESC-CHANGED-> field_26998field_26998
+FIELD	net/minecraft/class_1304	field_6169	Lnet/minecraft/class_1304;	4	DESC-CHANGED-> field_6169field_6169
+FIELD	net/minecraft/class_1304	field_6174	Lnet/minecraft/class_1304;	4	DESC-CHANGED-> field_6174field_6174
+FIELD	net/minecraft/class_1735	field_7874	I	4	DESC-CHANGED-> field_7874field_7874
+FIELD	net/minecraft/class_1802	field_8367	Lnet/minecraft/class_1792;	4	DESC-CHANGED-> field_8367field_8367
+FIELD	net/minecraft/class_1802	field_8634	Lnet/minecraft/class_1792;	4	DESC-CHANGED-> field_8634field_8634
+FIELD	net/minecraft/class_1923	field_9180	I	4	DESC-CHANGED-> field_9180field_9180
+FIELD	net/minecraft/class_1923	field_9181	I	4	DESC-CHANGED-> field_9181field_9181
+FIELD	net/minecraft/class_2246	field_10382	Lnet/minecraft/class_2248;	4	DESC-CHANGED-> field_10382field_10382
+FIELD	net/minecraft/class_2246	field_23152	Lnet/minecraft/class_2248;	4	DESC-CHANGED-> field_23152field_23152
+FIELD	net/minecraft/class_239$class_240	field_1332	Lnet/minecraft/class_239$class_240;	4	DESC-CHANGED-> field_1332field_1332
+FIELD	net/minecraft/class_241	field_1342	F	4	DESC-CHANGED-> field_1342field_1342
+FIELD	net/minecraft/class_241	field_1343	F	4	DESC-CHANGED-> field_1343field_1343
+FIELD	net/minecraft/class_310	field_1769	Lnet/minecraft/class_761;	4	DESC-CHANGED-> field_1769field_1769
+FIELD	net/minecraft/class_315	field_1832	Lnet/minecraft/class_304;	4	DESC-CHANGED-> field_1832field_1832
+FIELD	net/minecraft/class_315	field_1842	Z	4	DESC-CHANGED-> field_1842field_1842
+FIELD	net/minecraft/class_4050	field_18076	Lnet/minecraft/class_4050;	4	DESC-CHANGED-> field_18076field_18076
+FIELD	net/minecraft/class_5498	field_26664	Lnet/minecraft/class_5498;	4	DESC-CHANGED-> field_26664field_26664
+FIELD	net/minecraft/class_7923	field_41175	Lnet/minecraft/class_7922;	4	DESC-CHANGED-> field_41175field_41175
+FIELD	net/minecraft/class_9334	field_49646	Lnet/minecraft/class_9331;	4	DESC-CHANGED-> field_49646field_49646
+METHOD	net/minecraft/class_1792	method_7854	()Lnet/minecraft/class_1799;	4	DESC-CHANGED-> method_7854method_7854
+METHOD	net/minecraft/class_2960	method_12832	()Ljava/lang/String;	4	DESC-CHANGED-> method_12832method_12832
+METHOD	net/minecraft/class_342	method_1882	()Ljava/lang/String;	4	DESC-CHANGED-> method_1882method_1882
+METHOD	net/minecraft/class_3532	method_15340	(III)I	4	DESC-CHANGED-> method_15340method_15340
+FIELD	net/minecraft/class_1799	field_8037	Lnet/minecraft/class_1799;	3	DESC-CHANGED-> field_8037field_8037
+FIELD	net/minecraft/class_1802	field_22020	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_22020field_22020
+FIELD	net/minecraft/class_1802	field_8162	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8162field_8162
+FIELD	net/minecraft/class_1802	field_8204	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8204field_8204
+FIELD	net/minecraft/class_1802	field_8233	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8233field_8233
+FIELD	net/minecraft/class_1802	field_8255	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8255field_8255
+FIELD	net/minecraft/class_1802	field_8309	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8309field_8309
+FIELD	net/minecraft/class_1802	field_8317	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8317field_8317
+FIELD	net/minecraft/class_1802	field_8463	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8463field_8463
+FIELD	net/minecraft/class_1802	field_8477	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8477field_8477
+FIELD	net/minecraft/class_1802	field_8598	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8598field_8598
+FIELD	net/minecraft/class_1802	field_8687	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8687field_8687
+FIELD	net/minecraft/class_1802	field_8786	Lnet/minecraft/class_1792;	3	DESC-CHANGED-> field_8786field_8786
+FIELD	net/minecraft/class_1893	field_9101	Lnet/minecraft/class_5321;	3	DESC-CHANGED-> field_9101field_9101
+FIELD	net/minecraft/class_1893	field_9107	Lnet/minecraft/class_5321;	3	DESC-CHANGED-> field_9107field_9107
+FIELD	net/minecraft/class_1893	field_9111	Lnet/minecraft/class_5321;	3	DESC-CHANGED-> field_9111field_9111
+FIELD	net/minecraft/class_1937	field_9236	Z	3	DESC-CHANGED-> field_9236field_9236
+FIELD	net/minecraft/class_2244	field_9967	Lnet/minecraft/class_2754;	3	DESC-CHANGED-> field_9967field_9967
+FIELD	net/minecraft/class_2246	field_10535	Lnet/minecraft/class_2248;	3	DESC-CHANGED-> field_10535field_10535
+FIELD	net/minecraft/class_290	field_1575	Lcom/mojang/blaze3d/vertex/VertexFormat;	3	DESC-CHANGED-> field_1575field_1575
+FIELD	net/minecraft/class_315	field_1881	Lnet/minecraft/class_304;	3	DESC-CHANGED-> field_1881field_1881
+FIELD	net/minecraft/class_315	field_1894	Lnet/minecraft/class_304;	3	DESC-CHANGED-> field_1894field_1894
+FIELD	net/minecraft/class_3489	field_54294	Lnet/minecraft/class_6862;	3	DESC-CHANGED-> field_54294field_54294
+FIELD	net/minecraft/class_4050	field_18081	Lnet/minecraft/class_4050;	3	DESC-CHANGED-> field_18081field_18081
+FIELD	net/minecraft/class_630	field_38456	Z	3	DESC-CHANGED-> field_38456field_38456
+FIELD	net/minecraft/class_7833	field_40714	Lnet/minecraft/class_7833;	3	DESC-CHANGED-> field_40714field_40714
+FIELD	net/minecraft/class_7833	field_40716	Lnet/minecraft/class_7833;	3	DESC-CHANGED-> field_40716field_40716
+FIELD	net/minecraft/class_7833	field_40718	Lnet/minecraft/class_7833;	3	DESC-CHANGED-> field_40718field_40718
+FIELD	net/minecraft/class_7924	field_41265	Lnet/minecraft/class_5321;	3	DESC-CHANGED-> field_41265field_41265
+FIELD	net/minecraft/class_8080	field_42109	F	3	DESC-CHANGED-> field_42109field_42109
+FIELD	net/minecraft/class_8080	field_42110	F	3	DESC-CHANGED-> field_42110field_42110
+FIELD	net/minecraft/class_8080	field_42111	F	3	DESC-CHANGED-> field_42111field_42111
+FIELD	net/minecraft/class_9334	field_49622	Lnet/minecraft/class_9331;	3	DESC-CHANGED-> field_49622field_49622
+FIELD	net/minecraft/class_9334	field_49643	Lnet/minecraft/class_9331;	3	DESC-CHANGED-> field_49643field_49643
+FIELD	net/minecraft/class_9334	field_49651	Lnet/minecraft/class_9331;	3	DESC-CHANGED-> field_49651field_49651
+METHOD	net/minecraft/class_1297	method_23317	()D	3	DESC-CHANGED-> method_23317method_23317
+METHOD	net/minecraft/class_1297	method_23318	()D	3	DESC-CHANGED-> method_23318method_23318
+METHOD	net/minecraft/class_1297	method_23321	()D	3	DESC-CHANGED-> method_23321method_23321
+METHOD	net/minecraft/class_1297	method_5858	(Lnet/minecraft/class_1297;)D	3	DESC-CHANGED-> method_5858method_5858
+METHOD	net/minecraft/class_1799	method_7947	()I	3	DESC-CHANGED-> method_7947method_7947
+METHOD	net/minecraft/class_1799	method_7978	(Lnet/minecraft/class_6880;I)V	3	DESC-CHANGED-> method_7978method_7978
+METHOD	net/minecraft/class_310	method_1522	()Lnet/minecraft/class_276;	3	DESC-CHANGED-> method_1522method_1522
+METHOD	net/minecraft/class_327	method_1727	(Ljava/lang/String;)I	3	DESC-CHANGED-> method_1727method_1727
+METHOD	net/minecraft/class_332	method_25290	(Ljava/util/function/Function;Lnet/minecraft/class_2960;IIFFIIII)V	3	DESC-CHANGED-> method_25290None
+METHOD	net/minecraft/class_342	method_1881	()I	3	DESC-CHANGED-> method_1881method_1881
+METHOD	net/minecraft/class_3532	method_15350	(DDD)D	3	DESC-CHANGED-> method_15350method_15350
+METHOD	net/minecraft/class_4588	method_22915	(FFFF)Lnet/minecraft/class_4588;	3	DESC-CHANGED-> method_22915method_22915
+METHOD	net/minecraft/class_5321	method_29177	()Lnet/minecraft/class_2960;	3	DESC-CHANGED-> method_29177method_29177
+FIELD	net/minecraft/class_10584	field_55666	Lnet/minecraft/class_10584$class_10585;	2	DESC-CHANGED-> field_55666field_55666
+FIELD	net/minecraft/class_10584$class_10585	field_55671	Lnet/minecraft/class_243;	2	DESC-CHANGED-> field_55671field_55671
+FIELD	net/minecraft/class_124	field_1079	Lnet/minecraft/class_124;	2	DESC-CHANGED-> field_1079field_1079
+FIELD	net/minecraft/class_1294	field_38092	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_38092field_38092
+FIELD	net/minecraft/class_1294	field_5901	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_5901field_5901
+FIELD	net/minecraft/class_1294	field_5907	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_5907field_5907
+FIELD	net/minecraft/class_1294	field_5909	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_5909field_5909
+FIELD	net/minecraft/class_1294	field_5913	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_5913field_5913
+FIELD	net/minecraft/class_1294	field_5924	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_5924field_5924
+FIELD	net/minecraft/class_1297	field_5982	F	2	DESC-CHANGED-> field_5982field_5982
+FIELD	net/minecraft/class_1297	field_6004	F	2	DESC-CHANGED-> field_6004field_6004
+FIELD	net/minecraft/class_1299	field_6097	Lnet/minecraft/class_1299;	2	DESC-CHANGED-> field_6097field_6097
+FIELD	net/minecraft/class_1299	field_6133	Lnet/minecraft/class_1299;	2	DESC-CHANGED-> field_6133field_6133
+FIELD	net/minecraft/class_1304	field_6166	Lnet/minecraft/class_1304;	2	DESC-CHANGED-> field_6166field_6166
+FIELD	net/minecraft/class_1304	field_6172	Lnet/minecraft/class_1304;	2	DESC-CHANGED-> field_6172field_6172
+FIELD	net/minecraft/class_1656	field_7477	Z	2	DESC-CHANGED-> field_7477field_7477
+FIELD	net/minecraft/class_1664	field_7559	Lnet/minecraft/class_1664;	2	DESC-CHANGED-> field_7559field_7559
+FIELD	net/minecraft/class_1735	field_7872	I	2	DESC-CHANGED-> field_7872field_7872
+FIELD	net/minecraft/class_1735	field_7873	I	2	DESC-CHANGED-> field_7873field_7873
+FIELD	net/minecraft/class_1802	field_46249	Lnet/minecraft/class_1792;	2	DESC-CHANGED-> field_46249field_46249
+FIELD	net/minecraft/class_1802	field_46250	Lnet/minecraft/class_1792;	2	DESC-CHANGED-> field_46250field_46250
+FIELD	net/minecraft/class_1802	field_49814	Lnet/minecraft/class_1792;	2	DESC-CHANGED-> field_49814field_49814
+FIELD	net/minecraft/class_1802	field_8102	Lnet/minecraft/class_1792;	2	DESC-CHANGED-> field_8102field_8102
+FIELD	net/minecraft/class_1802	field_8287	Lnet/minecraft/class_1792;	2	DESC-CHANGED-> field_8287field_8287
+FIELD	net/minecraft/class_1802	field_8399	Lnet/minecraft/class_1792;	2	DESC-CHANGED-> field_8399field_8399
+FIELD	net/minecraft/class_1893	field_50157	Lnet/minecraft/class_5321;	2	DESC-CHANGED-> field_50157field_50157
+FIELD	net/minecraft/class_1893	field_9119	Lnet/minecraft/class_5321;	2	DESC-CHANGED-> field_9119field_9119
+FIELD	net/minecraft/class_1893	field_9131	Lnet/minecraft/class_5321;	2	DESC-CHANGED-> field_9131field_9131
+FIELD	net/minecraft/class_2246	field_10030	Lnet/minecraft/class_2248;	2	DESC-CHANGED-> field_10030field_10030
+FIELD	net/minecraft/class_2246	field_10266	Lnet/minecraft/class_2248;	2	DESC-CHANGED-> field_10266field_10266
+FIELD	net/minecraft/class_2246	field_10316	Lnet/minecraft/class_2248;	2	DESC-CHANGED-> field_10316field_10316
+FIELD	net/minecraft/class_2246	field_10477	Lnet/minecraft/class_2248;	2	DESC-CHANGED-> field_10477field_10477
+FIELD	net/minecraft/class_2246	field_22091	Lnet/minecraft/class_2248;	2	DESC-CHANGED-> field_22091field_22091
+FIELD	net/minecraft/class_2246	field_23869	Lnet/minecraft/class_2248;	2	DESC-CHANGED-> field_23869field_23869
+FIELD	net/minecraft/class_2246	field_23874	Lnet/minecraft/class_2248;	2	DESC-CHANGED-> field_23874field_23874
+FIELD	net/minecraft/class_2281	field_10770	Lnet/minecraft/class_2754;	2	DESC-CHANGED-> field_10770field_10770
+FIELD	net/minecraft/class_2398	field_22247	Lnet/minecraft/class_2400;	2	DESC-CHANGED-> field_22247field_22247
+FIELD	net/minecraft/class_2398	field_23956	Lnet/minecraft/class_2400;	2	DESC-CHANGED-> field_23956field_23956
+FIELD	net/minecraft/class_241	field_1340	Lnet/minecraft/class_241;	2	DESC-CHANGED-> field_1340field_1340
+FIELD	net/minecraft/class_2742	field_12557	Lnet/minecraft/class_2742;	2	DESC-CHANGED-> field_12557field_12557
+FIELD	net/minecraft/class_2742	field_12560	Lnet/minecraft/class_2742;	2	DESC-CHANGED-> field_12560field_12560
+FIELD	net/minecraft/class_2745	field_12569	Lnet/minecraft/class_2745;	2	DESC-CHANGED-> field_12569field_12569
+FIELD	net/minecraft/class_2846$class_2847	field_12974	Lnet/minecraft/class_2846$class_2847;	2	DESC-CHANGED-> field_12974field_12974
+FIELD	net/minecraft/class_290	field_1592	Lcom/mojang/blaze3d/vertex/VertexFormat;	2	DESC-CHANGED-> field_1592field_1592
+FIELD	net/minecraft/class_304	field_1655	Lnet/minecraft/class_3675$class_306;	2	DESC-CHANGED-> field_1655field_1655
+FIELD	net/minecraft/class_310	field_1713	Lnet/minecraft/class_702;	2	DESC-CHANGED-> field_1713field_1713
+FIELD	net/minecraft/class_315	field_1849	Lnet/minecraft/class_304;	2	DESC-CHANGED-> field_1849field_1849
+FIELD	net/minecraft/class_315	field_1913	Lnet/minecraft/class_304;	2	DESC-CHANGED-> field_1913field_1913
+FIELD	net/minecraft/class_315	field_1914	Z	2	DESC-CHANGED-> field_1914field_1914
+FIELD	net/minecraft/class_327$class_6415	field_33993	Lnet/minecraft/class_327$class_6415;	2	DESC-CHANGED-> field_33993field_33993
+FIELD	net/minecraft/class_338	field_2064	Ljava/util/List;	2	DESC-CHANGED-> field_2064field_2064
+FIELD	net/minecraft/class_3486	field_15517	Lnet/minecraft/class_6862;	2	DESC-CHANGED-> field_15517field_15517
+FIELD	net/minecraft/class_3620$class_6594	field_34761	Lnet/minecraft/class_3620$class_6594;	2	DESC-CHANGED-> field_34761field_34761
+FIELD	net/minecraft/class_3959$class_3960	field_17559	Lnet/minecraft/class_3959$class_3960;	2	DESC-CHANGED-> field_17559field_17559
+FIELD	net/minecraft/class_5134	field_23725	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_23725field_23725
+FIELD	net/minecraft/class_5134	field_23728	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_23728field_23728
+FIELD	net/minecraft/class_5134	field_45124	Lnet/minecraft/class_6880;	2	DESC-CHANGED-> field_45124field_45124
+FIELD	net/minecraft/class_7833	field_40713	Lnet/minecraft/class_7833;	2	DESC-CHANGED-> field_40713field_40713
+FIELD	net/minecraft/class_9334	field_49616	Lnet/minecraft/class_9331;	2	DESC-CHANGED-> field_49616field_49616
+FIELD	net/minecraft/class_9334	field_49631	Lnet/minecraft/class_9331;	2	DESC-CHANGED-> field_49631field_49631
+FIELD	net/minecraft/class_9334	field_49650	Lnet/minecraft/class_9331;	2	DESC-CHANGED-> field_49650field_49650
+FIELD	net/minecraft/class_9334	field_50077	Lnet/minecraft/class_9331;	2	DESC-CHANGED-> field_50077field_50077
+FIELD	net/minecraft/class_9334	field_53696	Lnet/minecraft/class_9331;	2	DESC-CHANGED-> field_53696field_53696
+FIELD	net/minecraft/class_9334	field_55878	Lnet/minecraft/class_9331;	2	DESC-CHANGED-> field_55878field_55878
+METHOD	net/minecraft/class_1044	method_68004	()Lcom/mojang/blaze3d/textures/GpuTexture;	2	DESC-CHANGED-> method_68004method_68004
+METHOD	net/minecraft/class_1297	method_36454	()F	2	DESC-CHANGED-> method_36454method_36454
+METHOD	net/minecraft/class_1429	method_6481	(Lnet/minecraft/class_1799;)Z	2	DESC-CHANGED-> method_6481method_6481
+METHOD	net/minecraft/class_1657	method_7334	()Lcom/mojang/authlib/GameProfile;	2	DESC-CHANGED-> method_7334method_7334
+METHOD	net/minecraft/class_1735	method_7677	()Lnet/minecraft/class_1799;	2	DESC-CHANGED-> method_7677method_7677
+METHOD	net/minecraft/class_1792	method_63680	()Lnet/minecraft/class_2561;	2	DESC-CHANGED-> method_63680method_63680
+METHOD	net/minecraft/class_1799	method_7960	()Z	2	DESC-CHANGED-> method_7960method_7960
+METHOD	net/minecraft/class_1921	method_60895	(Lnet/minecraft/class_9801;)V	2	DESC-CHANGED-> method_60895method_60895
+METHOD	net/minecraft/class_2338	method_10093	(Lnet/minecraft/class_2350;)Lnet/minecraft/class_2338;	2	DESC-CHANGED-> method_10093method_10093
+METHOD	net/minecraft/class_243	method_1021	(D)Lnet/minecraft/class_243;	2	DESC-CHANGED-> method_1021method_1021
+METHOD	net/minecraft/class_243	method_1025	(Lnet/minecraft/class_243;)D	2	DESC-CHANGED-> method_1025method_1025
+METHOD	net/minecraft/class_2487	method_10545	(Ljava/lang/String;)Z	2	DESC-CHANGED-> method_10545method_10545
+METHOD	net/minecraft/class_2561	method_30163	(Ljava/lang/String;)Lnet/minecraft/class_2561;	2	DESC-CHANGED-> method_30163method_30163
+METHOD	net/minecraft/class_2561	method_43473	()Lnet/minecraft/class_5250;	2	DESC-CHANGED-> method_43473method_43473
+METHOD	net/minecraft/class_2583	method_10973	()Lnet/minecraft/class_5251;	2	DESC-CHANGED-> method_10973method_10973
+METHOD	net/minecraft/class_2583	method_36139	(I)Lnet/minecraft/class_2583;	2	DESC-CHANGED-> method_36139method_36139
+METHOD	net/minecraft/class_287	method_60800	()Lnet/minecraft/class_9801;	2	DESC-CHANGED-> method_60800method_60800
+METHOD	net/minecraft/class_2960	method_12836	()Ljava/lang/String;	2	DESC-CHANGED-> method_12836method_12836
+METHOD	net/minecraft/class_2960	method_43903	()Ljava/lang/String;	2	DESC-CHANGED-> method_43903method_43903
+METHOD	net/minecraft/class_309	method_1460	()Ljava/lang/String;	2	DESC-CHANGED-> method_1460method_1460
+METHOD	net/minecraft/class_310	method_1548	()Lnet/minecraft/class_320;	2	DESC-CHANGED-> method_1548method_1548
+METHOD	net/minecraft/class_310	method_22940	()Lnet/minecraft/class_4599;	2	DESC-CHANGED-> method_22940method_22940
+METHOD	net/minecraft/class_320	method_1676	()Ljava/lang/String;	2	DESC-CHANGED-> method_1676method_1676
+METHOD	net/minecraft/class_329	method_1743	()Lnet/minecraft/class_338;	2	DESC-CHANGED-> method_1743method_1743
+METHOD	net/minecraft/class_332	method_25294	(IIIII)V	2	DESC-CHANGED-> method_25294method_25294
+METHOD	net/minecraft/class_332	method_25303	(Lnet/minecraft/class_327;Ljava/lang/String;III)I	2	DESC-CHANGED-> method_25303None
+METHOD	net/minecraft/class_342	method_1887	(Ljava/lang/String;)V	2	DESC-CHANGED-> method_1887method_1887
+METHOD	net/minecraft/class_3532	method_15374	(F)F	2	DESC-CHANGED-> method_15374None
+METHOD	net/minecraft/class_3532	method_16436	(DDD)D	2	DESC-CHANGED-> method_16436method_16436
+METHOD	net/minecraft/class_3532	method_16439	(FFF)F	2	DESC-CHANGED-> method_16439method_16439
+METHOD	net/minecraft/class_3965	method_17777	()Lnet/minecraft/class_2338;	2	DESC-CHANGED-> method_17777method_17777
+METHOD	net/minecraft/class_4184	method_19329	()F	2	DESC-CHANGED-> method_19329method_19329
+METHOD	net/minecraft/class_4184	method_19330	()F	2	DESC-CHANGED-> method_19330method_19330
+METHOD	net/minecraft/class_4587	method_22904	(DDD)V	2	DESC-CHANGED-> method_22904method_22904
+METHOD	net/minecraft/class_4587	method_22907	(Lorg/joml/Quaternionfc;)V	2	DESC-CHANGED-> method_22907method_22907
+METHOD	net/minecraft/class_4588	method_22913	(FF)Lnet/minecraft/class_4588;	2	DESC-CHANGED-> method_22913method_22913
+METHOD	net/minecraft/class_4597$class_4598	method_22993	()V	2	DESC-CHANGED-> method_22993method_22993
+METHOD	net/minecraft/class_4599	method_23000	()Lnet/minecraft/class_4597$class_4598;	2	DESC-CHANGED-> method_23000method_23000
+METHOD	net/minecraft/class_4618	method_23286	(IIII)V	2	DESC-CHANGED-> method_23286None
+METHOD	net/minecraft/class_5250	method_27693	(Ljava/lang/String;)Lnet/minecraft/class_5250;	2	DESC-CHANGED-> method_27693method_27693
+METHOD	net/minecraft/class_5250	method_27694	(Ljava/util/function/UnaryOperator;)Lnet/minecraft/class_5250;	2	DESC-CHANGED-> method_27694method_27694
+METHOD	net/minecraft/class_6880	comp_349	()Ljava/lang/Object;	2	DESC-CHANGED-> comp_349comp_349
+FIELD	net/minecraft/class_10017	field_53325	D	1	DESC-CHANGED-> field_53325field_53325
+FIELD	net/minecraft/class_10017	field_53326	D	1	DESC-CHANGED-> field_53326field_53326
+FIELD	net/minecraft/class_10017	field_53327	D	1	DESC-CHANGED-> field_53327field_53327
+FIELD	net/minecraft/class_10017	field_53335	Z	1	DESC-CHANGED-> field_53335field_53335
+FIELD	net/minecraft/class_10017	field_53337	Lnet/minecraft/class_2561;	1	DESC-CHANGED-> field_53337field_53337
+FIELD	net/minecraft/class_10034	field_53418	Lnet/minecraft/class_1799;	1	DESC-CHANGED-> field_53418field_53418
+FIELD	net/minecraft/class_10034	field_53419	Lnet/minecraft/class_1799;	1	DESC-CHANGED-> field_53419field_53419
+FIELD	net/minecraft/class_10034	field_53420	Lnet/minecraft/class_1799;	1	DESC-CHANGED-> field_53420field_53420
+FIELD	net/minecraft/class_10034	field_55309	Lnet/minecraft/class_1799;	1	DESC-CHANGED-> field_55309field_55309
+FIELD	net/minecraft/class_10042	field_53446	F	1	DESC-CHANGED-> field_53446field_53446
+FIELD	net/minecraft/class_10042	field_53447	F	1	DESC-CHANGED-> field_53447field_53447
+FIELD	net/minecraft/class_10042	field_53448	F	1	DESC-CHANGED-> field_53448field_53448
+FIELD	net/minecraft/class_10055	field_53521	F	1	DESC-CHANGED-> field_53521field_53521
+FIELD	net/minecraft/class_10055	field_53530	Z	1	DESC-CHANGED-> field_53530field_53530
+FIELD	net/minecraft/class_10055	field_53531	Z	1	DESC-CHANGED-> field_53531field_53531
+FIELD	net/minecraft/class_10055	field_53532	Z	1	DESC-CHANGED-> field_53532field_53532
+FIELD	net/minecraft/class_10055	field_53535	Z	1	DESC-CHANGED-> field_53535field_53535
+FIELD	net/minecraft/class_10055	field_53543	Z	1	DESC-CHANGED-> field_53543field_53543
+FIELD	net/minecraft/class_10055	field_53544	Z	1	DESC-CHANGED-> field_53544field_53544
+FIELD	net/minecraft/class_10055	field_53545	Z	1	DESC-CHANGED-> field_53545field_53545
+FIELD	net/minecraft/class_10055	field_53546	Z	1	DESC-CHANGED-> field_53546field_53546
+FIELD	net/minecraft/class_10186$class_10190	field_54127	Lnet/minecraft/class_10186$class_10190;	1	DESC-CHANGED-> field_54127field_54127
+FIELD	net/minecraft/class_1059	field_5275	Lnet/minecraft/class_2960;	1	DESC-CHANGED-> field_5275field_5275
+FIELD	net/minecraft/class_10799	field_56854	Lcom/mojang/blaze3d/pipeline/RenderPipeline$Snippet;	1	DESC-CHANGED-> field_56854field_56854
+FIELD	net/minecraft/class_10799	field_56860	Lcom/mojang/blaze3d/pipeline/RenderPipeline$Snippet;	1	DESC-CHANGED-> field_56860field_56860
+FIELD	net/minecraft/class_10799	field_56883	Lcom/mojang/blaze3d/pipeline/RenderPipeline;	1	DESC-CHANGED-> field_56883field_56883
+FIELD	net/minecraft/class_124	field_1065	Lnet/minecraft/class_124;	1	DESC-CHANGED-> field_1065field_1065
+FIELD	net/minecraft/class_124	field_1070	Lnet/minecraft/class_124;	1	DESC-CHANGED-> field_1070field_1070
+FIELD	net/minecraft/class_124	field_1077	Lnet/minecraft/class_124;	1	DESC-CHANGED-> field_1077field_1077
+FIELD	net/minecraft/class_1267	field_5801	Lnet/minecraft/class_1267;	1	DESC-CHANGED-> field_5801field_5801
+FIELD	net/minecraft/class_1267	field_5805	Lnet/minecraft/class_1267;	1	DESC-CHANGED-> field_5805field_5805
+FIELD	net/minecraft/class_1267	field_5807	Lnet/minecraft/class_1267;	1	DESC-CHANGED-> field_5807field_5807
+FIELD	net/minecraft/class_1269	field_5814	Lnet/minecraft/class_1269$class_9857;	1	DESC-CHANGED-> field_5814field_5814
+FIELD	net/minecraft/class_1269$class_9861	field_52427	Lnet/minecraft/class_1269$class_9861;	1	DESC-CHANGED-> field_52427field_52427
+FIELD	net/minecraft/class_1294	field_5904	Lnet/minecraft/class_6880;	1	DESC-CHANGED-> field_5904field_5904
+FIELD	net/minecraft/class_1294	field_5911	Lnet/minecraft/class_6880;	1	DESC-CHANGED-> field_5911field_5911
+FIELD	net/minecraft/class_1294	field_5919	Lnet/minecraft/class_6880;	1	DESC-CHANGED-> field_5919field_5919
+FIELD	net/minecraft/class_1294	field_5925	Lnet/minecraft/class_6880;	1	DESC-CHANGED-> field_5925field_5925
+FIELD	net/minecraft/class_1297	field_36331	Z	1	DESC-CHANGED-> field_36331field_36331
+FIELD	net/minecraft/class_1297	field_51994	Lnet/minecraft/class_9787;	1	DESC-CHANGED-> field_51994field_51994
+FIELD	net/minecraft/class_1297	field_5976	Z	1	DESC-CHANGED-> field_5976field_5976
+FIELD	net/minecraft/class_1297$class_5529	field_26999	Lnet/minecraft/class_1297$class_5529;	1	DESC-CHANGED-> field_26999field_26999
+FIELD	net/minecraft/class_1299	field_6044	Lnet/minecraft/class_1299;	1	DESC-CHANGED-> field_6044field_6044
+FIELD	net/minecraft/class_1299	field_6051	Lnet/minecraft/class_1299;	1	DESC-CHANGED-> field_6051field_6051
+FIELD	net/minecraft/class_1299	field_6052	Lnet/minecraft/class_1299;	1	DESC-CHANGED-> field_6052field_6052
+FIELD	net/minecraft/class_1299	field_6082	Lnet/minecraft/class_1299;	1	DESC-CHANGED-> field_6082field_6082
+FIELD	net/minecraft/class_1299	field_6112	Lnet/minecraft/class_1299;	1	DESC-CHANGED-> field_6112field_6112
+FIELD	net/minecraft/class_1304	field_48824	Lnet/minecraft/class_1304;	1	DESC-CHANGED-> field_48824field_48824
+FIELD	net/minecraft/class_1304	field_55946	Lnet/minecraft/class_1304;	1	DESC-CHANGED-> field_55946field_55946
+FIELD	net/minecraft/class_1304	field_6171	Lnet/minecraft/class_1304;	1	DESC-CHANGED-> field_6171field_6171
+FIELD	net/minecraft/class_1304	field_6173	Lnet/minecraft/class_1304;	1	DESC-CHANGED-> field_6173field_6173
+FIELD	net/minecraft/class_1304$class_1305	field_6178	Lnet/minecraft/class_1304$class_1305;	1	DESC-CHANGED-> field_6178field_6178
+FIELD	net/minecraft/class_1306	field_6182	Lnet/minecraft/class_1306;	1	DESC-CHANGED-> field_6182field_6182
+FIELD	net/minecraft/class_1309	field_6235	I	1	DESC-CHANGED-> field_6235field_6235
+FIELD	net/minecraft/class_1309	field_6254	I	1	DESC-CHANGED-> field_6254field_6254
+FIELD	net/minecraft/class_1657	field_7512	Lnet/minecraft/class_1703;	1	DESC-CHANGED-> field_7512field_7512
+FIELD	net/minecraft/class_1659	field_7536	Lnet/minecraft/class_1659;	1	DESC-CHANGED-> field_7536field_7536
+FIELD	net/minecraft/class_1664	field_7563	Lnet/minecraft/class_1664;	1	DESC-CHANGED-> field_7563field_7563
+FIELD	net/minecraft/class_1664	field_7564	Lnet/minecraft/class_1664;	1	DESC-CHANGED-> field_7564field_7564
+FIELD	net/minecraft/class_1664	field_7565	Lnet/minecraft/class_1664;	1	DESC-CHANGED-> field_7565field_7565
+FIELD	net/minecraft/class_1664	field_7566	Lnet/minecraft/class_1664;	1	DESC-CHANGED-> field_7566field_7566
+FIELD	net/minecraft/class_1664	field_7568	Lnet/minecraft/class_1664;	1	DESC-CHANGED-> field_7568field_7568
+FIELD	net/minecraft/class_1664	field_7570	Lnet/minecraft/class_1664;	1	DESC-CHANGED-> field_7570field_7570
+FIELD	net/minecraft/class_1761$class_7916	field_41053	Lnet/minecraft/class_1761$class_7916;	1	DESC-CHANGED-> field_41053field_41053
+FIELD	net/minecraft/class_1764	field_7937	Z	1	DESC-CHANGED-> field_7937field_7937
+FIELD	net/minecraft/class_1802	field_16482	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_16482field_16482
+FIELD	net/minecraft/class_1802	field_17523	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_17523field_17523
+FIELD	net/minecraft/class_1802	field_17531	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_17531field_17531
+FIELD	net/minecraft/class_1802	field_22024	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_22024field_22024
+FIELD	net/minecraft/class_1802	field_23141	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_23141field_23141
+FIELD	net/minecraft/class_1802	field_41946	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_41946field_41946
+FIELD	net/minecraft/class_1802	field_47830	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_47830field_47830
+FIELD	net/minecraft/class_1802	field_8054	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8054field_8054
+FIELD	net/minecraft/class_1802	field_8090	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8090field_8090
+FIELD	net/minecraft/class_1802	field_8105	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8105field_8105
+FIELD	net/minecraft/class_1802	field_8121	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8121field_8121
+FIELD	net/minecraft/class_1802	field_8143	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8143field_8143
+FIELD	net/minecraft/class_1802	field_8161	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8161field_8161
+FIELD	net/minecraft/class_1802	field_8179	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8179field_8179
+FIELD	net/minecraft/class_1802	field_8249	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8249field_8249
+FIELD	net/minecraft/class_1802	field_8324	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8324field_8324
+FIELD	net/minecraft/class_1802	field_8378	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8378field_8378
+FIELD	net/minecraft/class_1802	field_8407	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8407field_8407
+FIELD	net/minecraft/class_1802	field_8448	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8448field_8448
+FIELD	net/minecraft/class_1802	field_8466	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8466field_8466
+FIELD	net/minecraft/class_1802	field_8529	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8529field_8529
+FIELD	net/minecraft/class_1802	field_8530	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8530field_8530
+FIELD	net/minecraft/class_1802	field_8567	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8567field_8567
+FIELD	net/minecraft/class_1802	field_8606	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8606field_8606
+FIELD	net/minecraft/class_1802	field_8620	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8620field_8620
+FIELD	net/minecraft/class_1802	field_8695	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8695field_8695
+FIELD	net/minecraft/class_1802	field_8705	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8705field_8705
+FIELD	net/minecraft/class_1802	field_8725	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8725field_8725
+FIELD	net/minecraft/class_1802	field_8745	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8745field_8745
+FIELD	net/minecraft/class_1802	field_8790	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8790field_8790
+FIELD	net/minecraft/class_1802	field_8793	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8793field_8793
+FIELD	net/minecraft/class_1802	field_8801	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8801field_8801
+FIELD	net/minecraft/class_1802	field_8802	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8802field_8802
+FIELD	net/minecraft/class_1802	field_8814	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8814field_8814
+FIELD	net/minecraft/class_1802	field_8862	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8862field_8862
+FIELD	net/minecraft/class_1802	field_8884	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8884field_8884
+FIELD	net/minecraft/class_1802	field_8892	Lnet/minecraft/class_1792;	1	DESC-CHANGED-> field_8892field_8892
+FIELD	net/minecraft/class_1893	field_50158	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_50158field_50158
+FIELD	net/minecraft/class_1893	field_9097	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9097field_9097
+FIELD	net/minecraft/class_1893	field_9105	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9105field_9105
+FIELD	net/minecraft/class_1893	field_9113	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9113field_9113
+FIELD	net/minecraft/class_1893	field_9115	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9115field_9115
+FIELD	net/minecraft/class_1893	field_9118	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9118field_9118
+FIELD	net/minecraft/class_1893	field_9121	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9121field_9121
+FIELD	net/minecraft/class_1893	field_9124	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9124field_9124
+FIELD	net/minecraft/class_1893	field_9129	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9129field_9129
+FIELD	net/minecraft/class_1893	field_9130	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9130field_9130
+FIELD	net/minecraft/class_1934	field_9219	Lnet/minecraft/class_1934;	1	DESC-CHANGED-> field_9219field_9219
+FIELD	net/minecraft/class_1944	field_9282	Lnet/minecraft/class_1944;	1	DESC-CHANGED-> field_9282field_9282
+FIELD	net/minecraft/class_1959$class_1963	field_9382	Lnet/minecraft/class_1959$class_1963;	1	DESC-CHANGED-> field_9382field_9382
+FIELD	net/minecraft/class_1959$class_1963	field_9383	Lnet/minecraft/class_1959$class_1963;	1	DESC-CHANGED-> field_9383field_9383
+FIELD	net/minecraft/class_1959$class_1963	field_9384	Lnet/minecraft/class_1959$class_1963;	1	DESC-CHANGED-> field_9384field_9384
+FIELD	net/minecraft/class_1972	field_9411	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9411field_9411
+FIELD	net/minecraft/class_1972	field_9451	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9451field_9451
+FIELD	net/minecraft/class_1972	field_9462	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_9462field_9462
+FIELD	net/minecraft/class_2172$class_2173	field_9834	Lnet/minecraft/class_2172$class_2173;	1	DESC-CHANGED-> field_9834field_9834
+FIELD	net/minecraft/class_22	field_119	B	1	DESC-CHANGED-> field_119field_119
+FIELD	net/minecraft/class_22	field_122	[B	1	DESC-CHANGED-> field_122field_122
+FIELD	net/minecraft/class_2246	field_10002	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10002field_10002
+FIELD	net/minecraft/class_2246	field_10027	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10027field_10027
+FIELD	net/minecraft/class_2246	field_10029	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10029field_10029
+FIELD	net/minecraft/class_2246	field_10033	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10033field_10033
+FIELD	net/minecraft/class_2246	field_10034	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10034field_10034
+FIELD	net/minecraft/class_2246	field_10110	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10110field_10110
+FIELD	net/minecraft/class_2246	field_10114	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10114field_10114
+FIELD	net/minecraft/class_2246	field_10164	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10164field_10164
+FIELD	net/minecraft/class_2246	field_10211	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10211field_10211
+FIELD	net/minecraft/class_2246	field_10225	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10225field_10225
+FIELD	net/minecraft/class_2246	field_10243	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10243field_10243
+FIELD	net/minecraft/class_2246	field_10255	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10255field_10255
+FIELD	net/minecraft/class_2246	field_10285	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10285field_10285
+FIELD	net/minecraft/class_2246	field_10295	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10295field_10295
+FIELD	net/minecraft/class_2246	field_10340	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10340field_10340
+FIELD	net/minecraft/class_2246	field_10362	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10362field_10362
+FIELD	net/minecraft/class_2246	field_10379	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10379field_10379
+FIELD	net/minecraft/class_2246	field_10384	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10384field_10384
+FIELD	net/minecraft/class_2246	field_10422	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10422field_10422
+FIELD	net/minecraft/class_2246	field_10424	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10424field_10424
+FIELD	net/minecraft/class_2246	field_10443	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10443field_10443
+FIELD	net/minecraft/class_2246	field_10445	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10445field_10445
+FIELD	net/minecraft/class_2246	field_10528	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10528field_10528
+FIELD	net/minecraft/class_2246	field_10560	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10560field_10560
+FIELD	net/minecraft/class_2246	field_10603	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_10603field_10603
+FIELD	net/minecraft/class_2246	field_16492	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_16492field_16492
+FIELD	net/minecraft/class_2246	field_21211	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_21211field_21211
+FIELD	net/minecraft/class_2246	field_22089	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_22089field_22089
+FIELD	net/minecraft/class_2246	field_22090	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_22090field_22090
+FIELD	net/minecraft/class_2246	field_22109	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_22109field_22109
+FIELD	net/minecraft/class_2246	field_22113	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_22113field_22113
+FIELD	net/minecraft/class_2246	field_22120	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_22120field_22120
+FIELD	net/minecraft/class_2246	field_22423	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_22423field_22423
+FIELD	net/minecraft/class_2246	field_23077	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_23077field_23077
+FIELD	net/minecraft/class_2246	field_23880	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_23880field_23880
+FIELD	net/minecraft/class_2246	field_27120	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_27120field_27120
+FIELD	net/minecraft/class_2246	field_27133	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_27133field_27133
+FIELD	net/minecraft/class_2246	field_27159	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_27159field_27159
+FIELD	net/minecraft/class_2246	field_28048	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28048field_28048
+FIELD	net/minecraft/class_2246	field_28411	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28411field_28411
+FIELD	net/minecraft/class_2246	field_28673	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28673field_28673
+FIELD	net/minecraft/class_2246	field_28675	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28675field_28675
+FIELD	net/minecraft/class_2246	field_28678	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28678field_28678
+FIELD	net/minecraft/class_2246	field_28680	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28680field_28680
+FIELD	net/minecraft/class_2246	field_28888	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28888field_28888
+FIELD	net/minecraft/class_2246	field_28896	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28896field_28896
+FIELD	net/minecraft/class_2246	field_28900	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28900field_28900
+FIELD	net/minecraft/class_2246	field_28904	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_28904field_28904
+FIELD	net/minecraft/class_2246	field_29222	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_29222field_29222
+FIELD	net/minecraft/class_2246	field_29223	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_29223field_29223
+FIELD	net/minecraft/class_2246	field_31037	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_31037field_31037
+FIELD	net/minecraft/class_2246	field_33407	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_33407field_33407
+FIELD	net/minecraft/class_2246	field_33408	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_33408field_33408
+FIELD	net/minecraft/class_2246	field_37546	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_37546field_37546
+FIELD	net/minecraft/class_2246	field_37551	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_37551field_37551
+FIELD	net/minecraft/class_2246	field_37568	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_37568field_37568
+FIELD	net/minecraft/class_2246	field_37576	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_37576field_37576
+FIELD	net/minecraft/class_2246	field_38420	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_38420field_38420
+FIELD	net/minecraft/class_2246	field_41072	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_41072field_41072
+FIELD	net/minecraft/class_2246	field_47030	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_47030field_47030
+FIELD	net/minecraft/class_2246	field_47039	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_47039field_47039
+FIELD	net/minecraft/class_2246	field_47071	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_47071field_47071
+FIELD	net/minecraft/class_2246	field_9980	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_9980field_9980
+FIELD	net/minecraft/class_2246	field_9983	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_9983field_9983
+FIELD	net/minecraft/class_2246	field_9989	Lnet/minecraft/class_2248;	1	DESC-CHANGED-> field_9989field_9989
+FIELD	net/minecraft/class_2277	field_10755	Lcom/mojang/brigadier/exceptions/SimpleCommandExceptionType;	1	DESC-CHANGED-> field_10755field_10755
+FIELD	net/minecraft/class_2281	field_10768	Lnet/minecraft/class_2754;	1	DESC-CHANGED-> field_10768field_10768
+FIELD	net/minecraft/class_2318	field_10927	Lnet/minecraft/class_2754;	1	DESC-CHANGED-> field_10927field_10927
+FIELD	net/minecraft/class_2338	field_25064	Lcom/mojang/serialization/Codec;	1	DESC-CHANGED-> field_25064field_25064
+FIELD	net/minecraft/class_2350$class_2351	field_11048	Lnet/minecraft/class_2350$class_2351;	1	DESC-CHANGED-> field_11048field_11048
+FIELD	net/minecraft/class_2350$class_2351	field_11051	Lnet/minecraft/class_2350$class_2351;	1	DESC-CHANGED-> field_11051field_11051
+FIELD	net/minecraft/class_2350$class_2353	field_11064	Lnet/minecraft/class_2350$class_2353;	1	DESC-CHANGED-> field_11064field_11064
+FIELD	net/minecraft/class_239$class_240	field_1331	Lnet/minecraft/class_239$class_240;	1	DESC-CHANGED-> field_1331field_1331
+FIELD	net/minecraft/class_2398	field_11220	Lnet/minecraft/class_2400;	1	DESC-CHANGED-> field_11220field_11220
+FIELD	net/minecraft/class_2398	field_11248	Lnet/minecraft/class_2400;	1	DESC-CHANGED-> field_11248field_11248
+FIELD	net/minecraft/class_2399	field_55768	Ljava/util/Map;	1	DESC-CHANGED-> field_55768field_55768
+FIELD	net/minecraft/class_2421	field_11306	Lnet/minecraft/class_2758;	1	DESC-CHANGED-> field_11306field_11306
+FIELD	net/minecraft/class_2488	field_11518	Lnet/minecraft/class_2758;	1	DESC-CHANGED-> field_11518field_11518
+FIELD	net/minecraft/class_2535	field_11651	Lio/netty/channel/Channel;	1	DESC-CHANGED-> field_11651field_11651
+FIELD	net/minecraft/class_2535	field_11656	I	1	DESC-CHANGED-> field_11656field_11656
+FIELD	net/minecraft/class_2583	field_24360	Lnet/minecraft/class_2583;	1	DESC-CHANGED-> field_24360field_24360
+FIELD	net/minecraft/class_2598	field_11942	Lnet/minecraft/class_2598;	1	DESC-CHANGED-> field_11942field_11942
+FIELD	net/minecraft/class_2627$class_2628	field_12065	Lnet/minecraft/class_2627$class_2628;	1	DESC-CHANGED-> field_12065field_12065
+FIELD	net/minecraft/class_2709	field_12397	Lnet/minecraft/class_2709;	1	DESC-CHANGED-> field_12397field_12397
+FIELD	net/minecraft/class_2709	field_12401	Lnet/minecraft/class_2709;	1	DESC-CHANGED-> field_12401field_12401
+FIELD	net/minecraft/class_2745	field_12574	Lnet/minecraft/class_2745;	1	DESC-CHANGED-> field_12574field_12574
+FIELD	net/minecraft/class_276	field_1481	I	1	DESC-CHANGED-> field_1481field_1481
+FIELD	net/minecraft/class_276	field_1482	I	1	DESC-CHANGED-> field_1482field_1482
+FIELD	net/minecraft/class_279	field_53104	Lnet/minecraft/class_2960;	1	DESC-CHANGED-> field_53104field_53104
+FIELD	net/minecraft/class_2846$class_2847	field_12969	Lnet/minecraft/class_2846$class_2847;	1	DESC-CHANGED-> field_12969field_12969
+FIELD	net/minecraft/class_2848$class_2849	field_12982	Lnet/minecraft/class_2848$class_2849;	1	DESC-CHANGED-> field_12982field_12982
+FIELD	net/minecraft/class_2856$class_2857	field_13015	Lnet/minecraft/class_2856$class_2857;	1	DESC-CHANGED-> field_13015field_13015
+FIELD	net/minecraft/class_2859$class_2860	field_13024	Lnet/minecraft/class_2859$class_2860;	1	DESC-CHANGED-> field_13024field_13024
+FIELD	net/minecraft/class_290	field_1580	Lcom/mojang/blaze3d/vertex/VertexFormat;	1	DESC-CHANGED-> field_1580field_1580
+FIELD	net/minecraft/class_290	field_1585	Lcom/mojang/blaze3d/vertex/VertexFormat;	1	DESC-CHANGED-> field_1585field_1585
+FIELD	net/minecraft/class_310	field_1719	Lnet/minecraft/class_1297;	1	DESC-CHANGED-> field_1719field_1719
+FIELD	net/minecraft/class_315	field_1822	Lnet/minecraft/class_304;	1	DESC-CHANGED-> field_1822field_1822
+FIELD	net/minecraft/class_315	field_1867	Lnet/minecraft/class_304;	1	DESC-CHANGED-> field_1867field_1867
+FIELD	net/minecraft/class_315	field_1907	Lnet/minecraft/class_304;	1	DESC-CHANGED-> field_1907field_1907
+FIELD	net/minecraft/class_3417	field_14890	Lnet/minecraft/class_3414;	1	DESC-CHANGED-> field_14890field_14890
+FIELD	net/minecraft/class_3417	field_14931	Lnet/minecraft/class_3414;	1	DESC-CHANGED-> field_14931field_14931
+FIELD	net/minecraft/class_3419	field_15248	Lnet/minecraft/class_3419;	1	DESC-CHANGED-> field_15248field_15248
+FIELD	net/minecraft/class_3419	field_15250	Lnet/minecraft/class_3419;	1	DESC-CHANGED-> field_15250field_15250
+FIELD	net/minecraft/class_3481	field_15466	Lnet/minecraft/class_6862;	1	DESC-CHANGED-> field_15466field_15466
+FIELD	net/minecraft/class_3481	field_22414	Lnet/minecraft/class_6862;	1	DESC-CHANGED-> field_22414field_22414
+FIELD	net/minecraft/class_3481	field_29822	Lnet/minecraft/class_6862;	1	DESC-CHANGED-> field_29822field_29822
+FIELD	net/minecraft/class_3489	field_42611	Lnet/minecraft/class_6862;	1	DESC-CHANGED-> field_42611field_42611
+FIELD	net/minecraft/class_3489	field_42612	Lnet/minecraft/class_6862;	1	DESC-CHANGED-> field_42612field_42612
+FIELD	net/minecraft/class_3489	field_42614	Lnet/minecraft/class_6862;	1	DESC-CHANGED-> field_42614field_42614
+FIELD	net/minecraft/class_3612	field_15909	Lnet/minecraft/class_3609;	1	DESC-CHANGED-> field_15909field_15909
+FIELD	net/minecraft/class_3612	field_15910	Lnet/minecraft/class_3609;	1	DESC-CHANGED-> field_15910field_15910
+FIELD	net/minecraft/class_3620	field_16008	Lnet/minecraft/class_3620;	1	DESC-CHANGED-> field_16008field_16008
+FIELD	net/minecraft/class_3620	field_16011	I	1	DESC-CHANGED-> field_16011field_16011
+FIELD	net/minecraft/class_3675$class_307	field_1668	Lnet/minecraft/class_3675$class_307;	1	DESC-CHANGED-> field_1668field_1668
+FIELD	net/minecraft/class_3675$class_307	field_1672	Lnet/minecraft/class_3675$class_307;	1	DESC-CHANGED-> field_1672field_1672
+FIELD	net/minecraft/class_370$class_9037	field_47589	Lnet/minecraft/class_370$class_9037;	1	DESC-CHANGED-> field_47589field_47589
+FIELD	net/minecraft/class_3959$class_242	field_1347	Lnet/minecraft/class_3959$class_242;	1	DESC-CHANGED-> field_1347field_1347
+FIELD	net/minecraft/class_4061	field_18151	Lnet/minecraft/class_4061;	1	DESC-CHANGED-> field_18151field_18151
+FIELD	net/minecraft/class_4065	field_18176	Lnet/minecraft/class_4065;	1	DESC-CHANGED-> field_18176field_18176
+FIELD	net/minecraft/class_437	field_22789	I	1	DESC-CHANGED-> field_22789field_22789
+FIELD	net/minecraft/class_437	field_22790	I	1	DESC-CHANGED-> field_22790field_22790
+FIELD	net/minecraft/class_4597$class_4598	field_20953	Ljava/util/SequencedMap;	1	DESC-CHANGED-> field_20953field_20953
+FIELD	net/minecraft/class_4597$class_4598	field_52157	Ljava/util/Map;	1	DESC-CHANGED-> field_52157field_52157
+FIELD	net/minecraft/class_4597$class_4598	field_52158	Lnet/minecraft/class_1921;	1	DESC-CHANGED-> field_52158field_52158
+FIELD	net/minecraft/class_4608	field_21444	I	1	DESC-CHANGED-> field_21444field_21444
+FIELD	net/minecraft/class_481	field_2896	Lnet/minecraft/class_1761;	1	DESC-CHANGED-> field_2896field_2896
+FIELD	net/minecraft/class_4837	field_22383	Lnet/minecraft/class_4837;	1	DESC-CHANGED-> field_22383field_22383
+FIELD	net/minecraft/class_4837	field_22384	Lnet/minecraft/class_4837;	1	DESC-CHANGED-> field_22384field_22384
+FIELD	net/minecraft/class_4837	field_25165	Lnet/minecraft/class_4837;	1	DESC-CHANGED-> field_25165field_25165
+FIELD	net/minecraft/class_4969	field_23153	Lnet/minecraft/class_2758;	1	DESC-CHANGED-> field_23153field_23153
+FIELD	net/minecraft/class_5134	field_23724	Lnet/minecraft/class_6880;	1	DESC-CHANGED-> field_23724field_23724
+FIELD	net/minecraft/class_5134	field_47761	Lnet/minecraft/class_6880;	1	DESC-CHANGED-> field_47761field_47761
+FIELD	net/minecraft/class_516$class_9937	field_52848	Lnet/minecraft/class_516$class_9937;	1	DESC-CHANGED-> field_52848field_52848
+FIELD	net/minecraft/class_5352	field_25348	Lnet/minecraft/class_5352;	1	DESC-CHANGED-> field_25348field_25348
+FIELD	net/minecraft/class_5498	field_26665	Lnet/minecraft/class_5498;	1	DESC-CHANGED-> field_26665field_26665
+FIELD	net/minecraft/class_630	field_3654	F	1	DESC-CHANGED-> field_3654field_3654
+FIELD	net/minecraft/class_630	field_3674	F	1	DESC-CHANGED-> field_3674field_3674
+FIELD	net/minecraft/class_630	field_3675	F	1	DESC-CHANGED-> field_3675field_3675
+FIELD	net/minecraft/class_642$class_8678	field_45611	Lnet/minecraft/class_642$class_8678;	1	DESC-CHANGED-> field_45611field_45611
+FIELD	net/minecraft/class_703	field_3847	I	1	DESC-CHANGED-> field_3847field_3847
+FIELD	net/minecraft/class_746	field_3914	F	1	DESC-CHANGED-> field_3914field_3914
+FIELD	net/minecraft/class_746	field_3916	F	1	DESC-CHANGED-> field_3916field_3916
+FIELD	net/minecraft/class_746	field_3931	F	1	DESC-CHANGED-> field_3931field_3931
+FIELD	net/minecraft/class_746	field_3932	F	1	DESC-CHANGED-> field_3932field_3932
+FIELD	net/minecraft/class_7833	field_40715	Lnet/minecraft/class_7833;	1	DESC-CHANGED-> field_40715field_40715
+FIELD	net/minecraft/class_7923	field_41174	Lnet/minecraft/class_2378;	1	DESC-CHANGED-> field_41174field_41174
+FIELD	net/minecraft/class_7923	field_41177	Lnet/minecraft/class_7922;	1	DESC-CHANGED-> field_41177field_41177
+FIELD	net/minecraft/class_7924	field_41197	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_41197field_41197
+FIELD	net/minecraft/class_7924	field_41254	Lnet/minecraft/class_5321;	1	DESC-CHANGED-> field_41254field_41254
+FIELD	net/minecraft/class_8001	field_41687	Lnet/minecraft/class_8000;	1	DESC-CHANGED-> field_41687field_41687
+FIELD	net/minecraft/class_811	field_4319	Lnet/minecraft/class_811;	1	DESC-CHANGED-> field_4319field_4319
+FIELD	net/minecraft/class_8646	field_45156	Lnet/minecraft/class_8646;	1	DESC-CHANGED-> field_45156field_45156
+FIELD	net/minecraft/class_8709	field_48655	Lnet/minecraft/class_8710$class_9154;	1	DESC-CHANGED-> field_48655field_48655
+FIELD	net/minecraft/class_892	field_53187	Lnet/minecraft/class_9946;	1	DESC-CHANGED-> field_53187field_53187
+FIELD	net/minecraft/class_9334	field_49624	Lnet/minecraft/class_9331;	1	DESC-CHANGED-> field_49624field_49624
+FIELD	net/minecraft/class_9334	field_49628	Lnet/minecraft/class_9331;	1	DESC-CHANGED-> field_49628field_49628
+FIELD	net/minecraft/class_9334	field_49636	Lnet/minecraft/class_9331;	1	DESC-CHANGED-> field_49636field_49636
+FIELD	net/minecraft/class_9334	field_49649	Lnet/minecraft/class_9331;	1	DESC-CHANGED-> field_49649field_49649
+FIELD	net/minecraft/class_9334	field_49652	Lnet/minecraft/class_9331;	1	DESC-CHANGED-> field_49652field_49652
+FIELD	net/minecraft/class_9334	field_53964	Lnet/minecraft/class_9331;	1	DESC-CHANGED-> field_53964field_53964
+FIELD	net/minecraft/class_9334	field_56396	Lnet/minecraft/class_9331;	1	DESC-CHANGED-> field_56396field_56396
+FIELD	net/minecraft/class_9636	field_51551	Lnet/minecraft/class_6862;	1	DESC-CHANGED-> field_51551field_51551
+FIELD	net/minecraft/class_9851	field_52395	Lnet/minecraft/class_9851;	1	DESC-CHANGED-> field_52395field_52395
+FIELD	net/minecraft/class_9851	field_52396	Lnet/minecraft/class_9851;	1	DESC-CHANGED-> field_52396field_52396
+FIELD	net/minecraft/class_9946	field_52900	Lnet/minecraft/class_630;	1	DESC-CHANGED-> field_52900field_52900
+FIELD	net/minecraft/class_9946	field_52901	Lnet/minecraft/class_630;	1	DESC-CHANGED-> field_52901field_52901
+FIELD	net/minecraft/class_9946	field_52902	Lnet/minecraft/class_630;	1	DESC-CHANGED-> field_52902field_52902
+FIELD	net/minecraft/class_9960	field_53097	Lnet/minecraft/class_9925;	1	DESC-CHANGED-> field_53097field_53097
+FIELD	net/minecraft/class_9960	field_53902	Ljava/util/Set;	1	DESC-CHANGED-> field_53902field_53902
+METHOD	net/minecraft/class_1011	method_24032	(Ljava/nio/channels/WritableByteChannel;)Z	1	DESC-CHANGED-> method_24032method_24032
+METHOD	net/minecraft/class_1011	method_4324	(Ljava/nio/ByteBuffer;)Lnet/minecraft/class_1011;	1	DESC-CHANGED-> method_4324method_4324
+METHOD	net/minecraft/class_10151	method_62941	(Lnet/minecraft/class_2960;Ljava/util/Set;)Lnet/minecraft/class_279;	1	DESC-CHANGED-> method_62941method_62941
+METHOD	net/minecraft/class_10185	comp_3163	()Z	1	DESC-CHANGED-> comp_3163comp_3163
+METHOD	net/minecraft/class_1041	method_4495	()D	1	DESC-CHANGED-> method_4495None
+METHOD	net/minecraft/class_1060	method_4619	(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1044;	1	DESC-CHANGED-> method_4619method_4619
+METHOD	net/minecraft/class_1113	method_43221	()Lnet/minecraft/class_5819;	1	DESC-CHANGED-> method_43221method_43221
+METHOD	net/minecraft/class_124	method_539	(Ljava/lang/String;)Ljava/lang/String;	1	DESC-CHANGED-> method_539method_539
+METHOD	net/minecraft/class_1292	method_5575	(Lnet/minecraft/class_1309;)I	1	DESC-CHANGED-> method_5575method_5575
+METHOD	net/minecraft/class_1292	method_5576	(Lnet/minecraft/class_1309;)Z	1	DESC-CHANGED-> method_5576method_5576
+METHOD	net/minecraft/class_1293	method_5578	()I	1	DESC-CHANGED-> method_5578method_5578
+METHOD	net/minecraft/class_1293	method_5584	()I	1	DESC-CHANGED-> method_5584method_5584
+METHOD	net/minecraft/class_1297	method_18376	()Lnet/minecraft/class_4050;	1	DESC-CHANGED-> method_18376method_18376
+METHOD	net/minecraft/class_1297	method_18381	(Lnet/minecraft/class_4050;)F	1	DESC-CHANGED-> method_18381method_18381
+METHOD	net/minecraft/class_1297	method_36455	()F	1	DESC-CHANGED-> method_36455method_36455
+METHOD	net/minecraft/class_1297	method_36456	(F)V	1	DESC-CHANGED-> method_36456method_36456
+METHOD	net/minecraft/class_1297	method_36457	(F)V	1	DESC-CHANGED-> method_36457method_36457
+METHOD	net/minecraft/class_1297	method_5751	()F	1	DESC-CHANGED-> method_5751method_5751
+METHOD	net/minecraft/class_1297	method_5847	(F)V	1	DESC-CHANGED-> method_5847method_5847
+METHOD	net/minecraft/class_1297	method_59920	(Lnet/minecraft/class_1297;Lnet/minecraft/class_1937;Ljava/util/List;Lnet/minecraft/class_238;)Ljava/util/List;	1	DESC-CHANGED-> method_59920method_59920
+METHOD	net/minecraft/class_1297	method_60949	(Lnet/minecraft/class_243;FF)V	1	DESC-CHANGED-> method_60949method_60949
+METHOD	net/minecraft/class_1304	method_5927	()I	1	DESC-CHANGED-> method_5927method_5927
+METHOD	net/minecraft/class_1309	method_6059	(Lnet/minecraft/class_6880;)Z	1	DESC-CHANGED-> method_6059method_6059
+METHOD	net/minecraft/class_1309	method_6112	(Lnet/minecraft/class_6880;)Lnet/minecraft/class_1293;	1	DESC-CHANGED-> method_6112method_6112
+METHOD	net/minecraft/class_1493	method_58062	()Lnet/minecraft/class_6880;	1	DESC-CHANGED-> method_58062method_58062
+METHOD	net/minecraft/class_156	method_27958	()Lnet/minecraft/class_10207;	1	DESC-CHANGED-> method_27958method_27958
+METHOD	net/minecraft/class_156	method_34865	(Ljava/util/function/BiFunction;)Ljava/util/function/BiFunction;	1	DESC-CHANGED-> method_34865method_34865
+METHOD	net/minecraft/class_156	method_34866	(Ljava/util/function/Function;)Ljava/util/function/Function;	1	DESC-CHANGED-> method_34866method_34866
+METHOD	net/minecraft/class_156	method_648	()J	1	DESC-CHANGED-> method_648method_648
+METHOD	net/minecraft/class_156	method_658	()J	1	DESC-CHANGED-> method_658method_658
+METHOD	net/minecraft/class_1656	method_7253	()F	1	DESC-CHANGED-> method_7253method_7253
+METHOD	net/minecraft/class_1701	method_7578	()Z	1	DESC-CHANGED-> method_7578method_7578
+METHOD	net/minecraft/class_1703	method_7611	(I)Lnet/minecraft/class_1735;	1	DESC-CHANGED-> method_7611method_7611
+METHOD	net/minecraft/class_1723	method_29281	()Lnet/minecraft/class_8566;	1	DESC-CHANGED-> method_29281method_29281
+METHOD	net/minecraft/class_1747	method_7711	()Lnet/minecraft/class_2248;	1	DESC-CHANGED-> method_7711method_7711
+METHOD	net/minecraft/class_1764	method_20309	(Lnet/minecraft/class_9278;)F	1	DESC-CHANGED-> method_20309method_20309
+METHOD	net/minecraft/class_1799	method_31573	(Lnet/minecraft/class_6862;)Z	1	DESC-CHANGED-> method_31573method_31573
+METHOD	net/minecraft/class_1799	method_31577	(Lnet/minecraft/class_1799;Lnet/minecraft/class_1799;)Z	1	DESC-CHANGED-> method_31577method_31577
+METHOD	net/minecraft/class_1799	method_7942	()Z	1	DESC-CHANGED-> method_7942method_7942
+METHOD	net/minecraft/class_1887	comp_2686	()Lnet/minecraft/class_2561;	1	DESC-CHANGED-> comp_2686comp_2686
+METHOD	net/minecraft/class_1887	method_60046	(Lnet/minecraft/class_1799;)Z	1	DESC-CHANGED-> method_60046method_60046
+METHOD	net/minecraft/class_1887	method_8183	()I	1	DESC-CHANGED-> method_8183method_8183
+METHOD	net/minecraft/class_1890	method_57531	(Lnet/minecraft/class_1799;Ljava/util/function/Consumer;)Lnet/minecraft/class_9304;	1	DESC-CHANGED-> method_57531method_57531
+METHOD	net/minecraft/class_1922	method_8320	(Lnet/minecraft/class_2338;)Lnet/minecraft/class_2680;	1	DESC-CHANGED-> method_8320method_8320
+METHOD	net/minecraft/class_2248	method_9564	()Lnet/minecraft/class_2680;	1	DESC-CHANGED-> method_9564method_9564
+METHOD	net/minecraft/class_2338	method_10084	()Lnet/minecraft/class_2338;	1	DESC-CHANGED-> method_10084method_10084
+METHOD	net/minecraft/class_2378	method_42021	()Ljava/util/Set;	1	DESC-CHANGED-> method_42021method_42021
+METHOD	net/minecraft/class_2378	method_63535	(Lnet/minecraft/class_2960;)Ljava/lang/Object;	1	DESC-CHANGED-> method_63535method_63535
+METHOD	net/minecraft/class_238	method_1006	(Lnet/minecraft/class_243;)Z	1	DESC-CHANGED-> method_1006method_1006
+METHOD	net/minecraft/class_238	method_1009	(DDD)Lnet/minecraft/class_238;	1	DESC-CHANGED-> method_1009method_1009
+METHOD	net/minecraft/class_238	method_17940	()D	1	DESC-CHANGED-> method_17940method_17940
+METHOD	net/minecraft/class_239	method_17783	()Lnet/minecraft/class_239$class_240;	1	DESC-CHANGED-> method_17783method_17783
+METHOD	net/minecraft/class_243	method_1019	(Lnet/minecraft/class_243;)Lnet/minecraft/class_243;	1	DESC-CHANGED-> method_1019method_1019
+METHOD	net/minecraft/class_243	method_1022	(Lnet/minecraft/class_243;)D	1	DESC-CHANGED-> method_1022method_1022
+METHOD	net/minecraft/class_243	method_1024	(F)Lnet/minecraft/class_243;	1	DESC-CHANGED-> method_1024method_1024
+METHOD	net/minecraft/class_243	method_1028	(DDD)D	1	DESC-CHANGED-> method_1028method_1028
+METHOD	net/minecraft/class_243	method_1037	(F)Lnet/minecraft/class_243;	1	DESC-CHANGED-> method_1037method_1037
+METHOD	net/minecraft/class_2540	method_10804	(I)Lnet/minecraft/class_2540;	1	DESC-CHANGED-> method_10804method_10804
+METHOD	net/minecraft/class_2558$class_10609	comp_3506	()Ljava/lang/String;	1	DESC-CHANGED-> comp_3506comp_3506
+METHOD	net/minecraft/class_2561	method_30937	()Lnet/minecraft/class_5481;	1	DESC-CHANGED-> method_30937method_30937
+METHOD	net/minecraft/class_2561	method_43471	(Ljava/lang/String;)Lnet/minecraft/class_5250;	1	DESC-CHANGED-> method_43471method_43471
+METHOD	net/minecraft/class_2583	method_10965	()Z	1	DESC-CHANGED-> method_10965method_10965
+METHOD	net/minecraft/class_2583	method_10966	()Z	1	DESC-CHANGED-> method_10966method_10966
+METHOD	net/minecraft/class_2583	method_10970	()Lnet/minecraft/class_2558;	1	DESC-CHANGED-> method_10970method_10970
+METHOD	net/minecraft/class_2583	method_10978	(Ljava/lang/Boolean;)Lnet/minecraft/class_2583;	1	DESC-CHANGED-> method_10978method_10978
+METHOD	net/minecraft/class_2583	method_10982	(Ljava/lang/Boolean;)Lnet/minecraft/class_2583;	1	DESC-CHANGED-> method_10982method_10982
+METHOD	net/minecraft/class_2583	method_10984	()Z	1	DESC-CHANGED-> method_10984method_10984
+METHOD	net/minecraft/class_2583	method_10986	()Z	1	DESC-CHANGED-> method_10986method_10986
+METHOD	net/minecraft/class_2583	method_10987	()Z	1	DESC-CHANGED-> method_10987method_10987
+METHOD	net/minecraft/class_2583	method_30938	(Ljava/lang/Boolean;)Lnet/minecraft/class_2583;	1	DESC-CHANGED-> method_30938method_30938
+METHOD	net/minecraft/class_2583	method_36140	(Ljava/lang/Boolean;)Lnet/minecraft/class_2583;	1	DESC-CHANGED-> method_36140method_36140
+METHOD	net/minecraft/class_2583	method_36141	(Ljava/lang/Boolean;)Lnet/minecraft/class_2583;	1	DESC-CHANGED-> method_36141method_36141
+METHOD	net/minecraft/class_2586	method_11016	()Lnet/minecraft/class_2338;	1	DESC-CHANGED-> method_11016method_11016
+METHOD	net/minecraft/class_259	method_1073	()Lnet/minecraft/class_265;	1	DESC-CHANGED-> method_1073method_1073
+METHOD	net/minecraft/class_259	method_1077	()Lnet/minecraft/class_265;	1	DESC-CHANGED-> method_1077method_1077
+METHOD	net/minecraft/class_2604	method_11169	()Lnet/minecraft/class_1299;	1	DESC-CHANGED-> method_11169method_11169
+METHOD	net/minecraft/class_265	method_1107	()Lnet/minecraft/class_238;	1	DESC-CHANGED-> method_1107method_1107
+METHOD	net/minecraft/class_265	method_1110	()Z	1	DESC-CHANGED-> method_1110method_1110
+METHOD	net/minecraft/class_2664	comp_2883	()Lnet/minecraft/class_243;	1	DESC-CHANGED-> comp_2883comp_2883
+METHOD	net/minecraft/class_2664	comp_2884	()Ljava/util/Optional;	1	DESC-CHANGED-> comp_2884comp_2884
+METHOD	net/minecraft/class_269	method_1189	(Lnet/minecraft/class_8646;)Lnet/minecraft/class_266;	1	DESC-CHANGED-> method_1189method_1189
+METHOD	net/minecraft/class_2692	comp_3347	()Lnet/minecraft/class_243;	1	DESC-CHANGED-> comp_3347comp_3347
+METHOD	net/minecraft/class_2693	method_11677	()Lnet/minecraft/class_2338;	1	DESC-CHANGED-> method_11677method_11677
+METHOD	net/minecraft/class_2693	method_49995	()Z	1	DESC-CHANGED-> method_49995method_49995
+METHOD	net/minecraft/class_2735	comp_3325	()I	1	DESC-CHANGED-> comp_3325comp_3325
+METHOD	net/minecraft/class_2743	method_11818	()I	1	DESC-CHANGED-> method_11818method_11818
+METHOD	net/minecraft/class_276	method_1234	(II)V	1	DESC-CHANGED-> method_1234method_1234
+METHOD	net/minecraft/class_276	method_30277	()Lcom/mojang/blaze3d/textures/GpuTexture;	1	DESC-CHANGED-> method_30277method_30277
+METHOD	net/minecraft/class_276	method_30278	()Lcom/mojang/blaze3d/textures/GpuTexture;	1	DESC-CHANGED-> method_30278method_30278
+METHOD	net/minecraft/class_279	method_62234	(Lnet/minecraft/class_9909;IILnet/minecraft/class_279$class_9961;Ljava/util/function/Consumer;)V	1	DESC-CHANGED-> method_62234None
+METHOD	net/minecraft/class_279$class_9961	method_62241	(Lnet/minecraft/class_2960;Lnet/minecraft/class_9925;)Lnet/minecraft/class_279$class_9961;	1	DESC-CHANGED-> method_62241method_62241
+METHOD	net/minecraft/class_2824	method_55976	(Lnet/minecraft/class_2540;)V	1	DESC-CHANGED-> method_55976method_55976
+METHOD	net/minecraft/class_287	method_60794	()Lnet/minecraft/class_9801;	1	DESC-CHANGED-> method_60794method_60794
+METHOD	net/minecraft/class_2886	method_12551	()Lnet/minecraft/class_1268;	1	DESC-CHANGED-> method_12551method_12551
+METHOD	net/minecraft/class_2886	method_42081	()I	1	DESC-CHANGED-> method_42081method_42081
+METHOD	net/minecraft/class_289	method_1348	()Lnet/minecraft/class_289;	1	DESC-CHANGED-> method_1348method_1348
+METHOD	net/minecraft/class_289	method_60827	(Lcom/mojang/blaze3d/vertex/VertexFormat$class_5596;Lcom/mojang/blaze3d/vertex/VertexFormat;)Lnet/minecraft/class_287;	1	DESC-CHANGED-> method_60827method_60827
+METHOD	net/minecraft/class_2960	method_12833	(Lnet/minecraft/class_2960;)I	1	DESC-CHANGED-> method_12833method_12833
+METHOD	net/minecraft/class_2960	method_60654	(Ljava/lang/String;)Lnet/minecraft/class_2960;	1	DESC-CHANGED-> method_60654method_60654
+METHOD	net/minecraft/class_303	comp_894	()Lnet/minecraft/class_7591;	1	DESC-CHANGED-> comp_894comp_894
+METHOD	net/minecraft/class_303	comp_915	()Lnet/minecraft/class_7469;	1	DESC-CHANGED-> comp_915comp_915
+METHOD	net/minecraft/class_304	method_1417	(II)Z	1	DESC-CHANGED-> method_1417None
+METHOD	net/minecraft/class_304	method_1434	()Z	1	DESC-CHANGED-> method_1434method_1434
+METHOD	net/minecraft/class_309	method_1455	(Ljava/lang/String;)V	1	DESC-CHANGED-> method_1455method_1455
+METHOD	net/minecraft/class_310	method_1531	()Lnet/minecraft/class_1060;	1	DESC-CHANGED-> method_1531method_1531
+METHOD	net/minecraft/class_310	method_1542	()Z	1	DESC-CHANGED-> method_1542method_1542
+METHOD	net/minecraft/class_310	method_1560	()Lnet/minecraft/class_1297;	1	DESC-CHANGED-> method_1560method_1560
+METHOD	net/minecraft/class_310	method_1562	()Lnet/minecraft/class_634;	1	DESC-CHANGED-> method_1562method_1562
+METHOD	net/minecraft/class_310	method_1569	()Z	1	DESC-CHANGED-> method_1569method_1569
+METHOD	net/minecraft/class_310	method_62887	()Lnet/minecraft/class_10151;	1	DESC-CHANGED-> method_62887method_62887
+METHOD	net/minecraft/class_315	method_1635	(Lnet/minecraft/class_1664;Z)V	1	DESC-CHANGED-> method_1635method_1635
+METHOD	net/minecraft/class_315	method_57703	()I	1	DESC-CHANGED-> method_57703method_57703
+METHOD	net/minecraft/class_327	method_22942	(Lnet/minecraft/class_5481;FFIZLorg/joml/Matrix4f;Lnet/minecraft/class_4597;Lnet/minecraft/class_327$class_6415;II)I	1	DESC-CHANGED-> method_22942None
+METHOD	net/minecraft/class_327	method_27521	(Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/class_4597;Lnet/minecraft/class_327$class_6415;II)I	1	DESC-CHANGED-> method_27521None
+METHOD	net/minecraft/class_327	method_27522	(Lnet/minecraft/class_2561;FFIZLorg/joml/Matrix4f;Lnet/minecraft/class_4597;Lnet/minecraft/class_327$class_6415;II)I	1	DESC-CHANGED-> method_27522None
+METHOD	net/minecraft/class_327	method_27525	(Lnet/minecraft/class_5348;)I	1	DESC-CHANGED-> method_27525method_27525
+METHOD	net/minecraft/class_327	method_30880	(Lnet/minecraft/class_5481;)I	1	DESC-CHANGED-> method_30880method_30880
+METHOD	net/minecraft/class_329	method_53531	()Lnet/minecraft/class_340;	1	DESC-CHANGED-> method_53531method_53531
+METHOD	net/minecraft/class_332	method_25296	(IIIIII)V	1	DESC-CHANGED-> method_25296method_25296
+METHOD	net/minecraft/class_332	method_25300	(Lnet/minecraft/class_327;Ljava/lang/String;III)V	1	DESC-CHANGED-> method_25300method_25300
+METHOD	net/minecraft/class_332	method_51427	(Lnet/minecraft/class_1799;II)V	1	DESC-CHANGED-> method_51427method_51427
+METHOD	net/minecraft/class_332	method_51428	(Lnet/minecraft/class_1799;III)V	1	DESC-CHANGED-> method_51428method_51428
+METHOD	net/minecraft/class_332	method_51431	(Lnet/minecraft/class_327;Lnet/minecraft/class_1799;II)V	1	DESC-CHANGED-> method_51431method_51431
+METHOD	net/minecraft/class_332	method_51446	(Lnet/minecraft/class_327;Lnet/minecraft/class_1799;II)V	1	DESC-CHANGED-> method_51446method_51446
+METHOD	net/minecraft/class_332	method_52706	(Ljava/util/function/Function;Lnet/minecraft/class_2960;IIII)V	1	DESC-CHANGED-> method_52706None
+METHOD	net/minecraft/class_332	method_64859	(Lnet/minecraft/class_327;Lnet/minecraft/class_1799;IILjava/lang/String;)V	1	DESC-CHANGED-> method_64859method_64859
+METHOD	net/minecraft/class_340	method_53536	()Z	1	DESC-CHANGED-> method_53536method_53536
+METHOD	net/minecraft/class_342	method_1852	(Ljava/lang/String;)V	1	DESC-CHANGED-> method_1852method_1852
+METHOD	net/minecraft/class_342	method_1862	(Z)V	1	DESC-CHANGED-> method_1862method_1862
+METHOD	net/minecraft/class_342	method_1863	(Ljava/util/function/Consumer;)V	1	DESC-CHANGED-> method_1863method_1863
+METHOD	net/minecraft/class_342	method_1880	(I)V	1	DESC-CHANGED-> method_1880method_1880
+METHOD	net/minecraft/class_342	method_1888	(Z)V	1	DESC-CHANGED-> method_1888method_1888
+METHOD	net/minecraft/class_3532	method_15362	(F)F	1	DESC-CHANGED-> method_15362None
+METHOD	net/minecraft/class_3532	method_15386	(F)I	1	DESC-CHANGED-> method_15386method_15386
+METHOD	net/minecraft/class_3532	method_15393	(F)F	1	DESC-CHANGED-> method_15393method_15393
+METHOD	net/minecraft/class_3532	method_17821	(FFF)F	1	DESC-CHANGED-> method_17821method_17821
+METHOD	net/minecraft/class_355	method_1919	(Lnet/minecraft/class_332;ILnet/minecraft/class_269;Lnet/minecraft/class_266;)V	1	DESC-CHANGED-> method_1919method_1919
+METHOD	net/minecraft/class_3675$class_306	method_1444	()I	1	DESC-CHANGED-> method_1444method_1444
+METHOD	net/minecraft/class_368	method_1987	()Ljava/lang/Object;	1	DESC-CHANGED-> method_1987method_1987
+METHOD	net/minecraft/class_3695	method_15407	()V	1	DESC-CHANGED-> method_15407method_15407
+METHOD	net/minecraft/class_412	method_36877	(Lnet/minecraft/class_437;Lnet/minecraft/class_310;Lnet/minecraft/class_639;Lnet/minecraft/class_642;ZLnet/minecraft/class_9112;)V	1	DESC-CHANGED-> method_36877method_36877
+METHOD	net/minecraft/class_4184	method_19328	()Lnet/minecraft/class_2338;	1	DESC-CHANGED-> method_19328method_19328
+METHOD	net/minecraft/class_4184	method_19333	()Z	1	DESC-CHANGED-> method_19333method_19333
+METHOD	net/minecraft/class_4185	method_46430	(Lnet/minecraft/class_2561;Lnet/minecraft/class_4185$class_4241;)Lnet/minecraft/class_4185$class_7840;	1	DESC-CHANGED-> method_46430method_46430
+METHOD	net/minecraft/class_4185$class_7840	method_46431	()Lnet/minecraft/class_4185;	1	DESC-CHANGED-> method_46431method_46431
+METHOD	net/minecraft/class_4185$class_7840	method_46432	(I)Lnet/minecraft/class_4185$class_7840;	1	DESC-CHANGED-> method_46432method_46432
+METHOD	net/minecraft/class_4286	method_54787	(Lnet/minecraft/class_2561;Lnet/minecraft/class_327;)Lnet/minecraft/class_4286$class_8929;	1	DESC-CHANGED-> method_54787method_54787
+METHOD	net/minecraft/class_4286$class_8929	method_54788	()Lnet/minecraft/class_4286;	1	DESC-CHANGED-> method_54788method_54788
+METHOD	net/minecraft/class_4286$class_8929	method_54789	(II)Lnet/minecraft/class_4286$class_8929;	1	DESC-CHANGED-> method_54789method_54789
+METHOD	net/minecraft/class_4286$class_8929	method_54791	(Lnet/minecraft/class_4286$class_8930;)Lnet/minecraft/class_4286$class_8929;	1	DESC-CHANGED-> method_54791method_54791
+METHOD	net/minecraft/class_4286$class_8929	method_54794	(Z)Lnet/minecraft/class_4286$class_8929;	1	DESC-CHANGED-> method_54794method_54794
+METHOD	net/minecraft/class_437	method_25419	()V	1	DESC-CHANGED-> method_25419method_25419
+METHOD	net/minecraft/class_437	method_25423	(Lnet/minecraft/class_310;II)V	1	DESC-CHANGED-> method_25423None
+METHOD	net/minecraft/class_4587$class_4665	method_23762	()Lorg/joml/Matrix3f;	1	DESC-CHANGED-> method_23762method_23762
+METHOD	net/minecraft/class_4588	method_22918	(Lorg/joml/Matrix4f;FFF)Lnet/minecraft/class_4588;	1	DESC-CHANGED-> method_22918None
+METHOD	net/minecraft/class_4597	method_22991	(Lnet/minecraft/class_9799;)Lnet/minecraft/class_4597$class_4598;	1	DESC-CHANGED-> method_22991method_22991
+METHOD	net/minecraft/class_4618	method_23285	()V	1	DESC-CHANGED-> method_23285method_23285
+METHOD	net/minecraft/class_5250	method_10852	(Lnet/minecraft/class_2561;)Lnet/minecraft/class_5250;	1	DESC-CHANGED-> method_10852method_10852
+METHOD	net/minecraft/class_5250	method_10862	(Lnet/minecraft/class_2583;)Lnet/minecraft/class_5250;	1	DESC-CHANGED-> method_10862method_10862
+METHOD	net/minecraft/class_5251	method_27716	()I	1	DESC-CHANGED-> method_27716method_27716
+METHOD	net/minecraft/class_5348	method_27658	(Lnet/minecraft/class_5348$class_5246;Lnet/minecraft/class_2583;)Ljava/util/Optional;	1	DESC-CHANGED-> method_27658method_27658
+METHOD	net/minecraft/class_5455	method_30530	(Lnet/minecraft/class_5321;)Lnet/minecraft/class_2378;	1	DESC-CHANGED-> method_30530method_30530
+METHOD	net/minecraft/class_5819	method_43050	()Lnet/minecraft/class_5819;	1	DESC-CHANGED-> method_43050method_43050
+METHOD	net/minecraft/class_5819	method_43056	()Z	1	DESC-CHANGED-> method_43056method_43056
+METHOD	net/minecraft/class_634	method_45729	(Ljava/lang/String;)V	1	DESC-CHANGED-> method_45729method_45729
+METHOD	net/minecraft/class_636	method_2919	(Lnet/minecraft/class_1657;Lnet/minecraft/class_1268;)Lnet/minecraft/class_1269;	1	DESC-CHANGED-> method_2919method_2919
+METHOD	net/minecraft/class_638	method_29089	(JJZ)V	1	DESC-CHANGED-> method_29089method_29089
+METHOD	net/minecraft/class_639	method_2950	(Ljava/lang/String;)Lnet/minecraft/class_639;	1	DESC-CHANGED-> method_2950method_2950
+METHOD	net/minecraft/class_639	method_2952	()Ljava/lang/String;	1	DESC-CHANGED-> method_2952method_2952
+METHOD	net/minecraft/class_640	method_2959	()I	1	DESC-CHANGED-> method_2959method_2959
+METHOD	net/minecraft/class_640	method_2966	()Lcom/mojang/authlib/GameProfile;	1	DESC-CHANGED-> method_2966method_2966
+METHOD	net/minecraft/class_702	method_3056	(Lnet/minecraft/class_2394;DDDDDD)Lnet/minecraft/class_703;	1	DESC-CHANGED-> method_3056method_3056
+METHOD	net/minecraft/class_7469	method_44994	()Ljava/nio/ByteBuffer;	1	DESC-CHANGED-> method_44994method_44994
+METHOD	net/minecraft/class_757	method_3172	(Lnet/minecraft/class_4184;FLorg/joml/Matrix4f;)V	1	DESC-CHANGED-> method_3172None
+METHOD	net/minecraft/class_8566	method_51305	()Ljava/util/List;	1	DESC-CHANGED-> method_51305method_51305
+METHOD	net/minecraft/class_8685	comp_1626	()Lnet/minecraft/class_2960;	1	DESC-CHANGED-> comp_1626None
+METHOD	net/minecraft/class_8685	comp_1627	()Lnet/minecraft/class_2960;	1	DESC-CHANGED-> comp_1627None
+METHOD	net/minecraft/class_8685	comp_1628	()Lnet/minecraft/class_2960;	1	DESC-CHANGED-> comp_1628None
+METHOD	net/minecraft/class_8685	comp_1629	()Lnet/minecraft/class_8685$class_7920;	1	DESC-CHANGED-> comp_1629None
+METHOD	net/minecraft/class_897	method_23169	(Lnet/minecraft/class_10017;)Lnet/minecraft/class_243;	1	DESC-CHANGED-> method_23169method_23169
+METHOD	net/minecraft/class_897	method_3936	(Lnet/minecraft/class_10017;Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V	1	DESC-CHANGED-> method_3936None
+METHOD	net/minecraft/class_897	method_62425	(Lnet/minecraft/class_1297;F)Lnet/minecraft/class_10017;	1	DESC-CHANGED-> method_62425method_62425
+METHOD	net/minecraft/class_9209	comp_2315	()I	1	DESC-CHANGED-> comp_2315comp_2315
+METHOD	net/minecraft/class_922	method_55832	(Lnet/minecraft/class_10042;)F	1	DESC-CHANGED-> method_55832method_55832
+METHOD	net/minecraft/class_9304$class_9305	method_57548	(Ljava/util/function/Predicate;)V	1	DESC-CHANGED-> method_57548method_57548
+METHOD	net/minecraft/class_9779	method_60637	(Z)F	1	DESC-CHANGED-> method_60637method_60637
+METHOD	net/minecraft/class_9787	method_60705	(Z)V	1	DESC-CHANGED-> method_60705method_60705
+METHOD	net/minecraft/class_9812	comp_2853	()Lnet/minecraft/class_2561;	1	DESC-CHANGED-> comp_2853comp_2853
+METHOD	net/minecraft/class_9848	method_61320	(I)I	1	DESC-CHANGED-> method_61320method_61320
+METHOD	net/minecraft/class_9848	method_61324	(IIII)I	1	DESC-CHANGED-> method_61324method_61324
+METHOD	net/minecraft/class_9848	method_61327	(I)I	1	DESC-CHANGED-> method_61327method_61327
+METHOD	net/minecraft/class_9848	method_61329	(I)I	1	DESC-CHANGED-> method_61329method_61329
+METHOD	net/minecraft/class_9848	method_61331	(I)I	1	DESC-CHANGED-> method_61331method_61331
+METHOD	net/minecraft/class_9909	method_61914	(Ljava/lang/String;Ljava/lang/Object;)Lnet/minecraft/class_9925;	1	DESC-CHANGED-> method_61914method_61914

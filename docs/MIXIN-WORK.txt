@@ -1,0 +1,159 @@
+# mixin targets with no 1.21.11 counterpart (44 mixin classes, 70 targets)
+
+me/mioclient/mixin/m$$7pn9m3SvmzsnfBGVgTiVRsrl8Qhr7yHXKusRbFTx3LhENpcdvXE6FJsokvTwGy6jKXL6BpnpqOSJLP9qbbSve4plZ4AvHPR2m.class
+    MEMBER       net/minecraft/client/render/WeatherRendering.renderPrecipitation(Lnet/minecraft/world/World;Lnet/minecraft/client/render/VertexConsumerProvider;IFLnet/minecraft/util/math/Vec3d;)V
+    MEMBER       net/minecraft/client/render/WorldRenderer.renderTargetBlockOutline(Lnet/minecraft/client/render/Camera;Lnet/minecraft/client/render/VertexConsumerProvider$Immediate;Lnet/minecraft/client/util/math/MatrixStack;Z)V
+    OWNER        net/minecraft/client/render/DimensionEffects.isDarkened()Z
+
+me/mioclient/mixin/m$$80XAo1PYHJQGj6ke7Pf4Hq1APdDU8jZ79qYxXHYBHywPfjM3foFt15ZDykEMKNgJYTscSz4F0K8LXDnMSv6rhQxI3P7GwqOi1.class
+    METHOD       render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/client/render/entity/state/LivingEntityRenderState;FF)V
+
+me/mioclient/mixin/m$$8qtmo4GCtcnkiaSRoIY546SJHBZIugwZOQUctPFYpkpWQqUVO2v6fga3nbYQHXvbu7Ytzv5gx4wIQjLqftxMcEu4cs7SBCpZc.class
+    METHOD       disconnect(Lnet/minecraft/client/gui/screen/Screen;)V
+    MEMBER       net/minecraft/client/gui/screen/Screen.init(Lnet/minecraft/client/MinecraftClient;II)V
+    MEMBER       net/minecraft/client/MinecraftClient.runTasks()V
+
+me/mioclient/mixin/m$$9lGG9WYzVF2yt0GJdbVwfVXPUedl4C0LlAOAJTX1wiHk50HGeayDzsixIAgcxZO7ykBLYENudqLwh0agpq77ICuaWCkA5zEME.class
+    METHOD       render(Lnet/minecraft/client/render/entity/equipment/EquipmentModel$LayerType;Lnet/minecraft/registry/RegistryKey;Lnet/minecraft/client/model/Model;Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/util/Identifier;)V
+    MEMBER       net/minecraft/client/render/RenderLayer.getArmorCutoutNoCull(Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/RenderLayer;
+
+me/mioclient/mixin/m$$9vbTFJerlvcXWS73AGXSiHW3CqUHF9KEmBuQASCbJJrsTDUX2VzhFsGtNxg64vcVOKMR6PzEwZWY1NKBAgWIMvN6utUze16C3.class
+    OWNER        net/minecraft/client/render/entity/EntityRenderDispatcher.render(Lnet/minecraft/entity/Entity;DDDFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V
+
+me/mioclient/mixin/m$$C7jwyCZGOGmxYHR6CinqHYKGpwwojfCUt8uyzjRA2awICUF3ogkSBtJt9OZZ5TwdqY7XMH0WNbqisrPkOMONx1NLAAWZsoOL0.class
+    METHOD       render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/client/render/entity/state/EntityRenderState;FF)V
+
+me/mioclient/mixin/m$$EOjNslxDicSrPv2Pcu8ZewlDwv4HlMfwnmOfdjq3GtE2vs9FhB90OJTHSRLpyRebQ1e8Cl4QqTUzKWFc73biVF3MZ7aXfLiOc.class
+    MEMBER       net/minecraft/client/render/RenderLayer.getEntityTranslucent(Lnet/minecraft/util/Identifier;)Lnet/minecraft/client/render/RenderLayer;
+
+me/mioclient/mixin/m$$Eptpbrf8OJi8ylJn4vw42SuYHtUUwMIVPNZgEwnmlW8On8xML48lY1XaokifHYUo9LzRM2w5zTCwTvwLlePpCcFrYcjrmZg5W.class
+    CLASS        net/minecraft/client/MinecraftClient.currentScreen:Lnet/minecraft/client/gui/screen/Screen;
+
+me/mioclient/mixin/m$$FRUoLijfpaF0AscB8mUhrhNdNEblEiPOZuoJxqug1epMQkvhce1Jg2Cq3ct30g7xTvsaqo4EG8Syw6bOlNV2NSj6wmJMo13uj.class
+    MEMBER       net/minecraft/network/NetworkThreadUtils.forceMainThread(Lnet/minecraft/network/packet/Packet;Lnet/minecraft/network/listener/PacketListener;Lnet/minecraft/util/thread/ThreadExecutor;)V
+
+me/mioclient/mixin/m$$IdmPNGPYzocKrxl7NEZGAyTI52O49JPj6YU8mLBjmECVkiw8EP7PIFNrEDm8DArZyBQLZgQFtBqoJ4W25T2LTvQLb4y9a4WXX.class
+    MEMBER       net/minecraft/entity/player/PlayerEntity.setVelocity(Lnet/minecraft/util/math/Vec3d;)V
+    CLASS        net/minecraft/entity/player/PlayerEntity.lastAttackedTicks:I
+
+me/mioclient/mixin/m$$JHUQQvBBRGW2a7dHn0HsX575yQpeZUxhQnpnFdnXlCUPUJTu7TSjAVhmJdNWT5PeNVS5JiVmpCGVelFlrHcTiInvputupI0aq.class
+    METHOD       <init>(Lnet/minecraft/entity/EntityType;Lnet/minecraft/world/World;)V
+
+me/mioclient/mixin/m$$Md98Ck06Z0qvMdZsdhnA9mbnHu1irP8giawgjPL7LnvrCyTxQwYdg7IApGJSVL39S2wr7aXBNJzqOgpdvkhomYnhxgSwTEyMC.class
+    CLASS        Lnet/minecraft/client/main/Main;
+
+me/mioclient/mixin/m$$N412H07IafE9zLoJ1mWN61MZ5nSFs650IipuGltuDOeLdZgFqRiGc5xPGsNM9iJVNxIfOgujem5J4kzsE9NR0Ju3uP5N4NZm7.class
+    METHOD       play(Lnet/minecraft/client/sound/SoundInstance;)V
+
+me/mioclient/mixin/m$$NgFs7hcxUI7N06BV9oOVeofUPo3WEq3xfns0tB7GGPJyjQ4tgrlGZAyiYPyNAJuwssYzZuVc6qN98S292dAZt5Z2G3raqZDcd.class
+    MEMBER       net/minecraft/client/gui/DrawContext.drawTexture(Ljava/util/function/Function;Lnet/minecraft/util/Identifier;IIFFIIIIIII)V
+
+me/mioclient/mixin/m$$OEp0YT29NNw42heIP0zmUASyxkpkgoNDAf3XefGfcuFiBO7f9sZHIryBvav7JKblNZDhvgVG6hujSvCycPiIiJ2hCkzUT8lyU.class
+    OWNER        net/minecraft/util/CubicSampler.sampleColor(Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/CubicSampler$RgbFetcher;)Lnet/minecraft/util/math/Vec3d;
+
+me/mioclient/mixin/m$$PIlKSGgnnbQVrP6j2HzyS60vt19FFlOzKrijS9LZ6rPDQoT1thdcrw800ukwOEBm6AFDbVTlbCPH0DiXAvtZzcIdEUDvvMlAO.class
+    METHOD       render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/client/render/entity/state/ArmedEntityRenderState;FF)V
+
+me/mioclient/mixin/m$$PR2Fo7Mb2GWYmXp7UwylQBDUxCEav32r5ubtrBrW8aVRDP8Dz9IRcTyheyl2fHrzdzu1KrShskNJ7nnN426W0NrwYhNJYFeGS.class
+    CLASS        net/minecraft/client/gl/RenderPipelines.BILT_SCREEN_LIGHTMAP:Lcom/mojang/blaze3d/pipeline/RenderPipeline;
+
+me/mioclient/mixin/m$$PjcpaOoCllt7z1H6dQL3rUihYA0cavBJ6aUiKTF9aI4zibTEqXvGvIuz9nuV70CJP76AmQ2AviW7xb3dUgUQZmZaiwHnwCwrF.class
+    CLASS        net/minecraft/client/render/entity/state/EndCrystalEntityRenderState.age:F
+
+me/mioclient/mixin/m$$PuyggCM2X8HsXkuPN0yii5O72tDQfA4ARD0z5rfx80f94wThoRXpDny1bQlabtSiUYf3PDoXrj7LUqMY4ST3aztXHa4qeGQ3z.class
+    METHOD       <init>(Lnet/minecraft/registry/entry/RegistryEntry;IIZZZLnet/minecraft/entity/effect/StatusEffectInstance;)V
+    CLASS        net/minecraft/entity/effect/StatusEffectInstance.duration:I
+
+me/mioclient/mixin/m$$QP1nkKXdAqrK40sTFydvZusZNTgzKxMPxskK7CZm9X8APXIzUEFhDxTQe5o7kthCBprfG9JM9bg3LjcHok942TeBF3KG6ax0x.class
+    METHOD       render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/client/render/entity/state/MooshroomEntityRenderState;FF)V
+
+me/mioclient/mixin/m$$V4lyxrRQY4hbEfdVgOkJT1UkKYxRiHNCyoyIx38U3wc0auWoQX6QQEF2DcWL13dgJmqWIo9jPBqnLHQxpJlcFsPHiPwWTaR0v.class
+    MEMBER       net/minecraft/client/render/GameRenderer.renderHand(Lnet/minecraft/client/render/Camera;FLorg/joml/Matrix4f;)V
+    OWNER        net/minecraft/client/render/entity/EntityRenderDispatcher.getLight(Lnet/minecraft/entity/Entity;F)I
+    MEMBER       net/minecraft/client/gui/hud/InGameOverlayRenderer.renderOverlays(Lnet/minecraft/client/MinecraftClient;Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;)V
+
+me/mioclient/mixin/m$$VcPWjgvlrp1fLa2WRXNtpH3ZGhycwHMbiAOYIpqHkHyVWkplfHtQaLgZxMQENPXZkEfSDCq2Ln4ndWrsOop2DD5FilfB62RRT.class
+    CLASS        net/minecraft/client/gui/hud/PlayerListHud.ENTRY_ORDERING:Ljava/util/Comparator;
+
+me/mioclient/mixin/m$$Wz4K4AacT2Fw1R0jKffd4e44esucMmff6flSG1xQGQcutJSM8vSVwGeQHKJ203SSeVV0w8mutEjJo218KFK55vxhqUvE3jANU.class
+    METHOD       render(Lnet/minecraft/client/render/entity/state/EndCrystalEntityRenderState;Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V
+    CLASS        net/minecraft/client/render/entity/EndCrystalEntityRenderer.END_CRYSTAL:Lnet/minecraft/client/render/RenderLayer;
+
+me/mioclient/mixin/m$$aQ4q1TxdQKz4BFU6nT1XmNv63cqaPCoFaXeROTZ8XJtEho1HFOqgyAuiJpYGMBe8xwxAqDbtldokjhP7Dp7ngOmSKWBhpNCM8.class
+    MEMBER       net/minecraft/entity/Entity.writeCustomDataToNbt(Lnet/minecraft/nbt/NbtCompound;)V
+
+me/mioclient/mixin/m$$abwu89Yj2EMB4isM0MuefnzLLuM4Hb5Mqyncif8UdCLOJ1X1JlIcxUEBxoRHRJuhWXqyNjqzYt85qngaqN37Zh1ONmFfBFCW2.class
+    MEMBER       net/minecraft/world/World.getTopY(Lnet/minecraft/world/Heightmap$Type;II)I
+
+me/mioclient/mixin/m$$bSHfTqaRAlkoBdiDlsWt9yCTLLEKW9392P9ZC6gfotNQyadQWoNUEYGJYXxIoW960z3Fq0BTLz2x9UYAjxluAyUh16krrQ07x.class
+    METHOD       <init>(Lnet/minecraft/client/world/ClientWorld;DDD)V
+
+me/mioclient/mixin/m$$bcaK3OZSsUg0voEcdoYEomkE8oTiMBJ7hzVSCKByTR9IOwD6QpOj9dDD2798xHzBlX7HtBjAAIFBmqbzwsxgTw5ha1ErUxrD1.class
+    MEMBER       net/minecraft/entity/LivingEntity.setVelocity(Lnet/minecraft/util/math/Vec3d;)V
+
+me/mioclient/mixin/m$$bxS775zr0dPkyXIqkzgB7c1f7dx2GGeftjTTYr5C8eKPfEvS1d9A1jpXe3DzuRasS9VlczIFc9PeBvRDA2KN9M6oCYoJnyUrq.class
+    METHOD       <init>(Lnet/minecraft/entity/EntityType;Lnet/minecraft/world/World;)V
+
+me/mioclient/mixin/m$$cQZc5oKdvasPVXiXL6WcUUxbeF3bP86qUnqQAa2oNXmeC69dD470gkmO3NdrpFTKLBtOUS9fQt35eCnE2vu6sCxhvg7dQLCAm.class
+    CLASS        net/minecraft/client/render/RenderTickCounter$Dynamic.lastTimeMillis:J
+
+me/mioclient/mixin/m$$efZx5bnEk1lm3D90ko0qwxulyPjxwjQH3CZAMM8r9KHjHBpvWl8T7WUfyLVY1V6KXBAGOtflpLChA5RVPHlk9L2KxY8uZ176v.class
+    MEMBER       net/minecraft/client/render/item/HeldItemRenderer.renderItem(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemDisplayContext;Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V
+    METHOD       renderItem(FLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider$Immediate;Lnet/minecraft/client/network/ClientPlayerEntity;I)V
+    MEMBER       net/minecraft/client/render/item/HeldItemRenderer.renderFirstPersonItem(Lnet/minecraft/client/network/AbstractClientPlayerEntity;FFLnet/minecraft/util/Hand;FLnet/minecraft/item/ItemStack;FLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V
+
+me/mioclient/mixin/m$$fBc8ocZnHFlUXf176wkL0Qf0yzL0Lj36XIK51c3mgvmpn4c3RXvZ3CjgM9MB2UToB3zsDTZKJe6D5fU2chpIE8yZwojZ3idGX.class
+    METHOD       saveScreenshot(Ljava/io/File;Ljava/lang/String;Lnet/minecraft/client/gl/Framebuffer;Ljava/util/function/Consumer;)V
+
+me/mioclient/mixin/m$$fIHJjiNpd5FbKFtiMTTHoTvq5ynbCGuLvof5U0yGEfvBR3Ktg9NLo5x0TXsHGIMYCNnNvySKTnJ90rPAostsVBFMSioVkQMh3.class
+    MEMBER       net/minecraft/client/gui/DrawContext.drawTextWithShadow(Lnet/minecraft/client/font/TextRenderer;Lnet/minecraft/text/OrderedText;III)I
+    MEMBER       net/minecraft/client/gui/DrawContext.fill(IIIIII)V
+
+me/mioclient/mixin/m$$gfNr3CiZiDjM6C9Dr0poKuxAtlKUotV73RoBkMR1HzpeuELQFwKujESpRa62A5zUM1p22TON1uywt9tUnfx9N273v64avm0G0.class
+    MEMBER       net/minecraft/client/render/item/ItemRenderer.getDynamicDisplayGlintConsumer(Lnet/minecraft/client/render/VertexConsumerProvider;Lnet/minecraft/client/render/RenderLayer;Lnet/minecraft/client/util/math/MatrixStack$Entry;)Lnet/minecraft/client/render/VertexConsumer;
+
+me/mioclient/mixin/m$$gkNYEpwpZGLHbqxKJ4NkFDjLhm7njMR502jCopALMT6ZQL7gT9aWk4Icu0GRqtOOZnzVNtR2CnA4wuMRD52TzCv6mCzYFyHNi.class
+    MEMBER       net/minecraft/client/gui/screen/Screen.applyBlur()V
+
+me/mioclient/mixin/m$$hKuz3sHyuVZTnb8n7ABrLHrsTSpr9CGUTJkn3dUOLdFBQSBiesoMkHtEjYtPndsXLjP4Ct7pWevav93v7X3SJcWl0SnnB9RGH.class
+    MEMBER       net/minecraft/network/NetworkThreadUtils.forceMainThread(Lnet/minecraft/network/packet/Packet;Lnet/minecraft/network/listener/PacketListener;Lnet/minecraft/util/thread/ThreadExecutor;)V
+
+me/mioclient/mixin/m$$lE4q6UXCGETJFOIh7C2KhJceFPUrQh80YcKPsAVtuHtXK4sLETESxc8eqWYePoGE9vlTvKIhg5djHWvuMzbEcLJAcIYY7139Q.class
+    MEMBER       net/minecraft/client/gui/screen/ingame/HandledScreen.isClickOutsideBounds(DDIII)Z
+
+me/mioclient/mixin/m$$mhvh85mY6niNMEtyNVaUbcAivPcazOkS3RGfwgVYGOhMvOObJ82u75swZ3fibgYUKJT6AHFKpgbqnshFgkPKIh43gnQpeoSPh.class
+    MEMBER       net/minecraft/entity/LivingEntity.getYaw()F
+
+me/mioclient/mixin/m$$npTGZKi9FNUMb5xmgTX1UJGy4ekcszA1JH3RWvBQNlcpyu5fCsNId9oHdPVvx4zrnyWyZzqzZ1iLKUhS85uQA7LsJjLytcMkM.class
+    METHOD       render(Lnet/minecraft/client/render/entity/state/LivingEntityRenderState;Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V
+    MEMBER       net/minecraft/client/render/entity/model/EntityModel.render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumer;III)V
+    CLASS        net/minecraft/client/render/entity/LivingEntityRenderer.features:Ljava/util/List;
+    METHOD       render(Lnet/minecraft/client/render/entity/state/EntityRenderState;Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V
+
+me/mioclient/mixin/m$$nziqpqkcISpC8fxrLl4fuc0sNpcFmP6KIebZwq2VhTKMPJe3aAyBWuQXb3LiHRT9OxoKPbDHT8JTtDK2oj8khY8sYPWiMC57N.class
+    METHOD       render(Lnet/minecraft/entity/Entity;DDDFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V
+
+me/mioclient/mixin/m$$pYDJCoqI8Ojhbb56LQkwCZ5gpnn9ZEcKhiA74Fh0gyPaOEfKTDyZnIMlXe4Mg8YM6muyUPYxbGPCtJ3PYGisQVgkw1D57avoz.class
+    MEMBER       net/minecraft/client/network/AbstractClientPlayerEntity.tick()V
+    MEMBER       net/minecraft/client/network/ClientPlayerEntity.getX()D
+    MEMBER       net/minecraft/client/network/ClientPlayerEntity.getY()D
+    MEMBER       net/minecraft/client/network/ClientPlayerEntity.getZ()D
+    MEMBER       net/minecraft/client/network/ClientPlayerEntity.getYaw()F
+    MEMBER       net/minecraft/client/network/ClientPlayerEntity.getPitch()F
+    MEMBER       net/minecraft/client/network/ClientPlayerEntity.isOnGround()Z
+
+me/mioclient/mixin/m$$pYiEn7YpSQwtOdZQNVwHwRCnqbsaCV5kwkpxcYDBuVzHYWZ76HB1P2RYchodxXvVdrY5vNBaQWT6SiJ3eLt72CXanPHJTS0Qx.class
+    MEMBER       net/minecraft/client/network/ClientPlayNetworkHandler.sendPacket(Lnet/minecraft/network/packet/Packet;)V
+    CLASS        (Lnet/minecraft/util/Hand;IFF)Lnet/minecraft/network/packet/c2s/play/PlayerInteractItemC2SPacket;
+
+me/mioclient/mixin/m$$qr3LBrHryrjUuQLS0VRd7OfCfWptYkMOQcEGibJx9GtrbrZEob20lm4FDCbF6bd6yzd7v8UA0a3uKyeHZWS771Nfm6fvZ1Sjp.class
+    METHOD       drawItem(Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;IIII)V
+    CLASS        net/minecraft/client/util/math/MatrixStack.translate(FFF)V
+    CLASS        net/minecraft/client/util/math/MatrixStack.scale(FFF)V
+    MEMBER       net/minecraft/client/gui/DrawContext.drawTooltip(Lnet/minecraft/client/font/TextRenderer;Ljava/util/List;IILnet/minecraft/client/gui/tooltip/TooltipPositioner;Lnet/minecraft/util/Identifier;)V
+
+me/mioclient/mixin/m$$xywraAZxC3SLTK96kRMh7cNwSD2Qss427nzq1UR3Z9S4o6PGrAwjB8O8EYshNcTMnJ5qfU8pieX9vBUb7H3pYPGCsdMFmmZaL.class
+    METHOD       render(Lnet/minecraft/block/entity/BlockEntity;FLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;)V
+
+me/mioclient/mixin/m$$yjCVZcCt6yxJspwcDIRUm4MqtXo5JenJhw9IyMEm1YvWpRoXrc5iYsxSxqCGwLEBi4wQs4GB8itigwfqDQiAfifsxkmoSZmKL.class
+    MEMBER       net/minecraft/client/gui/DrawContext.drawGuiTexture(Ljava/util/function/Function;Lnet/minecraft/util/Identifier;IIII)V
