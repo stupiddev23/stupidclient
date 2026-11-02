@@ -1,2 +1,0 @@
-# stupidclient
-very stoopid
