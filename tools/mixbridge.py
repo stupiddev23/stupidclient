@@ -290,7 +290,12 @@ def patch(mn, b, log):
         ci_slot = new_slots[-1]
 
         code = bytearray() if static else bytearray([ALOAD_N])
-        for t, sl in zip(old_params, old_slots):
+        # The handler's last parameter already is the callback object, so it is
+        # loaded once -- from the slot it occupies in the new descriptor, which is
+        # where it lives in the bridge's own frame.  Pushing the old parameters and
+        # then the callback again puts two copies on the stack and the verifier
+        # rejects the call.
+        for t, sl in zip(old_params[:-1], old_slots[:-1]):
             emit_load(code, t, sl)
         emit_load(code, new_params[-1], ci_slot)
         code.append(0xB8 if static else 0xB7)
