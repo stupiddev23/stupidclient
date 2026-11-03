@@ -44,3 +44,25 @@ open; it can only be changed by rebuilding the annotation, never by poking a
 byte inside it.  tools/harness/AnnCheck.java parses every class through
 ClassNode, the reader Mixin uses, so that damage fails here instead.
 
+
+
+# ---- methods that lost their return type
+
+DrawContext.drawTextWithShadow kept its id and its parameters but stopped
+returning the width it drew:
+
+    1.21.5   (TextRenderer, String, int, int, int) int
+    1.21.11  (TextRenderer, String, int, int, int) void
+
+The title screen handler called it with the old descriptor and threw
+NoSuchMethodError the moment the splash overlay drew text:
+
+    NoSuchMethodError: 'int net.minecraft.class_332.method_25303(...)'
+        at class_442.handler$bfb000$mioclient$m$$OEp0YT29...
+
+Both call sites throw the result away (`invokevirtual ...; pop`), so
+tools/fixvoidcalls.py repoints the constant pool entry at the void
+descriptor and turns that pop into a nop.  Same instruction widths, so no
+offset, frame or exception range moves.  A call site that used the value
+would be reported instead of guessed at.
+
