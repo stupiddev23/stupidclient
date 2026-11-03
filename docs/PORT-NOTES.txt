@@ -36,7 +36,11 @@ copied handler the first time the title screen drew text:
 Mixin discards whatever a handler returns - the value the target uses only
 travels through the callback - so a handler is always void.  tools/fixbridges.py
 cuts the dead tail, discards a forwarded non-void result, and rewrites the
-bridge descriptor to end in )V.  It also restores cancellable=true where the
-forwarded handler calls setReturnValue, which is what the decompiled 1.21.5
-handler was annotated with and what the callback needs to accept a value.
+bridge descriptor to end in )V.  The `cancellable` element is left exactly as it was.  Flipping it in place
+mis-landed by one byte and produced 17 annotation attributes that ASM rejected
+at mixin prepare time ("Index 283 out of bounds for length 206"), aborting the
+launch before any class was transformed.  Whether it should be true is still
+open; it can only be changed by rebuilding the annotation, never by poking a
+byte inside it.  tools/harness/AnnCheck.java parses every class through
+ClassNode, the reader Mixin uses, so that damage fails here instead.
 

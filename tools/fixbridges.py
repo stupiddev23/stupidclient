@@ -11,15 +11,15 @@ travels through the callback), so the tail is dead weight.  This cuts the code
 after the forwarding call, discards a forwarded result if there is one, and
 returns void -- the descriptor Mixin actually expects.
 
-The same pass restores `cancellable = true` on a bridge whose handler calls
-setReturnValue: without it the callback refuses the value, and the decompiled
-1.21.5 handler was annotated cancellable in the first place.
+Annotations are deliberately not touched.  An earlier version also rewrote the
+`cancellable` element in place and mis-landed by one byte, producing 17
+annotation attributes that ASM rejected at mixin prepare time.  Anything that
+changes an annotation has to rebuild it, not poke a byte in the middle.
 """
 import collections
 import json
 import os
 import re
-import struct
 import sys
 import zipfile
 
@@ -76,19 +76,6 @@ def method_ref(cls, i):
             MC.utf8(cls, (nt[3] << 8) | nt[4]))
 
 
-def calls(cls, m, name):
-    c = MC.code_of(cls, m)
-    if not c:
-        return False
-    code = bytes(c["code"])
-    for pc, op, _ln in instructions(code):
-        if op in (0xB6, 0xB7, 0xB8):
-            ref = method_ref(cls, (code[pc + 1] << 8) | code[pc + 2])
-            if ref and ref[1] == name:
-                return True
-    return False
-
-
 def add_utf8(cls, extra, text):
     raw = b"\x01" + MC.u2b(len(text.encode("utf-8"))) + text.encode("utf-8")
     for i, e in cls["cp"].items():
@@ -99,58 +86,6 @@ def add_utf8(cls, extra, text):
             return cls["cp_count"] + k
     extra.append(raw)
     return cls["cp_count"] + len(extra) - 1
-
-
-def skip_elem(b, o, tag):
-    """Offset just past one annotation element value."""
-    if tag in "BCDFIJSZ":
-        return o + 1
-    if tag in "sc":
-        return o + 2
-    if tag == "e":
-        return o + 4
-    if tag == "[":
-        n = struct.unpack_from(">H", b, o)[0]
-        o += 2
-        for _ in range(n):
-            t = chr(b[o])
-            o = skip_elem(b, o + 1, t)
-        return o
-    if tag == "@":
-        return skip_ann(b, o)
-    raise ValueError("annotation element tag %r" % tag)
-
-
-def skip_ann(b, o):
-    o += 2                                    # type index
-    n = struct.unpack_from(">H", b, o)[0]
-    o += 2
-    for _ in range(n):
-        o += 2                                # element name index
-        tag = chr(b[o])
-        o = skip_elem(b, o + 1, tag)
-    return o
-
-
-def enable_cancellable(cls, attr):
-    """Set the @Inject `cancellable` element to true in place."""
-    b = attr["data"]
-    o = 2
-    o += 2
-    n = struct.unpack_from(">H", b, o)[0]
-    o += 2
-    for _ in range(n):
-        name_i = struct.unpack_from(">H", b, o)[0]
-        o += 2
-        tag = chr(b[o])
-        o += 1
-        if tag == "Z" and MC.utf8(cls, name_i) == "cancellable":
-            if b[o] == 1:
-                return False
-            attr["data"] = b[:o] + b"\x01" + b[o + 1:]
-            return True
-        o = skip_elem(b, o, tag)
-    return False
 
 
 def patch(mn, b, log):
@@ -196,17 +131,8 @@ def patch(mn, b, log):
         c["handlers"] = b""
         MC.find_attr(cls, m, "Code")["data"] = MC.build_code(c)
         m["desc"] = add_utf8(cls, extra, desc[:desc.rindex(")") + 1] + "V")
-
-        note = desc
-        handler = next((x for x in cls["methods"]
-                        if MC.utf8(cls, x["name"]) == fwd[1]
-                        and MC.utf8(cls, x["desc"]) == fwd[2]), None)
-        if handler is not None and calls(cls, handler, "setReturnValue"):
-            attr = MC.find_attr(cls, m, "RuntimeVisibleAnnotations")
-            if attr is not None and enable_cancellable(cls, attr):
-                note += " cancellable"
         changed += 1
-        log.append((mn, name, note))
+        log.append((mn, name, desc))
     return MC.write(cls, extra) if changed else None
 
 
@@ -230,7 +156,7 @@ def main():
 
     for mn, name, desc in log:
         print("%-12s %-8s %s" % (mn[:12], name, desc))
-    stats["bridges_rewritten"] = sum(1 for r in log if r[2].startswith("("))
+    stats["bridges_rewritten"] = len(log)
 
     tmp = JAR + ".tmp"
     with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
