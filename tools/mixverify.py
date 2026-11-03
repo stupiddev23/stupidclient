@@ -38,9 +38,36 @@ def parse_type(d, i):
         t, j = parse_type(d, i + 1)
         return "[" + t, j
     if c == "L":
-        j = d.index(";", i)
-        return d[i:j + 1], j + 1
+        # CallbackInfoReturnable<T> appears in the handlers this tool did not
+        # write, so the type argument has to be stepped over, not stopped at.
+        depth = 0
+        j = i
+        while True:
+            ch = d[j]
+            if ch == "<":
+                depth += 1
+            elif ch == ">":
+                depth -= 1
+            elif ch == ";" and depth == 0:
+                return d[i:j + 1], j + 1
+            j += 1
     return c, i + 1
+
+
+def erase(t):
+    """CallbackInfoReturnable<T> and the erased form are the same class."""
+    if "<" not in t:
+        return t
+    i, depth, j = t.index("<"), 0, t.index("<")
+    while True:
+        if t[j] == "<":
+            depth += 1
+        elif t[j] == ">":
+            depth -= 1
+            if depth == 0:
+                break
+        j += 1
+    return t[:i] + t[j + 1:]
 
 
 def parse_desc(d):
@@ -60,8 +87,13 @@ def is_ref(t):
 
 
 def assignable(actual, formal):
+    actual, formal = erase(actual), erase(formal)
     if actual == formal:
         return True
+    # The null type is assignable to every reference type; a bridge supplies one
+    # for a parameter the target no longer passes.
+    if actual == "N":
+        return is_ref(formal)
     if formal == OBJ and is_ref(actual):
         return True
     # The only hierarchy a bridge relies on: a returnable callback is a callback.
@@ -153,6 +185,21 @@ def check(mc, m):
                 problems.append("primitive load of reference local %d" % sl)
             push(want if want else OBJ)
             used_locals = max(used_locals, sl + width(want or "I"))
+            i += 1
+        elif op == 0x01:
+            push("N")
+            i += 1
+        elif 0x03 <= op <= 0x08:
+            push("I")
+            i += 1
+        elif op in (0x09, 0x0A):
+            push("J")
+            i += 1
+        elif op in (0x0B, 0x0C, 0x0D):
+            push("F")
+            i += 1
+        elif op in (0x0E, 0x0F):
+            push("D")
             i += 1
         elif op in (0xB6, 0xB7, 0xB8):
             idx = int.from_bytes(code[i + 1:i + 3], "big")

@@ -307,3 +307,85 @@ m$$zoIj6nB6rifoF4BDikqp3Sdg2DS01OuaeZOXtmEN3AAy4QpZI0fybejCe82bx1TKZBLdDp5DwtmDE
     NEEDS-PORT  Inject.method            addBlockBreakingParticles
     NEEDS-PORT  Inject.method            method_31595
 
+
+
+# ---- @Inject handlers dropped by the 1.21.11 signature port: 12
+
+Each handler below targeted a method whose parameter list changed shape in
+a way that cannot be forwarded: a parameter the body reads is no longer
+passed, the injection names an overload set whose members disagree, or the
+bytecode could not be walked with confidence. tools/mixbridge.py removes the
+@Inject annotation and leaves the method and the rest of its mixin in place,
+so only that one injection is gone. A bridge that guessed would either be
+rejected at apply time (aborting the launch) or pass a wrong value.
+
+m$$AoRrg8flyPjKkEDvtoux1Vn4guiNtpFcod0txof9fxQxcKaFAb8ZXJKlw5c80MYnQV8qQlGiGYx1nzrhrYhXDvI47jyp09cRD
+    handler (Lnet/minecraft/class_10866;IILcom/mojang/blaze3d/vertex/VertexFormat$class_5595;Lnet/minecraft/class_10867;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    target  ('(IIIJ)V', None)
+    target  ('(Lnet/minecraft/class_10866;IIILcom/mojang/blaze3d/vertex/VertexFormat$class_5595;Lnet/minecraft/class_10867;I)V', False)
+    reads []   walk_ok True   descriptor pinned False
+
+m$$AoRrg8flyPjKkEDvtoux1Vn4guiNtpFcod0txof9fxQxcKaFAb8ZXJKlw5c80MYnQV8qQlGiGYx1nzrhrYhXDvI47jyp09cRD
+    handler (Lnet/minecraft/class_10866;IILcom/mojang/blaze3d/vertex/VertexFormat$class_5595;Lnet/minecraft/class_10867;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    target  ('(III)V', None)
+    target  ('(Lnet/minecraft/class_10866;IIILcom/mojang/blaze3d/vertex/VertexFormat$class_5595;Lnet/minecraft/class_10867;I)V', False)
+    reads []   walk_ok True   descriptor pinned False
+
+m$$Bt2WCJQeHB4TyQsfZ992xBi26LbuV49cmrW6MFWw9l1Egjv10qEiHq87PKmGfmR1VNpWkJ6EsNCj7kXVm13P8hfE82mIMwLjf
+    handler (Lnet/minecraft/class_1922;Lnet/minecraft/class_1297;ZZFLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    target  ('(FF)V', None)
+    target  ('(Lnet/minecraft/class_1937;Lnet/minecraft/class_1297;ZZF)V', False)
+    reads [7, 8, 16, 18]   walk_ok True   descriptor pinned False
+
+m$$DmZ8qDDTkUTq5jmy94sKb7BLAH0fu9GZZl53LaAlmSCqGRNhfqaV6TvUiXaVVGrEd8CXHYXImeXFlsOGcz36uOmDSWR1sBHkY
+    handler (JIIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    target  ('(Lnet/minecraft/class_3675$class_306;)V', None)
+    target  ('(JLnet/minecraft/class_11910;I)V', False)
+    reads [3, 7]   walk_ok True   descriptor pinned False
+
+m$$FRUoLijfpaF0AscB8mUhrhNdNEblEiPOZuoJxqug1epMQkvhce1Jg2Cq3ct30g7xTvsaqo4EG8Syw6bOlNV2NSj6wmJMo13uj
+    handler (Lnet/minecraft/class_2692;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lnet/minecraft/class_1297;)V
+    target  ('(DDDFF)V', None)
+    target  ('(Lnet/minecraft/class_2692;)V', False)
+    reads [4, 5, 17, 18]   walk_ok True   descriptor pinned False
+
+m$$aaBlY2kZSTnSIK1CuOck1jRFfz4npfVQgapsxmjpEOH3k3140z22GhCd9BxFH0wp65wK68VXMkP80vOeJVZORXkiMwdLCa3DZ
+    handler (Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lcom/mojang/brigadier/StringReader;)V
+    target  ('()Z', None)
+    target  ('()V', False)
+    reads [4, 5, 16, 17, 18, 19]   walk_ok True   descriptor pinned False
+
+m$$hKuz3sHyuVZTnb8n7ABrLHrsTSpr9CGUTJkn3dUOLdFBQSBiesoMkHtEjYtPndsXLjP4Ct7pWevav93v7X3SJcWl0SnnB9RGH
+    handler (Lnet/minecraft/class_2693;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Lnet/minecraft/class_2625;)V
+    target  ('(Lnet/minecraft/class_2625;Z)V', None)
+    target  ('(Lnet/minecraft/class_2693;)V', False)
+    reads [4, 17, 18, 19]   walk_ok True   descriptor pinned False
+
+m$$qtpdMhw2QlSmCHxorxwgF6r42fzxc39tGpqEUu6AYtSnEhUSsUW8rmA5qHGTxhzR0G72uLnBdFuHnO6kryAFghi7OxJn6VmFo
+    handler (IILnet/minecraft/class_2540;Ljava/util/Map;Ljava/util/function/Consumer;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lnet/minecraft/class_2818;)V
+    target  ('(Lnet/minecraft/class_1923;)V', None)
+    target  ('(IILnet/minecraft/class_2540;Ljava/util/Map;Ljava/util/function/Consumer;)Lnet/minecraft/class_2818;', False)
+    reads [7]   walk_ok True   descriptor pinned False
+
+m$$wUJMfrboBIslJVBPiPtTM3gGDZsGC4df6Z5DNd3DCjsRAbjuud4KCzHG2dDB4GMAuSpH5Suqb9Kn1SdxTXVkSOXoDigh13tr1
+    handler (JIIIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    target  ('(JILnet/minecraft/class_11908;)V', False)
+    reads [3, 5, 7, 8, 16]   walk_ok True   descriptor pinned False
+
+m$$wUJMfrboBIslJVBPiPtTM3gGDZsGC4df6Z5DNd3DCjsRAbjuud4KCzHG2dDB4GMAuSpH5Suqb9Kn1SdxTXVkSOXoDigh13tr1
+    handler (JIILorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V
+    target  ('(JLnet/minecraft/class_11905;)V', False)
+    reads [3, 5, 6, 16]   walk_ok True   descriptor pinned False
+
+m$$wUJMfrboBIslJVBPiPtTM3gGDZsGC4df6Z5DNd3DCjsRAbjuud4KCzHG2dDB4GMAuSpH5Suqb9Kn1SdxTXVkSOXoDigh13tr1
+    handler (ILorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+    target  ('(Z)V', None)
+    target  ('(Lnet/minecraft/class_11908;)Z', False)
+    reads []   walk_ok True   descriptor pinned False
+
+m$$wUJMfrboBIslJVBPiPtTM3gGDZsGC4df6Z5DNd3DCjsRAbjuud4KCzHG2dDB4GMAuSpH5Suqb9Kn1SdxTXVkSOXoDigh13tr1
+    handler (ILorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V
+    target  ('(Z)V', None)
+    target  ('(Lnet/minecraft/class_11908;)Z', False)
+    reads []   walk_ok True   descriptor pinned False
+

@@ -23,7 +23,7 @@ Handled shapes:
 Anything else (a parameter whose type changed, parameters reordered) cannot be
 forwarded and is reported for a per-mixin port.
 """
-import collections, json, os, sys, zipfile
+import collections, json, os, re, sys, zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -74,6 +74,10 @@ def target_static(owner_inter, name, desc):
                 table = {}
         _STATIC[off] = table
     return table.get((name, desc))
+
+# Named exactly like the bridges this file adds, so a second run can tell them
+# apart from the obfuscated originals and not bridge a bridge.
+BRIDGE = re.compile(r"m\$\$b\d+x?$")
 
 CI = "Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;"
 CIR_RAW = "Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;"
@@ -226,8 +230,174 @@ def decide(cfm_desc, cands):
         tp = MC.desc_types(dd)
         tr = MC.desc_ret(dd)
         if [norm(x) for x in tp] == old_args and tr != old_ret and tr != "V":
-            return ("generic", dd, MC.desc_of(tp + [CIR], tr), st)
+            # A handler always returns void, whatever the target returns.
+            return ("generic", dd, MC.desc_of(tp + [CIR], "V"), st)
     return ("port", cands[0][0] if cands else None, None, None)
+
+
+# ------------------------------------------------------------------ slot walker
+# A handler's parameters live in fixed local slots, so "does the body read this
+# parameter" is a question about slot loads.  Instruction lengths have to be
+# exact or the walk desynchronises and starts reporting operand bytes as slot
+# reads, so a walk is only trusted when it ends exactly on the last byte and
+# every branch lands on an instruction start.
+_LEN = {op: 1 for op in range(0x100)}
+for _op in (0x10, 0x12, 0x15, 0x16, 0x17, 0x18, 0x19, 0x36, 0x37, 0x38, 0x39,
+            0x3A, 0xA9, 0xBC):
+    _LEN[_op] = 2
+for _op in (0x11, 0x13, 0x14, 0x84, 0xB2, 0xB3, 0xB4, 0xB5, 0xB6, 0xB7, 0xB8,
+            0xBB, 0xBD, 0xC0, 0xC1, 0xC6, 0xC7):
+    _LEN[_op] = 3
+_LEN[0xC5] = 4
+for _op in (0xB9, 0xBA, 0xC8, 0xC9):
+    _LEN[_op] = 5
+for _op in range(0x99, 0xA9):
+    _LEN[_op] = 3
+_BRANCH = set(range(0x99, 0xA9)) | {0xC6, 0xC7}
+
+
+def walk_slots(code):
+    """-> (slots read, slots written, walk is trustworthy)"""
+    reads, writes, targets, starts = set(), set(), set(), set()
+    pc, n = 0, len(code)
+    try:
+        while pc < n:
+            starts.add(pc)
+            op = code[pc]
+            if op == 0xAA:                      # tableswitch
+                p = pc + 1
+                p += (4 - (p % 4)) % 4
+                lo = int.from_bytes(code[p + 4:p + 8], "big", signed=True)
+                hi = int.from_bytes(code[p + 8:p + 12], "big", signed=True)
+                targets.add(pc + int.from_bytes(code[p:p + 4], "big", signed=True))
+                for k in range(hi - lo + 1):
+                    targets.add(pc + int.from_bytes(
+                        code[p + 12 + 4 * k:p + 16 + 4 * k], "big", signed=True))
+                ln = (p - pc) + 12 + 4 * (hi - lo + 1)
+            elif op == 0xAB:                    # lookupswitch
+                p = pc + 1
+                p += (4 - (p % 4)) % 4
+                targets.add(pc + int.from_bytes(code[p:p + 4], "big", signed=True))
+                pairs = int.from_bytes(code[p + 4:p + 8], "big", signed=True)
+                for k in range(pairs):
+                    targets.add(pc + int.from_bytes(
+                        code[p + 12 + 8 * k:p + 16 + 8 * k], "big", signed=True))
+                ln = (p - pc) + 8 + 8 * pairs
+            elif op == 0xC4:                    # wide
+                ln = 6 if code[pc + 1] == 0x84 else 4
+            else:
+                ln = _LEN.get(op, 1)
+                if op in _BRANCH:
+                    targets.add(pc + int.from_bytes(code[pc + 1:pc + 3],
+                                                    "big", signed=True))
+            if 0x1A <= op <= 0x2D:
+                reads.add(op - 0x1A)
+            elif 0x3B <= op <= 0x4E:
+                writes.add(op - 0x3B)
+            elif op in (0x15, 0x16, 0x17, 0x18, 0x19):
+                reads.add(code[pc + 1])
+            elif op in (0x36, 0x37, 0x38, 0x39, 0x3A):
+                writes.add(code[pc + 1])
+            elif op == 0x84:
+                reads.add(code[pc + 1]); writes.add(code[pc + 1])
+            elif op == 0xC4:
+                idx = int.from_bytes(code[pc + 2:pc + 4], "big")
+                if code[pc + 1] in (0x36, 0x37, 0x38, 0x39, 0x3A, 0x84):
+                    writes.add(idx)
+                    if code[pc + 1] == 0x84:
+                        reads.add(idx)
+                else:
+                    reads.add(idx)
+            pc += ln
+    except IndexError:
+        return reads, writes, False
+    return reads, writes, pc == n and targets <= starts
+
+
+DEFAULT = {"I": 0x03, "Z": 0x03, "B": 0x03, "C": 0x03, "S": 0x03,
+           "J": 0x09, "F": 0x0B, "D": 0x0E}
+
+
+def emit_default(code, t):
+    """A value for a parameter the body never reads: null for references."""
+    code.append(DEFAULT.get(t, 0x01))
+
+
+def param_slots(types, first):
+    return slots_of(types, first)[0]
+
+
+def pinned_methods(cfm):
+    """Descriptors the @Inject itself names, as opposed to every overload."""
+    out = set()
+    for a in cfm["ann"]:
+        if short(a["type"]) != "Inject":
+            continue
+        for s in strings_in(a["v"].get("method")):
+            _o, _n, d, _h = classify(s["val"])
+            if d.startswith("("):
+                out.add(d)
+    return out
+
+
+def decide_remap(cfm_desc, cands, reads, static, pinned):
+    """A bridge for a target whose parameter list changed shape.
+
+    The bridge declares exactly what Mixin now expects -- the target's
+    parameters plus the callback -- and forwards to the old handler.  A parameter
+    the handler still takes but the target no longer passes can only be supplied
+    as a default, which is safe only when the body never reads that slot;
+    otherwise the injection has to be dropped instead.
+
+    -> (target_desc, bridge_desc, mapping, target_static) or None when no single
+       candidate is consistent, since Mixin matches every overload of the name.
+    """
+    params = MC.desc_types(cfm_desc)
+    ci = None
+    for i, t in enumerate(params):
+        if t == CI or norm(t) == "@CIR":
+            ci = i
+            break
+    if ci is None:
+        return None
+    cb = params[ci]
+    first = 0 if static else 1
+    pslots = param_slots(params, first)
+    old_args = [(i, t) for i, t in enumerate(params) if i != ci]
+    viable = []
+    for dd, st in cands:
+        tp = MC.desc_types(dd)
+        tr = MC.desc_ret(dd)
+        new_cb = CI if tr == "V" else CIR
+        if norm(new_cb) != norm(cb):
+            continue
+        tslots = param_slots(tp, first)
+        mapping, ok = {}, True
+        for k, (i, t) in enumerate(old_args):
+            if k < len(tp) and tp[k] == t:
+                mapping[i] = ("load", tslots[k])
+            elif pslots[i] not in reads:
+                mapping[i] = ("default", t)
+            else:
+                ok = False
+                break
+        if ok:
+            viable.append((dd, MC.desc_of(tp + [new_cb], "V"), mapping, st))
+    # A name-only injection applies to every overload, so a handler that fits
+    # just one of them still aborts the whole mixin at apply time.
+    if len(viable) != 1 or (not pinned and len(cands) > 1):
+        return None
+    return viable[0]
+
+
+def strip_ann(mc, m, attr, span, all_anns):
+    """Remove one annotation, keeping every other annotation on the member."""
+    keep = {(s, e) for (s, e, _t) in [x[1] for x in all_anns if x[0] is attr]
+            if (s, e) != (span[0], span[1])}
+    if keep:
+        attr["data"] = MC.anns_keep(attr["data"], keep)
+    else:
+        m["attrs"].remove(attr)
 
 
 def spanned_anns(mc, m):
@@ -252,20 +422,32 @@ def patch(mn, b, log):
 
     pool = Pool(mc)
     used = {MC.utf8(mc, m["name"]) for m in mc["methods"]}
-    bridged = 0
+    bridged = stripped = next_name = 0
     for idx, cfm in enumerate(cf.methods):
         if not any(short(a["type"]) == "Inject" for a in cfm["ann"]):
             continue
+        if BRIDGE.match(cfm["name"]):
+            continue          # already declares the descriptor Mixin expects
         m = mc["methods"][idx]
-        kind, tdesc, new_desc, tstatic = decide(MC.utf8(mc, m["desc"]),
-                                                target_descs(cfm, targets))
-        if kind in ("ok", "port"):
-            log.append((mn, cfm["name"], kind, tdesc, None))
+        old_desc = MC.utf8(mc, m["desc"])
+        cands = target_descs(cfm, targets)
+        kind, tdesc, new_desc, tstatic = decide(old_desc, cands)
+        static = bool(m["acc"] & 0x0008)
+        mapping = None
+        if kind == "port":
+            co = MC.code_of(mc, m)
+            reads, _w, walked = walk_slots(bytes(co["code"])) if co else (set(), set(), False)
+            plan = (decide_remap(old_desc, cands, reads, static, pinned_methods(cfm))
+                    if walked else None)
+            if plan:
+                kind = "remap"
+                tdesc, new_desc, mapping, tstatic = plan
+        if kind == "ok":
+            log.append((mn, cfm["name"], "ok", tdesc, None))
             continue
         # Mixin rejects a handler whose staticness differs from the target's.  The
         # 1.21.5 target's staticness is what the handler was written against, so the
         # bridge copies it rather than assuming an instance method.
-        static = bool(m["acc"] & 0x0008)
         if tstatic is not None and tstatic != static:
             log.append((mn, cfm["name"], "static", tdesc, None))
             continue
@@ -276,6 +458,14 @@ def patch(mn, b, log):
             log.append((mn, cfm["name"], "no-bytes", tdesc, None))
             continue
         attr, span = labels[0]
+        if kind == "port":
+            # Nothing can be forwarded: the target no longer passes a parameter
+            # the handler reads, so this one injection is dropped and the rest
+            # of the mixin keeps applying.
+            strip_ann(mc, m, attr, span, all_anns)
+            stripped += 1
+            log.append((mn, cfm["name"], "stripped", tdesc, None))
+            continue
         ann_bytes = attr["data"][span[0]:span[1]]
 
         old_desc = MC.utf8(mc, m["desc"])
@@ -290,14 +480,21 @@ def patch(mn, b, log):
         ci_slot = new_slots[-1]
 
         code = bytearray() if static else bytearray([ALOAD_N])
-        # The handler's last parameter already is the callback object, so it is
-        # loaded once -- from the slot it occupies in the new descriptor, which is
-        # where it lives in the bridge's own frame.  Pushing the old parameters and
-        # then the callback again puts two copies on the stack and the verifier
-        # rejects the call.
-        for t, sl in zip(old_params[:-1], old_slots[:-1]):
-            emit_load(code, t, sl)
-        emit_load(code, new_params[-1], ci_slot)
+        # The callback is pushed once, from the slot it occupies in the bridge's
+        # own frame; the other parameters come from wherever they landed in the
+        # new descriptor.  Pushing them a second time puts two copies on the
+        # stack and the verifier rejects the call.
+        ci_index = (len(old_params) - 1 if mapping is None
+                    else next(i for i in range(len(old_params)) if i not in mapping))
+        for i, t in enumerate(old_params):
+            if i == ci_index:
+                emit_load(code, new_params[-1], ci_slot)
+            elif mapping is None:
+                emit_load(code, t, old_slots[i])
+            elif mapping[i][0] == "load":
+                emit_load(code, t, mapping[i][1])
+            else:
+                emit_default(code, t)
         code.append(0xB8 if static else 0xB7)
         code += MC.u2b(pool.method(this, MC.utf8(mc, m["name"]), old_desc))
         if new_ret == "V":
@@ -307,10 +504,12 @@ def patch(mn, b, log):
         else:
             emit_return_value(pool, code, new_ret, ci_slot)
 
-        name = "m$$b%d" % bridged
+        name = "m$$b%d" % next_name
         while name in used:
-            name += "x"
+            next_name += 1
+            name = "m$$b%d" % next_name
         used.add(name)
+        next_name += 1
 
         mc["methods"].append({
             "acc": 0x000A if static else 0x0002,
@@ -338,7 +537,7 @@ def patch(mn, b, log):
         bridged += 1
         log.append((mn, cfm["name"], kind, tdesc, new_desc))
 
-    if not bridged:
+    if not (bridged or stripped):
         return None
     return MC.write(mc, pool.extra)
 
@@ -355,8 +554,8 @@ def verify(mn, b, new_b):
     """The bridge must exist, the handler must be clean, everything else intact."""
     old, new = MC.parse(b), MC.parse(new_b)
     problems = []
-    if len(new["methods"]) <= len(old["methods"]):
-        problems.append("no method added")
+    if len(new["methods"]) < len(old["methods"]):
+        problems.append("methods lost")
     if [m["acc"] for m in new["methods"][:len(old["methods"])]] != [m["acc"] for m in old["methods"]]:
         problems.append("method order changed")
     for i, m in enumerate(old["methods"]):
