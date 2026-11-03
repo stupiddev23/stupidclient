@@ -389,3 +389,45 @@ m$$wUJMfrboBIslJVBPiPtTM3gGDZsGC4df6Z5DNd3DCjsRAbjuud4KCzHG2dDB4GMAuSpH5Suqb9Kn1
     target  ('(Lnet/minecraft/class_11908;)Z', False)
     reads []   walk_ok True   descriptor pinned False
 
+
+
+# ---- injections dropped because their @At target no longer occurs: 30
+
+Mixin and MixinExtras require every injector to match at least one
+injection point, so an @At naming an instruction the method no longer
+contains aborts the whole mixin ("failed injection check, (0/1)
+succeeded. Scanned 0 target(s)").  This is not a rename: the call simply
+is not there any more.  tools/mixpoints.py decodes the 1.21.11 method and
+drops only injectors whose concrete INVOKE/FIELD target is provably
+absent; the rest of each mixin still applies.
+
+drop Redirect    m$$1kRxp1daRLB m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop ModifyExpressionValue m$$Ak2eHYNVXPp m$$mxmQX5hox2xjlqJLqeOvwQPWw9WJpPY
+drop ModifyArgs  m$$Bt2WCJQeHB4 m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop ModifyArgs  m$$Bt2WCJQeHB4 m$$mxmQX5hox2xjlqJLqeOvwQPWw9WJpPY
+drop WrapWithCondition m$$DmZ8qDDTkUT m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop Inject      m$$DmZ8qDDTkUT m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop ModifyVariable m$$FRUoLijfpaF m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop Inject      m$$FRUoLijfpaF m$$mxmQX5hox2xjlqJLqeOvwQPWw9WJpPY
+drop Inject      m$$FRUoLijfpaF m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop ModifyArgs  m$$JCDqBI1tV8L m$$fIHJjiNpd5FbKFtiMTTHoTvq5ynbCGu
+drop Inject      m$$KgsA96MC4T4 m$$mxmQX5hox2xjlqJLqeOvwQPWw9WJpPY
+drop Inject      m$$NgFs7hcxUI7 m$$OEp0YT29NNw42heIP0zmUASyxkpkgoN
+drop ModifyExpressionValue m$$NtFIT6zaieE m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop WrapWithCondition m$$PvLhzRxnXah m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop ModifyExpressionValue m$$TsJy3WWLeAe m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop ModifyExpressionValue m$$TsJy3WWLeAe m$$mxmQX5hox2xjlqJLqeOvwQPWw9WJpPY
+drop ModifyExpressionValue m$$ZntqiCSzVRf m$$mxmQX5hox2xjlqJLqeOvwQPWw9WJpPY
+drop ModifyArgs  m$$ZntqiCSzVRf m$$bhjmIQJ3z9GdMzjNLx0s0qiWLozkMDS
+drop ModifyExpressionValue m$$abwu89Yj2EM m$$h6YK9QjDoMTr6MXOhtlGTjBp7y0YtqK
+drop Inject      m$$bcaK3OZSsUg m$$To3vhJ3WNHdOvPenZy6hBvuDgvoeXq6
+drop ModifyExpressionValue m$$bcaK3OZSsUg m$$si2aX2X8Dch8BrpPv8C89mK3tHVjy6b
+drop ModifyExpressionValue m$$cblqmEE1hcV m$$fIHJjiNpd5FbKFtiMTTHoTvq5ynbCGu
+drop ModifyExpressionValue m$$cblqmEE1hcV m$$tW5sHtYZnngGdeXOj8DBtaupPoGjWfK
+drop ModifyArgs  m$$cblqmEE1hcV m$$yDK4FTzT0i2VDZNDh5GziSLpLFnovzL
+drop Inject      m$$hKuz3sHyuVZ m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop Inject      m$$hKuz3sHyuVZ m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop Inject      m$$hKuz3sHyuVZ m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
+drop ModifyArg   m$$rCRLtl0PFXa m$$si2aX2X8Dch8BrpPv8C89mK3tHVjy6b
+drop ModifyExpressionValue m$$xR8fdWn9zYG m$$Bt2WCJQeHB4TyQsfZ992xBi26LbuV49
+drop WrapWithCondition m$$yjCVZcCt6yx m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG
