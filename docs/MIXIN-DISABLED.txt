@@ -1,0 +1,309 @@
+# mixins disabled for the 1.21.11 port: 63 of 175
+
+Each class below still had at least one annotation target with no 1.21.11
+counterpart after every mapping-resolvable target was rewritten (see
+tools/mixaudit.py). The config is "required": true, so applying any of them
+aborts the launch; they are simply not listed in mio.mixins.json any more.
+
+To bring one back, add its name to the mixins array and port the targets
+listed under it - most are the 1.21.6/1.21.9 render-pipeline and GUI rewrite.
+
+m$$68QlsrW0NU63MatZBtDDTOYv0z0I8aaS9PViDComI9KQ5VQOCaLCdlj46ob3FMDn4LUdhEfkoIiB41x2gcOsItJ9vqtL1RZqg
+    @Mixin net/minecraft/class_1921$class_4688
+    CLASS-GONE  Mixin.target             Lnet/minecraft/class_1921$class_4688;
+    NEEDS-PORT  Accessor.value           target
+
+m$$68qnsV8FSqCewJikiTTdJQDgNAszNnyfZLVOMZZxTUuP4zo66i77V593z9xnBr9qna9ZVgLFES1aHO1vLId3zu9wmbyHSLy1x
+    @Mixin net/minecraft/class_500
+    NEEDS-PORT  Inject.method            init
+    NEEDS-PORT  Inject.method            keyPressed
+
+m$$7NXHiOT0tpluK4CV61R3yWSRpe7Mz97hWAiEWrWumtyWEnc0OJADHbp54seyJ331Kr9CejjUQVOAOXunGoi68nYtBf2o1ABCN
+    @Mixin net/minecraft/class_2535
+    CLASS-GONE  Inject.method            channelRead0*
+
+m$$7pn9m3SvmzsnfBGVgTiVRsrl8Qhr7yHXKusRbFTx3LhENpcdvXE6FJsokvTwGy6jKXL6BpnpqOSJLP9qbbSve4plZ4AvHPR2m
+    @Mixin net/minecraft/class_761
+    NEEDS-PORT  Inject.method            renderEntity
+    NEEDS-PORT  ModifyExpressionValue.method getEntitiesToRender
+    NEEDS-PORT  At.target                Lnet/minecraft/client/render/DimensionEffects;isDarkened()Z
+
+m$$8qtmo4GCtcnkiaSRoIY546SJHBZIugwZOQUctPFYpkpWQqUVO2v6fga3nbYQHXvbu7Ytzv5gx4wIQjLqftxMcEu4cs7SBCpZc
+    @Mixin net/minecraft/class_310
+    NEEDS-PORT  Inject.method            disconnect(Lnet/minecraft/class_437;)V
+
+m$$923zeYSFHVmChhRqd9bXSv42QHyCYnFZBY0Q444Tbq3eOtbF7eNgkqzgD1WTtbLdHfknIm4XLR0jf5dOxUfYqyObAXruX8D11
+    @Mixin net/minecraft/class_638
+    NEEDS-PORT  Shadow.decl              field_24606Lnet/minecraft/class_5294;
+    NEEDS-PORT  ModifyArg.method         method_24462
+    NEEDS-PORT  Inject.method            method_30932
+    NEEDS-PORT  Inject.method            getDimensionEffects
+
+m$$9W1PyZ9oPpdD08Uwy238j1iZ3I7C9XOBTTMWLtDOlbpAoaEvC8I37FQysx5i45SKsXkUApfKzWMyNwMwig8PrUwbaiyWwS1BS
+    @Mixin net/minecraft/class_11759
+    NEEDS-PORT  Inject.method            method_16800
+
+m$$9lGG9WYzVF2yt0GJdbVwfVXPUedl4C0LlAOAJTX1wiHk50HGeayDzsixIAgcxZO7ykBLYENudqLwh0agpq77ICuaWCkA5zEME
+    @Mixin net/minecraft/class_10197
+    NEEDS-PORT  At.target                Lnet/minecraft/class_1921;getArmorCutoutNoCull(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;
+
+m$$9vbTFJerlvcXWS73AGXSiHW3CqUHF9KEmBuQASCbJJrsTDUX2VzhFsGtNxg64vcVOKMR6PzEwZWY1NKBAgWIMvN6utUze16C3
+    @Mixin net/minecraft/class_490
+    NEEDS-PORT  ModifyArgs.method        method_64045
+    NEEDS-PORT  At.target                Lnet/minecraft/client/render/entity/EntityRenderDispatcher;render(Lnet/minecraft/entity/Entity;DDDFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V
+
+m$$AM14aV9OSQ5tTp8nApmbJsBzx4LSPjyH3BbSJIy3rhFvWUWgXT94fQlJUBFzRxVGo1g98zUIKF0FPlHKAU511UKGXtu1BlkXm
+    @Mixin net/minecraft/class_761
+    NEEDS-PORT  Accessor.value           frustum
+
+m$$C7jwyCZGOGmxYHR6CinqHYKGpwwojfCUt8uyzjRA2awICUF3ogkSBtJt9OZZ5TwdqY7XMH0WNbqisrPkOMONx1NLAAWZsoOL0
+    @Mixin net/minecraft/class_970
+    NEEDS-PORT  Inject.method            render(Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;ILnet/minecraft/class_10017;FF)V
+
+m$$DiLZAKZ96LNDjmIj5jQfBFZOHjqtVCj1XikArRWCf0abUMhC414F4eifZrmK6Y4B7pP1Py64BMf4DTxlkDnqxYjoJLrWlcExD
+    @Mixin net/minecraft/class_2833
+    NEEDS-PORT  Accessor.value           position
+
+m$$EOjNslxDicSrPv2Pcu8ZewlDwv4HlMfwnmOfdjq3GtE2vs9FhB90OJTHSRLpyRebQ1e8Cl4QqTUzKWFc73biVF3MZ7aXfLiOc
+    @Mixin net/minecraft/class_1007
+    NEEDS-PORT  At.target                Lnet/minecraft/class_1921;getEntityTranslucent(Lnet/minecraft/class_2960;)Lnet/minecraft/class_1921;
+
+m$$Eptpbrf8OJi8ylJn4vw42SuYHtUUwMIVPNZgEwnmlW8On8xML48lY1XaokifHYUo9LzRM2w5zTCwTvwLlePpCcFrYcjrmZg5W
+    @Mixin net/minecraft/class_9919
+    CLASS-GONE  At.target                Lnet/minecraft/class_310;field_1755Lnet/minecraft/class_437;
+
+m$$HWOrDG1HiPLhZw3jSfd0oxxaEWZvdjabKu7E0Q0HreRrpy73PHHGXl43FCQlO7CIwgkEqv0BKfd5VYr7Pdl8U6pCc5CJlEzqS
+    @Mixin net/minecraft/class_3830
+    NEEDS-PORT  WrapWithCondition.method onEntityCollision
+
+m$$IdmPNGPYzocKrxl7NEZGAyTI52O49JPj6YU8mLBjmECVkiw8EP7PIFNrEDm8DArZyBQLZgQFtBqoJ4W25T2LTvQLb4y9a4WXX
+    @Mixin net/minecraft/class_1657
+    NEEDS-PORT  At.target                Lnet/minecraft/class_1657;field_6273I
+
+m$$LGLFak5nbFECYdITscFpInQHGvLyjB6pb6cOAakiO2zDGdLGYbKOMcrVV59Rx3dlrn0ekrR2pTy57miCyeGRkPm0O0rFavrAH
+    @Mixin net/minecraft/class_2560
+    NEEDS-PORT  Inject.method            onEntityCollision
+
+m$$Ld0Jp3TfdrSc3yMFCm4maVBBz01Ta76LnwBXVN7DWYBtOE1PuZARPMEH0waEktNdQTljtLH5AYtUhUSBA8zWsNyQ4MIXXZEgb
+    @Mixin com/mojang/brigadier/arguments/BoolArgumentType
+    CLASS-GONE  Mixin.target             Lcom/mojang/brigadier/arguments/BoolArgumentType;
+    NEEDS-PORT  Inject.method            parse(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Boolean;
+
+m$$LuORSP6e5Zf8YQ3DBBij0z6SFEHm2YktdZDCJNooNetKoXEGM3xmQbRPxzV4kmmBdeKAsfmagJjHdr30J1iPFd4IdJ72Ry3rW
+    @Mixin net/minecraft/class_2743
+    NEEDS-PORT  Accessor.value           field_3852
+    NEEDS-PORT  Accessor.value           field_3869
+    NEEDS-PORT  Accessor.value           field_3850
+
+m$$MOd0iA347hrvqnr4CTeKdC3uPnnyKt4tfPkOptIDjYj7QhVqjNKmhJIS8pxWUN3fb7z6Wbeo3OXjaRrGJlEXDvFUXpp485sbY
+    @Mixin net/minecraft/class_4668
+    CLASS-GONE  Mixin.target             Lnet/minecraft/class_4668;
+    NEEDS-PORT  ModifyArgs.method        setupGlintTexturing
+    NEEDS-PORT  Inject.method            startDrawing
+    NEEDS-PORT  Inject.method            endDrawing
+
+m$$Md98Ck06Z0qvMdZsdhnA9mbnHu1irP8giawgjPL7LnvrCyTxQwYdg7IApGJSVL39S2wr7aXBNJzqOgpdvkhomYnhxgSwTEyMC
+    @Mixin net/minecraft/client/main/Main
+    CLASS-GONE  Inject.method            main*
+
+m$$OEp0YT29NNw42heIP0zmUASyxkpkgoNDAf3XefGfcuFiBO7f9sZHIryBvav7JKblNZDhvgVG6hujSvCycPiIiJ2hCkzUT8lyU
+    @Mixin net/minecraft/class_758
+    NEEDS-PORT  ModifyReturnValue.method applyFog
+    NEEDS-PORT  At.target                Lnet/minecraft/util/CubicSampler;sampleColor(Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/CubicSampler$RgbFetcher;)Lnet/minecraft/util/math/Vec3d;
+
+m$$PEGBaEOAvl7reQhiGC2oQxd3vO4wuP9uqEfogjHIaRqVks1pR7N1EgbPI5yyNX8uMhdBy8pXRQLfkZSHEC5cahVen75riHykf
+    @Mixin net/minecraft/class_2874
+    NEEDS-PORT  Accessor.value           fixedTime
+
+m$$PR2Fo7Mb2GWYmXp7UwylQBDUxCEav32r5ubtrBrW8aVRDP8Dz9IRcTyheyl2fHrzdzu1KrShskNJ7nnN426W0NrwYhNJYFeGS
+    @Mixin net/minecraft/class_765
+    CLASS-GONE  At.target                Lnet/minecraft/class_10799;field_56844Lcom/mojang/blaze3d/pipeline/RenderPipeline;
+    NEEDS-PORT  At.target                Lcom/mojang/blaze3d/systems/RenderPass;setUniform(Ljava/lang/String;[F)V
+
+m$$PjcpaOoCllt7z1H6dQL3rUihYA0cavBJ6aUiKTF9aI4zibTEqXvGvIuz9nuV70CJP76AmQ2AviW7xb3dUgUQZmZaiwHnwCwrF
+    @Mixin net/minecraft/class_9946
+    NEEDS-PORT  At.target                Lnet/minecraft/class_10014;field_53328F
+
+m$$PuyggCM2X8HsXkuPN0yii5O72tDQfA4ARD0z5rfx80f94wThoRXpDny1bQlabtSiUYf3PDoXrj7LUqMY4ST3aztXHa4qeGQ3z
+    @Mixin net/minecraft/class_1293
+    NEEDS-PORT  At.target                Lnet/minecraft/class_1293;field_5895I
+
+m$$RBThGBWLNJyEvMpDnhaZ0c98JvmCnFkuakQfhAHA1TyMGgSmOqXm7t98r9DYtKkFX7MHLPNUba3shB6hbyySv82JodcY7Vb4S
+    @Mixin net/minecraft/class_7591
+    NEEDS-PORT  Inject.method            indicatorColor
+
+m$$RN3bsUqkEaQjiBIPJeYmHHPuQqeH98Ix9VInB0dKw8Nzgh8kNZeI1cY7I42usNv4IsRh3Dl5z73XTODW9KhYZYyOmaoAO2bPd
+    @Mixin net/minecraft/class_12249
+    NEEDS-PORT  Inject.method            method_23683
+
+m$$T7kqf5nxAXDABAbzvuHY1Ht2CtHnT5niDVYUVT4zyOyBn0cd08tErvgwd404GiBTv40eLmrcOq0VUP3SEYS0DCG3UaWw3gtHh
+    @Mixin net/minecraft/class_433
+    NEEDS-PORT  Shadow.decl              method_47632()V
+    NEEDS-PORT  Inject.method            disconnect
+
+m$$V4lyxrRQY4hbEfdVgOkJT1UkKYxRiHNCyoyIx38U3wc0auWoQX6QQEF2DcWL13dgJmqWIo9jPBqnLHQxpJlcFsPHiPwWTaR0v
+    @Mixin net/minecraft/class_757
+    NEEDS-PORT  Shadow.decl              field_3992Z
+    NEEDS-PORT  Inject.method            findCrosshairTarget
+
+m$$VOxxPjOZrDJTvLQ6b20NvoCJzqJIwusXeHl2nPr10pKwrakXid1lh5psOuiuDJ59FoARYuvIn3j9JXXxf2d8zkmfqupm8JHSu
+    @Mixin net/minecraft/class_3294
+    NEEDS-PORT  ModifyReturnValue.method method_14486
+
+m$$VcPWjgvlrp1fLa2WRXNtpH3ZGhycwHMbiAOYIpqHkHyVWkplfHtQaLgZxMQENPXZkEfSDCq2Ln4ndWrsOop2DD5FilfB62RRT
+    @Mixin net/minecraft/class_355
+    CLASS-GONE  At.target                Lnet/minecraft/class_355;field_2156Ljava/util/Comparator;
+
+m$$Wz4K4AacT2Fw1R0jKffd4e44esucMmff6flSG1xQGQcutJSM8vSVwGeQHKJ203SSeVV0w8mutEjJo218KFK55vxhqUvE3jANU
+    @Mixin net/minecraft/class_892
+    CLASS-GONE  ModifyArgs.method        render*
+    CLASS-GONE  At.target                Lnet/minecraft/class_892;field_21736Lnet/minecraft/class_1921;
+
+m$$Y6W7vPMPWQrDyfiCFvIVCTBkLE6Nn3JuS5xn6iqufoXKEQeqKlCDZ6ox964g06Jpx1qG6vao4c8uOl3u20Z2JhWQUnDunaLU1
+    @Mixin net/minecraft/class_434
+    CLASS-GONE  Mixin.target             Lnet/minecraft/class_434;
+    NEEDS-PORT  Inject.method            shouldCloseOnEsc
+
+m$$a5eODVMQD2muwvTO43lZ1ucjZl4FhxrEJeevDjQD6VL7UhHsF8VVTUEVZ3pLqZMzxmOFfv70rlTc8265XS3zJfP9VIKWCCSbZ
+    @Mixin net/minecraft/class_6861
+    NEEDS-PORT  ModifyReturnValue.method method_14486
+
+m$$aQ4q1TxdQKz4BFU6nT1XmNv63cqaPCoFaXeROTZ8XJtEho1HFOqgyAuiJpYGMBe8xwxAqDbtldokjhP7Dp7ngOmSKWBhpNCM8
+    @Mixin net/minecraft/class_1297
+    NEEDS-PORT  ModifyReceiver.method    getVelocityMultiplier
+
+m$$bSHfTqaRAlkoBdiDlsWt9yCTLLEKW9392P9ZC6gfotNQyadQWoNUEYGJYXxIoW960z3Fq0BTLz2x9UYAjxluAyUh16krrQ07x
+    @Mixin net/minecraft/class_703
+    NEEDS-PORT  Shadow.decl              field_3841F
+    NEEDS-PORT  ModifyVariable.method    setAlpha
+
+m$$bhjmIQJ3z9GdMzjNLx0s0qiWLozkMDSSmjPx8lqlfaVFoMnTejLBQyrZKbp8kinqb4190vFHMH2GRYh4QHxskU6uUoO0z66vW
+    @Mixin com/mojang/brigadier/arguments/BoolArgumentType
+    CLASS-GONE  Mixin.target             Lcom/mojang/brigadier/arguments/BoolArgumentType;
+    NEEDS-PORT  Inject.method            parse(Lcom/mojang/brigadier/StringReader;)Ljava/lang/Boolean;
+
+m$$cQZc5oKdvasPVXiXL6WcUUxbeF3bP86qUnqQAa2oNXmeC69dD470gkmO3NdrpFTKLBtOUS9fQt35eCnE2vu6sCxhvg7dQLCAm
+    @Mixin net/minecraft/class_9779$class_9781
+    NEEDS-PORT  At.target                Lnet/minecraft/class_9779$class_9781;field_51962J
+
+m$$dqgASIaDtYYe3zYFD5wVnvar7p3RBBCX62DOFFw1NoiiZYC60ich0h1LKqIfRGasndJsEg7XDQNm5wptYmzZ4PJ3EIRktYkCT
+    @Mixin net/minecraft/class_2664
+    NEEDS-PORT  Accessor.value           playerKnockback
+
+m$$efZx5bnEk1lm3D90ko0qwxulyPjxwjQH3CZAMM8r9KHjHBpvWl8T7WUfyLVY1V6KXBAGOtflpLChA5RVPHlk9L2KxY8uZ176v
+    @Mixin net/minecraft/class_759
+    NEEDS-PORT  Shadow.decl              method_3228(Lnet/minecraft/class_742;FFLnet/minecraft/class_1268;FLnet/minecraft/class_1799;FLnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V
+
+m$$fIHJjiNpd5FbKFtiMTTHoTvq5ynbCGuLvof5U0yGEfvBR3Ktg9NLo5x0TXsHGIMYCNnNvySKTnJ90rPAostsVBFMSioVkQMh3
+    @Mixin net/minecraft/class_338
+    NEEDS-PORT  At.target                Lnet/minecraft/class_332;fill(IIIIII)V
+    NEEDS-PORT  ModifyExpressionValue.method getTextStyleAt
+    NEEDS-PORT  Inject.method            toChatLineX
+    NEEDS-PORT  Inject.method            toChatLineY
+
+m$$gfNr3CiZiDjM6C9Dr0poKuxAtlKUotV73RoBkMR1HzpeuELQFwKujESpRa62A5zUM1p22TON1uywt9tUnfx9N273v64avm0G0
+    @Mixin net/minecraft/class_918
+    NEEDS-PORT  At.target                Lnet/minecraft/class_918;getDynamicDisplayGlintConsumer(Lnet/minecraft/class_4597;Lnet/minecraft/class_1921;Lnet/minecraft/class_4587$class_4665;)Lnet/minecraft/class_4588;
+
+m$$gkNYEpwpZGLHbqxKJ4NkFDjLhm7njMR502jCopALMT6ZQL7gT9aWk4Icu0GRqtOOZnzVNtR2CnA4wuMRD52TzCv6mCzYFyHNi
+    @Mixin net/minecraft/class_437
+    NEEDS-PORT  Inject.method            handleTextClick
+
+m$$hcsj8NG3KtwSoxcYVG1ZxsafrVLvKZ1CP76Z0GTJEvxCG9JRfM2W3mVAgt0pBmaRrdq8APIH7AFOCezfPDVxNiEVcZu2J7DJH
+    @Mixin net/minecraft/class_315$3
+    NEEDS-PORT  WrapWithCondition.method method_42572
+
+m$$hvhnTqjAhB4fbfcnxTG5LN3wOzfeEXoNPbdyIwfCorKLISMvb9G61KVAxAAoxCLtjb7QVmzOgfxSeYRlv4FPg7atgBdw1bGqD
+    @Mixin net/minecraft/class_638$class_5271
+    NEEDS-PORT  Inject.method            getHorizonShadingRatio
+
+m$$jB8bUegGwiX8os37EncQWhICHXYVjygCQp93SeCB3P1zux2vbMaCUPdV5NoOzuZ5zP13WH7VvDLBAfcOGhBaBi7uFbmswRJqq
+    @Mixin net/minecraft/class_9958
+    CLASS-GONE  Mixin.target             Lnet/minecraft/class_9958;
+    NEEDS-PORT  Accessor.value           end
+    NEEDS-PORT  Accessor.value           red
+    NEEDS-PORT  Accessor.value           green
+    NEEDS-PORT  Accessor.value           blue
+    NEEDS-PORT  Accessor.value           start
+    NEEDS-PORT  Accessor.value           alpha
+
+m$$jKE8rPfAyHwfawN6Z7OubGQhbpRDN61kYdsrUpp4lmIFyMFVGHYoRWVBWiL2W3KrqQnQRKs3or6w0hdJlqBsYwtcvGIiLLrC7
+    @Mixin net/minecraft/class_10185
+    NEEDS-PORT  Accessor.value           right
+    NEEDS-PORT  Accessor.value           jump
+    NEEDS-PORT  Accessor.value           forward
+    NEEDS-PORT  Accessor.value           field_6571
+    NEEDS-PORT  Accessor.value           left
+    NEEDS-PORT  Accessor.value           sprint
+
+m$$lE4q6UXCGETJFOIh7C2KhJceFPUrQh80YcKPsAVtuHtXK4sLETESxc8eqWYePoGE9vlTvKIhg5djHWvuMzbEcLJAcIYY7139Q
+    @Mixin net/minecraft/class_465
+    NEEDS-PORT  Inject.method            keyPressed
+    NEEDS-PORT  ModifyExpressionValue.method mouseClicked
+    NEEDS-PORT  ModifyArgs.method        mouseClicked
+
+m$$liKv1lX7t0QZHrkATapCQwYbCJp1g01m5bxy36JKHG1RVHezfeYqbWbAZtvWolF3KduPeODOLMomaBpekhsfagxYhlK7Z2yBZ
+    @Mixin net/minecraft/class_7472
+    NEEDS-PORT  Accessor.value           command
+
+m$$mhvh85mY6niNMEtyNVaUbcAivPcazOkS3RGfwgVYGOhMvOObJ82u75swZ3fibgYUKJT6AHFKpgbqnshFgkPKIh43gnQpeoSPh
+    @Mixin net/minecraft/class_1309
+    NEEDS-PORT  ModifyExpressionValue.method writeCustomDataToNbt
+
+m$$nPOv40VwqbKwal7iXnfBZnLO7uxT1UUy4s8On2O1x1lDN1E2KgSimXS0RjZ94eRWtg4XuRmJOPvSzq2d5d35yKY3QBAUlMQOM
+    @Mixin net/minecraft/class_2817
+    NEEDS-PORT  Accessor.value           payload
+
+m$$npTGZKi9FNUMb5xmgTX1UJGy4ekcszA1JH3RWvBQNlcpyu5fCsNId9oHdPVvx4zrnyWyZzqzZ1iLKUhS85uQA7LsJjLytcMkM
+    @Mixin net/minecraft/class_922
+    CLASS-GONE  At.target                Lnet/minecraft/class_922;field_4738Ljava/util/List;
+    NEEDS-PORT  Inject.method            render(Lnet/minecraft/class_10017;Lnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V
+
+m$$nziqpqkcISpC8fxrLl4fuc0sNpcFmP6KIebZwq2VhTKMPJe3aAyBWuQXb3LiHRT9OxoKPbDHT8JTtDK2oj8khY8sYPWiMC57N
+    @Mixin net/minecraft/class_898
+    NEEDS-PORT  Inject.method            renderShadow
+    NEEDS-PORT  Inject.method            render(Lnet/minecraft/class_1297;DDDFLnet/minecraft/class_4587;Lnet/minecraft/class_4597;I)V
+    NEEDS-PORT  Inject.method            renderFire
+    NEEDS-PORT  Inject.method            renderHitbox
+
+m$$o7NbnOIjaECyMmKYx5DiZB0PBhO73e9kmc954AaJu8d8gBLyycPZikGVhIXboqmmmrWzu4AbLX436sJzavCoEt02H3eqUFDSZ
+    @Mixin net/minecraft/class_4622
+    NEEDS-PORT  ModifyExpressionValue.method onEntityCollision
+
+m$$pYDJCoqI8Ojhbb56LQkwCZ5gpnn9ZEcKhiA74Fh0gyPaOEfKTDyZnIMlXe4Mg8YM6muyUPYxbGPCtJ3PYGisQVgkw1D57avoz
+    @Mixin net/minecraft/class_746
+    NEEDS-PORT  Inject.method            swingHand
+    NEEDS-PORT  At.target                Lnet/minecraft/class_10185;method_54679()Z
+
+m$$pYiEn7YpSQwtOdZQNVwHwRCnqbsaCV5kwkpxcYDBuVzHYWZ76HB1P2RYchodxXvVdrY5vNBaQWT6SiJ3eLt72CXanPHJTS0Qx
+    @Mixin net/minecraft/class_636
+    CLASS-GONE  At.target                (Lnet/minecraft/util/Hand;IFF)Lnet/minecraft/network/packet/c2s/play/PlayerInteractItemC2SPacket;
+
+m$$qr3LBrHryrjUuQLS0VRd7OfCfWptYkMOQcEGibJx9GtrbrZEob20lm4FDCbF6bd6yzd7v8UA0a3uKyeHZWS771Nfm6fvZ1Sjp
+    @Mixin net/minecraft/class_332
+    NEEDS-PORT  Shadow.decl              method_51448()Lnet/minecraft/class_4587;
+    CLASS-GONE  At.target                net/minecraft/client/util/math/MatrixStack.translate(FFF)V
+    CLASS-GONE  At.target                net/minecraft/client/util/math/MatrixStack.scale(FFF)V
+
+m$$sLWT6jeaSJQCplj6UIZCOGxzBCp5guG2McQUL5IbYQpvZz7aqitOtCnf7fwF1ydJ0jFtgp29gWEVFb9oEHpUQqMkfkMNvkpgz
+    @Mixin net/minecraft/class_4970
+    NEEDS-PORT  ModifyReturnValue.method getRenderingSeed
+
+m$$xiB450akwOqgKtbvuWktwpGStfljAq8k3EUCIipnrDq8AQ0j10TEIMILcsCymv240nQ7x3W9lTGuKsj77oGZuX2oe15VGJCdN
+    @Mixin net/minecraft/class_419
+    NEEDS-PORT  Inject.method            init
+
+m$$yBzeGbgWqUTqU9AGI5jChSM8ejkAMZFu4FILBgBwE4gQ0Qt4JbzBW5RHaMLNF7oLlFacwDdcXXFGoEYeV8lQGe2z3978Epy8t
+    @Mixin net/minecraft/class_1921$class_4687
+    CLASS-GONE  Mixin.target             Lnet/minecraft/class_1921$class_4687;
+    NEEDS-PORT  Accessor.value           phases
+
+m$$yDK4FTzT0i2VDZNDh5GziSLpLFnovzLlp04OMlyk2IbrNPsl5ZAX8OxCoTUJrTJ1PmqFEP1mlK8KKb9bceSGkNjoKEghmz29t
+    @Mixin net/minecraft/class_408
+    NEEDS-PORT  Inject.method            init
+
+m$$zoIj6nB6rifoF4BDikqp3Sdg2DS01OuaeZOXtmEN3AAy4QpZI0fybejCe82bx1TKZBLdDp5DwtmDEYnkxtsLPBO8QJeOsHh5d
+    @Mixin net/minecraft/class_702
+    NEEDS-PORT  Inject.method            addBlockBreakingParticles
+    NEEDS-PORT  Inject.method            method_31595
+
