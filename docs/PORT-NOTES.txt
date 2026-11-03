@@ -1,0 +1,19 @@
+
+
+# ---- ClientCommandSource construction
+
+1.21.11 added a third argument to the client command source:
+
+    1.21.5   (ClientPlayNetworkHandler, MinecraftClient)
+    1.21.11  (ClientPlayNetworkHandler, MinecraftClient, PermissionPredicate)
+
+The mod builds one in a static initializer, so the missing argument threw
+NoSuchMethodError out of <clinit> and the client came up half-initialized;
+the screen-init listener then ran against unset state and died with an NPE.
+
+tools/fixccs.py adds a static bridge on the same class that passes
+PermissionPredicate.ALL (field_63208) and rewrites the call site in place at
+identical length - aconst_null/getstatic/invokestatic plus four nops - so no
+branch offset, stack map frame or exception range moves.  The descriptor used
+for the match is the 1.21.5 one; nothing else in the jar builds this class.
+
