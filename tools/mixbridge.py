@@ -225,7 +225,8 @@ def decide(cfm_desc, cands):
         tp = MC.desc_types(dd)
         tr = MC.desc_ret(dd)
         if len(tp) > len(old_args) and [norm(x) for x in tp[:len(old_args)]] == old_args:
-            return ("append", dd, MC.desc_of(tp + [CI if tr == "V" else CIR], tr), st)
+            # A handler always returns void, whatever the target returns.
+            return ("append", dd, MC.desc_of(tp + [CI if tr == "V" else CIR], "V"), st)
     for dd, st in cands:
         tp = MC.desc_types(dd)
         tr = MC.desc_ret(dd)
@@ -497,12 +498,11 @@ def patch(mn, b, log):
                 emit_default(code, t)
         code.append(0xB8 if static else 0xB7)
         code += MC.u2b(pool.method(this, MC.utf8(mc, m["name"]), old_desc))
-        if new_ret == "V":
-            code.append(0xB1)
-        elif old_ret != "V":
-            code.append(RET.get(new_ret, 0xB0))
-        else:
-            emit_return_value(pool, code, new_ret, ci_slot)
+        # Mixin discards whatever a handler returns; the value the target will
+        # use only ever travels through the callback.  Returning the target's
+        # type here made the bridge unbox CallbackInfoReturnable.getReturnValue()
+        # before the injection point had ever set one (null at @At("HEAD")).
+        code.append(0xB1)
 
         name = "m$$b%d" % next_name
         while name in used:
@@ -576,6 +576,8 @@ def verify(mn, b, new_b):
             problems.append("bridge descriptor carries a type argument")
         if not (m["acc"] & 0x0002):
             problems.append("bridge is not private")
+        if MC.desc_ret(MC.utf8(new, m["desc"])) != "V":
+            problems.append("bridge returns a value")
     if [MC.utf8(old, a["name"]) for a in old["fields"]] != [MC.utf8(new, a["name"]) for a in new["fields"]]:
         problems.append("fields changed")
     return problems

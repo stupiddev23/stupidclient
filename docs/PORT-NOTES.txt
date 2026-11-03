@@ -17,3 +17,26 @@ identical length - aconst_null/getstatic/invokestatic plus four nops - so no
 branch offset, stack map frame or exception range moves.  The descriptor used
 for the match is the 1.21.5 one; nothing else in the jar builds this class.
 
+
+
+# ---- @Inject bridges must return void
+
+mixbridge declares each bridge with the descriptor Mixin expects and then
+forwards to the untouched 1.21.5 handler.  For a target that grew a
+parameter it also gave the bridge the target's return type and ended it with
+CallbackInfoReturnable.getReturnValue() -> unbox -> return.
+
+That is only meaningful once the injection point has run.  At @At("HEAD")
+the callback still holds nothing, so TextColor.getRgb unboxed null inside the
+copied handler the first time the title screen drew text:
+
+    NPE: ... CallbackInfoReturnable.getReturnValue() is null
+        at class_5251.handler$beh002$mioclient$m$$b0
+
+Mixin discards whatever a handler returns - the value the target uses only
+travels through the callback - so a handler is always void.  tools/fixbridges.py
+cuts the dead tail, discards a forwarded non-void result, and rewrites the
+bridge descriptor to end in )V.  It also restores cancellable=true where the
+forwarded handler calls setReturnValue, which is what the decompiled 1.21.5
+handler was annotated with and what the callback needs to accept a value.
+
