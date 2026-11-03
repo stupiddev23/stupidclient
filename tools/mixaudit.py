@@ -387,6 +387,14 @@ def field_type_of(d):
     return inner.split(")")[0] if inner else ret
 
 
+def derive_accessor_name(name):
+    """Mixin derives a missing @Accessor value from the accessor method name."""
+    for p in ("get", "set", "is"):
+        if name.startswith(p) and len(name) > len(p) and name[len(p)].isupper():
+            return name[len(p)].lower() + name[len(p) + 1:]
+    return name
+
+
 def fmt(style, res, had_owner, had_desc, orig_owner):
     st, name, desc, owner, why = res
     if st not in ("FIX", "MOVED"): return None
@@ -446,6 +454,28 @@ for mn in mixins:
             dd = None
         if ann_type in ("Accessor", "Invoker"):
             kind = "METHOD" if ann_type == "Invoker" else "FIELD"
+            if elems.get("value") is None:
+                # No value: Mixin derives the member name from the declaration,
+                # so the Yarn name never appears as a string to patch.  Report
+                # it when the derived name does not already resolve.
+                nm = mbr["name"] if ann_type == "Invoker" else derive_accessor_name(mbr["name"])
+                d = "" if kind == "FIELD" else mbr["desc"]
+                dd2 = field_type_of(mbr["desc"]) if kind == "FIELD" else mbr["desc"]
+                ok = False
+                for o in targets:
+                    iowner = o if is_inter(o) else M5.n2i.get(o, o)
+                    if not iowner or not alive(iowner):
+                        continue
+                    if resolve_member(iowner, kind, nm, d, dd2)[0] == "OK":
+                        ok = True
+                        break
+                if not ok:
+                    rows.append({"mixin": mn, "status": "NEEDS-PORT",
+                                 "what": ann_type + ".derived",
+                                 "value": mbr["name"] + mbr["desc"],
+                                 "repl": None, "why": "name-derived target " + nm,
+                                 "off": None, "targets": targets})
+                return
             elems = {"value": elems.get("value")}
             style = "name"
         elif ann_type in ("Shadow", "Overwrite"):
