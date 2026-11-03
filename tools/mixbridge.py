@@ -44,10 +44,42 @@ classify = _g["classify"]
 by_name = _g["by_name"]
 off_of = _g["off_of"]
 M5 = _g["M5"]
+M11 = _g["M11"]
+MEMNAME = _g["MEMNAME"]
+xlate_desc = _g["xlate_desc"]
+CFS_BY_OFF = {c.name: c for c in _g["CFS"]}
+_STATIC = {}
+
+
+def target_static(owner_inter, name, desc):
+    """1.21.11 staticness of one intermediary method, or None if it can't be read.
+
+    Mixin rejects a handler whose staticness differs from the target's, so a
+    bridge has to copy the target's rather than assume an instance method.
+    """
+    off = M11.i2off.get(owner_inter, owner_inter)
+    table = _STATIC.get(off)
+    if table is None:
+        table = {}
+        cf = CFS_BY_OFF.get(off)
+        if cf is not None:
+            try:
+                mc = MC.parse(cf.b)
+                for m in mc["methods"]:
+                    d = xlate_desc(MC.utf8(mc, m["desc"]), M11.off2i)
+                    n = MC.utf8(mc, m["name"])
+                    table[(MEMNAME.get(("METHOD", owner_inter, n, d), n), d)] = \
+                        bool(m["acc"] & 0x0008)
+            except Exception:
+                table = {}
+        _STATIC[off] = table
+    return table.get((name, desc))
 
 CI = "Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;"
-CIR = "Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<%s>;"
 CIR_RAW = "Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;"
+# Descriptors are erased: the type argument belongs in a Signature attribute, and
+# ASM rejects a '<' inside a descriptor outright.
+CIR = CIR_RAW
 CIR_OPEN = "Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable<"
 INJECT = "Lorg/spongepowered/asm/mixin/injection/Inject;"
 CIR_OWNER = "org/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable"
@@ -154,7 +186,7 @@ def target_descs(cfm, targets):
                 for s in strings_in(nested["v"].get("target")):
                     _o, _n, d, _h = classify(s["val"])
                     if d.startswith("("):
-                        out.append(d)
+                        out.append((d, None))
         for s in strings_in(a["v"].get("method")):
             _o, name, d, _h = classify(s["val"])
             for t in targets:
@@ -164,36 +196,38 @@ def target_descs(cfm, targets):
                 off = off_of(ti)
                 if off is None:
                     continue
-                for _own, dd in by_name(off, "METHOD", name):
-                    out.append(dd)
+                for cc, dd in by_name(off, "METHOD", name):
+                    out.append((dd, target_static(cc, name, dd)))
     seen, uniq = set(), []
-    for d in out:
+    for d, st in out:
+        if "<" in d:
+            continue
         if d not in seen:
             seen.add(d)
-            uniq.append(d)
+            uniq.append((d, st))
     return uniq
 
 
 def decide(cfm_desc, cands):
-    """-> (kind, target_desc, new_handler_desc)"""
+    """-> (kind, target_desc, new_handler_desc, target_is_static)"""
     old_params = MC.desc_types(cfm_desc)
     old_ret = MC.desc_ret(cfm_desc)
     old_args = [norm(x) for x in old_params[:-1]]
-    for dd in cands:
+    for dd, st in cands:
         tp = MC.desc_types(dd)
         if [norm(x) for x in tp] == old_args and MC.desc_ret(dd) == old_ret:
-            return ("ok", dd, None)
-    for dd in cands:
+            return ("ok", dd, None, st)
+    for dd, st in cands:
         tp = MC.desc_types(dd)
         tr = MC.desc_ret(dd)
         if len(tp) > len(old_args) and [norm(x) for x in tp[:len(old_args)]] == old_args:
-            return ("append", dd, MC.desc_of(tp + [CI if tr == "V" else CIR % tr], tr))
-    for dd in cands:
+            return ("append", dd, MC.desc_of(tp + [CI if tr == "V" else CIR], tr), st)
+    for dd, st in cands:
         tp = MC.desc_types(dd)
         tr = MC.desc_ret(dd)
         if [norm(x) for x in tp] == old_args and tr != old_ret and tr != "V":
-            return ("generic", dd, MC.desc_of(tp + [CIR % tr], tr))
-    return ("port", cands[0] if cands else None, None)
+            return ("generic", dd, MC.desc_of(tp + [CIR], tr), st)
+    return ("port", cands[0][0] if cands else None, None, None)
 
 
 def spanned_anns(mc, m):
@@ -222,13 +256,20 @@ def patch(mn, b, log):
     for idx, cfm in enumerate(cf.methods):
         if not any(short(a["type"]) == "Inject" for a in cfm["ann"]):
             continue
-        kind, tdesc, new_desc = decide(MC.utf8(mc, mc["methods"][idx]["desc"]),
-                                      target_descs(cfm, targets))
+        m = mc["methods"][idx]
+        kind, tdesc, new_desc, tstatic = decide(MC.utf8(mc, m["desc"]),
+                                                target_descs(cfm, targets))
         if kind in ("ok", "port"):
             log.append((mn, cfm["name"], kind, tdesc, None))
             continue
+        # Mixin rejects a handler whose staticness differs from the target's.  The
+        # 1.21.5 target's staticness is what the handler was written against, so the
+        # bridge copies it rather than assuming an instance method.
+        static = bool(m["acc"] & 0x0008)
+        if tstatic is not None and tstatic != static:
+            log.append((mn, cfm["name"], "static", tdesc, None))
+            continue
 
-        m = mc["methods"][idx]
         all_anns = list(spanned_anns(mc, m))
         labels = [x for x in all_anns if MC.utf8(mc, x[1][2]) == INJECT]
         if not labels:
@@ -243,15 +284,16 @@ def patch(mn, b, log):
         new_params = MC.desc_types(new_desc)
         new_ret = MC.desc_ret(new_desc)
 
-        old_slots, _ = slots_of(old_params)
-        new_slots, total = slots_of(new_params)
+        first = 0 if static else 1
+        old_slots, _ = slots_of(old_params, first)
+        new_slots, total = slots_of(new_params, first)
         ci_slot = new_slots[-1]
 
-        code = bytearray([ALOAD_N])
+        code = bytearray() if static else bytearray([ALOAD_N])
         for t, sl in zip(old_params, old_slots):
             emit_load(code, t, sl)
         emit_load(code, new_params[-1], ci_slot)
-        code.append(0xB7)
+        code.append(0xB8 if static else 0xB7)
         code += MC.u2b(pool.method(this, MC.utf8(mc, m["name"]), old_desc))
         if new_ret == "V":
             code.append(0xB1)
@@ -266,7 +308,7 @@ def patch(mn, b, log):
         used.add(name)
 
         mc["methods"].append({
-            "acc": 0x0002,
+            "acc": 0x000A if static else 0x0002,
             "name": pool.utf8(name),
             "desc": pool.utf8(new_desc),
             "attrs": [
@@ -326,6 +368,10 @@ def verify(mn, b, new_b):
             problems.append("bridge without code")
         if not any(MC.utf8(new, x[1][2]) == INJECT for x in spanned_anns(new, m)):
             problems.append("bridge without @Inject")
+        if "<" in MC.utf8(new, m["desc"]):
+            problems.append("bridge descriptor carries a type argument")
+        if not (m["acc"] & 0x0002):
+            problems.append("bridge is not private")
     if [MC.utf8(old, a["name"]) for a in old["fields"]] != [MC.utf8(new, a["name"]) for a in new["fields"]]:
         problems.append("fields changed")
     return problems
