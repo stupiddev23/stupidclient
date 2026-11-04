@@ -19,7 +19,9 @@ tools/mc/client.jar, so it stays accurate if that jar is refreshed.
     python3 tools/fixmojang.py --check   # report, change nothing
     python3 tools/fixmojang.py --list    # show what would be stubbed
 """
+import gzip
 import os
+import re
 import sys
 import zipfile
 
@@ -32,6 +34,30 @@ ROOT = os.path.dirname(HERE)
 JAR = os.path.join(ROOT, "jars", "mio-1.21.11.jar")
 CLIENT = os.path.join(HERE, "mc", "client.jar")
 RETURN = b"\xb1"
+
+
+def _intermediary_to_official():
+    """The jar names Minecraft types in intermediary; client.jar uses Mojang's
+    names, so a descriptor has to be translated before it can be compared.
+    Without this every nested Minecraft type inside a com.mojang signature
+    (VertexFormat$class_5596, class_10789, ...) looks like a removal."""
+    out = {}
+    path = os.path.join(HERE, "mappings", "yarn-1.21.11.tiny.gz")
+    with gzip.open(path, "rt", encoding="utf-8") as fh:
+        fh.readline()
+        for line in fh:
+            p = line.rstrip("\n").split("\t")
+            if p[0] == "CLASS" and p[2].startswith(("net/minecraft/", "com/mojang/")):
+                out[p[2]] = p[1]
+    return out
+
+
+I2O = _intermediary_to_official()
+
+
+def norm(desc):
+    return re.sub(r"L([A-Za-z0-9_/$]+);",
+                  lambda m: "L" + I2O.get(m.group(1), m.group(1)) + ";", desc)
 
 
 def walk(code):
@@ -84,7 +110,7 @@ def refs(cls, code, vanilla):
             continue
         name = MC.utf8(cls, (nt[1] << 8) | nt[2])
         desc = MC.utf8(cls, (nt[3] << 8) | nt[4])
-        if (name, desc) not in vanilla.members(owner):
+        if (name, norm(desc)) not in vanilla.members(owner):
             out.append((owner, name, desc))
     return out
 

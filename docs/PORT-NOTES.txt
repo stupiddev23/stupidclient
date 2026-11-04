@@ -175,8 +175,7 @@ tools/fixskins.py performs both edits and reports any other method that
 still reaches the removed API instead of guessing at it.
 
 
-
-# ---- the custom renderer targets the 1.21.5 blaze3d pipeline
+# ---- the custom renderer is ported onto the 1.21.11 pass API
 
 The first in-game frame threw:
 
@@ -185,32 +184,86 @@ The first in-game frame threw:
         at me.mioclient.m$$3uGlx...m$$U07Rr2ofjRcmUA6QhPzXslX...
         at class_329.handler$bdf000$mioclient$m$$sLWT6...
 
-com.mojang.* is not remapped to intermediary, so a Mojang-side change
-surfaces as a plain NoSuchMethodError with nothing to bridge.  Auditing
-every com.mojang member the jar calls against client.jar finds twelve
-methods and thirty calls, all one subsystem -- mio's custom HUD renderer:
+com.mojang.* is not remapped to intermediary, so a Mojang-side change is a
+plain NoSuchMethodError with nothing to bridge.  Auditing every com.mojang
+member the jar calls against client.jar, name-normalised through the yarn
+mapping (mio names types in intermediary, the jar in Mojang's names), leaves
+two layers, both inside the custom HUD renderer.
 
-    RenderSystem.setShaderColor(FFFF)V          gone, colour is a uniform now
-    RenderSystem.getShaderColor()[F             gone
-    RenderSystem.setShaderTexture(int,GpuTexture)V   moved to RenderPass
-    RenderSystem.enableScissor(IIII)V           -> enableScissorForRenderTypeDraws
-    RenderSystem.disableScissor()V              -> disableScissorForRenderTypeDraws
-    RenderSystem.lineWidth(F)V                  gone
-    RenderSystem.getProjectionMatrix()          gone, it is a GpuBufferSlice now
-    RenderSystem.shaderLightDirections          gone, it is a GpuBufferSlice now
-    RenderPipeline.Builder.withUniform(String, class_10789)      changed
-    RenderPipeline.Builder.withVertexFormat(VertexFormat,...)    changed
+Layer one, RenderSystem statics -- eight members, nine call sites, all
+invokestatic, handled by tools/fixgfx.py:
 
-1.21.11 moved colour, texture binding, scissor and line width onto
-RenderPass and per-pipeline uniforms, and changed the builder, so this is
-a rewrite against the new GPU abstraction rather than a rename.  The
-renderer is one facade class with 23 overloads reached from 86 call
-sites, so stubbing it piecemeal would blank mio's whole custom HUD and
-still leave two non-void accessors returning float[] and Vector3f
-unresolved.  It is left alone until it can be ported properly.
+    RenderSystem.setShaderColor(FFFF)V                     x1
+    RenderSystem.getShaderColor()[F                        x1
+    RenderSystem.enableScissor(IIII)V                      x1
+    RenderSystem.disableScissor()V                         x1
+    RenderSystem.lineWidth(F)V                             x1
+    RenderSystem.setShaderTexture(int,GpuTexture)V         x1
+    RenderSystem.getProjectionMatrix()Lorg/joml/Matrix4f;  x1
+    RenderSystem.shaderLightDirections [Lorg/joml/Vector3f; x2
 
-tools/fixmojang.py re-runs the audit against client.jar, prints what is
-missing, and can stub void methods that call removed members (it refuses
-constructors, class initialisers and anything that has to return a
-value).  Use --list before deciding.
+Layer two, the pass API -- five call sites, all invokeinterface, handled by
+tools/fixpass.py:
 
+    RenderPass.setUniform(String,float[])        x3
+    RenderPass.bindSampler(String,GpuTexture)    x1
+    CommandEncoder.createRenderPass(GpuTexture,OptionalInt) x1
+
+An un-normalised audit reports twelve for layer one and drags in
+RenderPipeline.Builder's withUniform/withVertexFormat; those are false
+positives.  VertexFormat$class_5596, its field_29344/field_27382 constants and
+class_10789 (UniformType) are all unchanged, and the shader snippets build
+against the new builder exactly as they are.
+
+Both tools keep every site the same length.  invokestatic stays three bytes
+with the descriptor unchanged; invokeinterface becomes invokestatic and its
+trailing argument count and zero byte become nop, so nothing after it moves.
+The receiver already sits under the arguments, so promoting it to an explicit
+first parameter leaves the stack shape identical.  No offset, stack map frame
+or exception range moves.
+
+What each call does on 1.21.11:
+
+    scissor          enableScissorForRenderTypeDraws/disableScissorForRenderTypeDraws,
+                     same descriptor, a straight rename
+    colour           tracked in MioGl; 1.21.11 has no global shader colour, and
+                     the save/restore pair stays consistent because both
+                     endpoints moved together
+    lineWidth        no-op; there is no global line width any more
+    setShaderTexture no-op; binding happens on the pass instead
+    getProjectionMatrix  identity plus a one-time warning: 1.21.11 exposes only
+                     a GpuBufferSlice, so the matrix cannot be read back
+    shaderLightDirections  a fixed two-element array; the live value is a
+                     GpuBufferSlice and cannot be read back either
+    setUniform       keeps one GpuBuffer per uniform name and rewrites it in
+                     place, so a per-frame call does not allocate
+    setPipeline      sets the pipeline and then calls
+                     RenderSystem.bindDefaultUniforms, which 1.21.11 requires
+                     where 1.21.5 bound those uniforms implicitly
+    createRenderPass builds a GpuTextureView through the device and passes it
+                     with a label
+    bindSampler      DROPPED, see below
+
+Two losses, both deliberate rather than guessed:
+
+  * world-to-screen projection uses an identity matrix, so HUD elements that
+    project a position into the world are misplaced;
+  * bindSampler is dropped.  RenderPass.bindTexture takes a sampler whose type
+    is a remapped Minecraft class, and a compat helper cannot name a remapped
+    type in its descriptor without failing to link at runtime, so the texture
+    bind for that one sampler is lost rather than half-wired.
+
+Also: RenderSystem.bindDefaultUniforms is now called inside setPipeline.  That
+is a behaviour change, not a rename -- mio built its pipelines from the vanilla
+snippets, whose shaders expect Projection/ModelViewMat, and 1.21.11 does not
+supply them implicitly.
+
+Verified: fixgfx --check PASS (0 old sites, 9 MioGl sites), fixpass --check PASS
+(0 old sites, 5 MioGl sites), fixguimatrices --check PASS (62 sites), fixskins
+--check PASS (0 refs), mixverify PASS (34 handlers, 0 problems), fixmojang
+--list clean (0 members still pointing at something 1.21.11 removed).
+Not verified: any of it at runtime.
+
+Rebuild order: mixbridge.py, mixpoints.py, fixbridges.py, fixccs.py,
+fixvoidcalls.py, build-compat.sh, fixguimatrices.py, fixskins.py, fixgfx.py,
+fixpass.py.

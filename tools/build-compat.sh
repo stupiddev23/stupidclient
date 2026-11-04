@@ -33,7 +33,9 @@ echo "$JOML_SHA  $JOML" | sha256sum -c --status - || {
 OUT=tools/compat/out
 rm -rf "$OUT"
 mkdir -p "$OUT"
-"$JAVAC" -nowarn --release 21 -cp "$JOML" -d "$OUT" \
+# com.mojang.* is not remapped, so the real client jar supplies those types
+# (RenderSystem, GpuTexture, ...) exactly as the launcher will at runtime.
+"$JAVAC" -nowarn --release 21 -cp "$JOML:tools/mc/client.jar" -d "$OUT" \
     $(find tools/compat/stubs -name '*.java') \
     $(find tools/compat/src -name '*.java')
 find "$OUT/me" -name '*.class' | sort
