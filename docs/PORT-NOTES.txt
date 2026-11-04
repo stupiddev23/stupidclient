@@ -128,3 +128,49 @@ layer against the same joml-1.10.8.jar the launcher puts on the classpath,
 pinned by sha256.  A hand-written stub cannot drift from the real
 signature or access flags that way.
 
+
+
+# ---- SkinTextures became an asset record
+
+Joining a world threw:
+
+    NoSuchMethodError: 'class_2960 class_8685.comp_1626()'
+        at class_742.handler$bek005$mioclient$m$$b0(class_742.java)
+
+1.21.5 SkinTextures was a plain record of Identifiers:
+
+    (Identifier texture, String url, Identifier cape,
+     Identifier elytra, PlayerSkinType model, boolean secure)
+
+1.21.11 rebuilt it around assets:
+
+    (AssetInfo.TextureAsset texture, TextureAsset cape,
+     TextureAsset elytra, PlayerSkinType model, boolean secure)
+
+A TextureAsset (class_12079$class_12081) wraps the Identifier and carries
+the url that used to be a component of its own, and PlayerSkinType left
+the nested class_8685$class_7920 for top-level class_7920.  comp_1911 (the
+url), the six-argument constructor and field_41122/41123 went with it.  It
+is a redesign, not a rename.
+
+mio used it twice: a class_742 mixin that swaps skins for the local player,
+two hardcoded names and other Mio users, and a no-argument method_52814
+override in the widget class.
+
+Both are neutralised for now, which leaves vanilla skins in place:
+
+  - the mixin handler returns immediately;
+  - the method_52814 override returns super.method_52814(), so callers
+    still get a real skin instead of null.
+
+Porting the handler is not a descriptor swap.  It keeps Identifiers in
+locals whose stack map frames name class_2960 and class_8685$class_7920,
+three of the values it passes have to become TextureAssets, and the url
+argument disappears -- so four call sites, the frames and the local types
+change together.  Build the asset with the single-Identifier constructor of
+class_12079$class_12082 (iu$b) and the record with its five-argument
+constructor.
+
+tools/fixskins.py performs both edits and reports any other method that
+still reaches the removed API instead of guessing at it.
+
