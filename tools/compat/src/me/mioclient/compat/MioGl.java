@@ -139,4 +139,46 @@ public final class MioGl {
      */
     public static void bindSampler(RenderPass pass, String name, GpuTexture texture) {
     }
+
+    /**
+     * 1.21.5: VertexConsumer.method_22918(Matrix4f, float, float, float)V.
+     * 1.21.11: the same call takes Matrix4fc and returns the consumer, so a
+     * descriptor swap would leave a value on a stack that expects none.  This
+     * keeps the old void shape and discards the result.  The new intermediary
+     * id is not in the mapping we have, so the method is found by signature.
+     */
+    public static net.minecraft.class_4588 vertex(net.minecraft.class_4588 consumer,
+                                                 Matrix4f matrix,
+                                                 float x, float y, float z) {
+        try {
+            return (net.minecraft.class_4588) vertexMethod()
+                    .invoke(consumer, matrix, x, y, z);
+        } catch (ReflectiveOperationException e) {
+            throw new IllegalStateException("mio: VertexConsumer.vertex", e);
+        }
+    }
+
+    private static java.lang.reflect.Method vertexMethod() {
+        java.lang.reflect.Method found = MioGl.VERTEX;
+        if (found == null) {
+            for (java.lang.reflect.Method m : net.minecraft.class_4588.class.getMethods()) {
+                Class<?>[] p = m.getParameterTypes();
+                if (p.length == 4 && p[0].isAssignableFrom(Matrix4f.class)
+                        && p[1] == float.class && p[2] == float.class
+                        && p[3] == float.class) {
+                    found = m;
+                    break;
+                }
+            }
+            if (found == null) {
+                throw new IllegalStateException(
+                        "mio: no Matrix4f vertex overload on VertexConsumer");
+            }
+            found.setAccessible(true);
+            MioGl.VERTEX = found;
+        }
+        return found;
+    }
+
+    private static java.lang.reflect.Method VERTEX;
 }

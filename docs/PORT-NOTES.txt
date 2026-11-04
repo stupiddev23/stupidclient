@@ -274,3 +274,22 @@ with ClassFormatError (\"Method lights ... has illegal signature
 ()[Lorg/joml/Vector3f;.  fixgfx now derives the helper descriptor from
 the constant-pool tag and the pipeline re-runs clean from the
 pre-port jar.
+
+# ---- VertexConsumer.vertex moved and changed its parameter type
+
+The first HUD frame after the renderer port threw:
+
+    NoSuchMethodError: 'net.minecraft.class_4588
+    net.minecraft.class_4588.method_22918(org.joml.Matrix4f, float, float, float)'
+
+1.21.11 takes Matrix4fc and a new intermediary id, so the call is retargeted at
+MioGl.vertex, which keeps the old shape and returns the consumer so chained
+calls still line up.  The new id is not in the mapping we have, so the helper
+finds the overload reflectively by signature (four parameters, first assignable
+from Matrix4f, three floats) instead of guessing a name that would not link.
+
+The class_4588 stub used to compile the helper is NOT shipped in the jar: a mod
+jar that defines a game class would shadow the real interface.
+
+Rebuild order gains fixvc.py, after fixpass.py.
+
