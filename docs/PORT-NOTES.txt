@@ -293,32 +293,25 @@ jar that defines a game class would shadow the real interface.
 
 Rebuild order gains fixvc.py, after fixpass.py.
 
-# ---- mio's own reflection carries 1.21.5 member names
+# ---- mio reflects on member names it keeps encrypted
 
-mio resolves Minecraft members by name at runtime, so the ids it holds are plain
-strings in the class files, not constant-pool references.  The remapper never
-sees them, and a member that 1.21.11 renamed or deleted fails at the first frame
-that needs it with, for example:
+mio resolves Minecraft members by name at runtime, and those names live in an
+XOR-encrypted table that its own invokedynamic bootstrap decrypts per call site.
+The remapper cannot see them and neither can a string patch: the plain
+"method_19538" text in the jar belongs to mixin annotation targets, not to the
+reflection table, so editing it changes nothing at runtime and risks
+retargeting a mixin.
 
     NoSuchMethodException in net.minecraft.class_746 net.minecraft.class_243 method_19538()
 
-Auditing every method_/field_ id in the jar against the 1.21.11 Yarn mapping
-finds 58 that no longer exist (30 methods, 28 fields), nearly all in the
-renderer and fog APIs that 1.21.11 reworked.  tools/fixids.py reports them and
-translates the few that merely moved (owner + Yarn name still match); most have
-no counterpart at all, so they are deliberately left alone.
+is Entity.getPos(), which 1.21.11 no longer has.  The lookup scans declared
+methods of the named class plus its interfaces, so the fix is to make the name
+exist there again: MioShims is a mixin on ClientPlayerEntity that declares
+method_19538() and forwards to getSyncedPos (method_43390), the surviving no-arg
+Vec3d accessor the client renders from.  The cast is spelled through Entity
+because @Shadow does not validate against an inherited method.
 
-The first one hit at runtime was Entity.getPos().  1.21.11 has no getPos row for
-Entity; the surviving no-arg Vec3d accessors are getMovement, getLastRenderPos,
-getEyePos, getSyncedPos and getVelocity.  tools/fixreflect.py carries the one
-judgement call made here:
-
-    method_19538 (Entity.getPos) -> method_43390 (Entity.getSyncedPos)
-
-getSyncedPos is the position the client renders from, which is what a HUD
-position read wants; this is a reasoned substitution, not a mapping-verified
-rename, and needs a runtime log to confirm.
-
-Rebuild order gains fixreflect.py, after fixvc.py.  fixids.py is report-only and
-exits non-zero only when it has something to report.
+An audit of the jar against the 1.21.11 mapping finds 57 further stale ids,
+nearly all in the renderer and fog APIs 1.21.11 reworked; each needs the same
+treatment when a frame reaches it.  tools/fixids.py reports them, report-only.
 
