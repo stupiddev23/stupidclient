@@ -66,3 +66,42 @@ descriptor and turns that pop into a nop.  Same instruction widths, so no
 offset, frame or exception range moves.  A call site that used the value
 would be reported instead of guessed at.
 
+
+
+# ---- the GUI matrix stack behind DrawContext.getMatrices()
+
+1.21.5 gave the GUI a MatrixStack and drew through it:
+
+    class_332.method_51448()Lnet/minecraft/class_4587;
+
+1.21.11 draws 2D through a Matrix3x2fStack, and the same accessor now
+returns that instead:
+
+    class_332.method_51448()Lorg/joml/Matrix3x2fStack;
+
+It surfaced the moment a widget rendered:
+
+    NoSuchMethodError: 'class_4587 class_332.method_51448()'
+        at class_342.handler$bff000$mioclient$m$$To3v... (class_342.java:60778)
+
+Repointing the calls at the new type would mean changing every helper that
+takes a MatrixStack -- about 80 call sites read peek().getPositionMatrix()
+-- so the 62 call sites in 18 classes are instead retargeted at
+MioMatrices.get(DrawContext).  It returns a MatrixStack subclass whose
+push/pop/translate/scale also apply to the context's Matrix3x2fStack, which
+is what the draws that follow actually use.  One instruction for one
+instruction, same stack effect, so no offset, frame or handler moves.
+
+The compat classes are compiled from tools/compat/src against the
+hand-written stubs in tools/compat/stubs by tools/build-compat.sh;
+tools/fixguimatrices.py installs them and rewires the call sites.
+
+Known gap: class_4587.method_22907(Quaternionfc) has no 2D equivalent, so
+a rotation reaches the mirrored 4x4 matrix but not the 2D draw.
+
+Still broken on the same API: the DrawContext subclass in m$$HgFhY...
+calls the 1.21.5 constructor (class_310, class_4587,
+class_4597$class_4598) and reads field_44658.  1.21.11 has neither; its
+only public constructor is (class_310, class_11246, int, int) and the
+state object sits in a package-private field.
+
