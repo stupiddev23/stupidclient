@@ -28,3 +28,6 @@ Thumbs.db
 desktop.ini
 *.swp
 *.log
+
+# Compiled compat classes (tools/build-compat.sh)
+tools/compat/out/
