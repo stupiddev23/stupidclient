@@ -83,7 +83,13 @@ def target_of(cls, idx):
     name = MC.utf8(cls, (nt[1] << 8) | nt[2])
     desc = MC.utf8(cls, (nt[3] << 8) | nt[4])
     new = BY_MEMBER.get((name, desc))
-    return (name, desc, new) if new else None
+    if not new:
+        return None
+    # A field read becomes a no-arg call: the helper descriptor needs the
+    # parentheses.  Using the field descriptor here produced a Methodref with
+    # no parentheses and the JVM rejected the whole class with ClassFormatError.
+    helper_desc = "()" + desc if e[0] == 9 else desc
+    return (name, desc, new, helper_desc)
 
 
 def sites(cls):
@@ -102,7 +108,7 @@ def sites(cls):
             t = target_of(cls, (code[pc + 1] << 8) | code[pc + 2])
             if not t:
                 continue
-            entry = (m, pc, t[0], t[1], t[2])
+            entry = (m, pc, t[0], t[1], t[2], t[3])
             if (op == GETSTATIC) == (t[2] == "lights"):
                 good.append(entry)
             else:
@@ -120,20 +126,21 @@ def patch(b, owner_name, log):
     good, bad = sites(cls)
     if not good and not bad:
         return None, 0
-    for m, pc, name, desc, new in bad:
+    for m, pc, name, desc, new, helper_desc in bad:
         log.append((owner_name, "wrong-opcode", name))
     if not good:
         return None, 0
 
     extra = []
     refs = {}
-    for m, pc, name, desc, new in good:
-        if new not in refs:
-            refs[new] = FG.add_methodref(cls, extra, HELPER, new, desc)
+    for m, pc, name, desc, new, helper_desc in good:
+        if (new, helper_desc) not in refs:
+            refs[(new, helper_desc)] = FG.add_methodref(cls, extra, HELPER, new, helper_desc)
         c = MC.code_of(cls, m)
+        idx = refs[(new, helper_desc)]
         c["code"][pc] = INVOKESTATIC
-        c["code"][pc + 1] = refs[new] >> 8
-        c["code"][pc + 2] = refs[new] & 0xFF
+        c["code"][pc + 1] = idx >> 8
+        c["code"][pc + 2] = idx & 0xFF
         MC.find_attr(cls, m, "Code")["data"] = MC.build_code(c)
         log.append((owner_name, name, new))
     return MC.write(cls, extra), len(good)
@@ -162,10 +169,10 @@ def check(data):
                 nt = cls["cp"].get((e[3] << 8) | e[4])
                 if not nt or nt[0] != 12:
                     continue
-                if (MC.class_name(cls, ci) == HELPER
-                        and MC.utf8(cls, (nt[3] << 8) | nt[4]) in
-                        {d for _, d, _ in SWAPS}):
-                    new += 1
+                if MC.class_name(cls, ci) == HELPER:
+                    hd = MC.utf8(cls, (nt[3] << 8) | nt[4])
+                    if hd in {d for _, d, _ in SWAPS} or hd in {"()" + d for _, d, _ in SWAPS}:
+                        new += 1
     present = all(("me/mioclient/compat/" + c) in data for c in COMPAT_CLASSES)
     return old, new, present
 

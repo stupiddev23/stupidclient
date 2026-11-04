@@ -267,3 +267,10 @@ Not verified: any of it at runtime.
 Rebuild order: mixbridge.py, mixpoints.py, fixbridges.py, fixccs.py,
 fixvoidcalls.py, build-compat.sh, fixguimatrices.py, fixskins.py, fixgfx.py,
 fixpass.py.
+\nNote: the shaderLightDirections swap first shipped with the field
+descriptor reused as a method descriptor, so the class failed to load
+with ClassFormatError (\"Method lights ... has illegal signature
+[Lorg/joml/Vector3f;\").  A field read maps to a no-arg call and needs
+()[Lorg/joml/Vector3f;.  fixgfx now derives the helper descriptor from
+the constant-pool tag and the pipeline re-runs clean from the
+pre-port jar.
