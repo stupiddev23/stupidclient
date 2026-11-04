@@ -31,20 +31,26 @@ public final class MioMatrixStack extends class_4587 {
         return context.method_51448();
     }
 
-    /** Copy the live 2D transform into the inherited matrix, at the base of the stack. */
+    /**
+     * Copy the live 2D transform into the inherited matrix, at the base of the
+     * stack.
+     *
+     * <p>Matrix4f keeps its components package-private and exposes m00()..m33()
+     * instead, so the matrix is built through the public 16-argument
+     * constructor and copied in with set(Matrix4fc) -- assigning m00..m31 from
+     * outside org.joml is an IllegalAccessError at runtime.
+     */
     void sync() {
         if (depth != 0) {
             return;
         }
         Matrix3x2fStack gui = gui();
         Matrix4f position = method_23760().method_23761();
-        position.identity();
-        position.m00 = gui.m00;
-        position.m01 = gui.m01;
-        position.m10 = gui.m10;
-        position.m11 = gui.m11;
-        position.m30 = gui.m20;
-        position.m31 = gui.m21;
+        position.set(new Matrix4f(
+                gui.m00(), gui.m01(), 0.0F, 0.0F,
+                gui.m10(), gui.m11(), 0.0F, 0.0F,
+                0.0F, 0.0F, 1.0F, 0.0F,
+                gui.m20(), gui.m21(), 0.0F, 1.0F));
     }
 
     @Override

@@ -105,3 +105,26 @@ class_4597$class_4598) and reads field_44658.  1.21.11 has neither; its
 only public constructor is (class_310, class_11246, int, int) and the
 state object sits in a package-private field.
 
+
+
+# ---- JOML Matrix4f hides its components
+
+The first build of the matrix-stack fix got one frame further and threw:
+
+    IllegalAccessError: class me.mioclient.compat.MioMatrixStack tried to
+    access field org.joml.Matrix4f.m00
+        at MioMatrixStack.sync(MioMatrixStack.java:42)
+
+JOML is not uniform about this.  Matrix3x2f's components are public fields,
+but Matrix4f's are package-private (access flags 0x00) and only reachable
+through the m00()..m33() accessors, so a 4x4 cannot be filled in from
+outside org.joml.  The mirror is now built with the public 16-float
+constructor and copied into the inherited matrix with
+Matrix4f.set(Matrix4fc).
+
+The stubs that let this happen are gone: tools/compat/stubs no longer
+describes org.joml at all, and tools/build-compat.sh compiles the compat
+layer against the same joml-1.10.8.jar the launcher puts on the classpath,
+pinned by sha256.  A hand-written stub cannot drift from the real
+signature or access flags that way.
+
