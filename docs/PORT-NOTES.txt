@@ -174,3 +174,43 @@ constructor.
 tools/fixskins.py performs both edits and reports any other method that
 still reaches the removed API instead of guessing at it.
 
+
+
+# ---- the custom renderer targets the 1.21.5 blaze3d pipeline
+
+The first in-game frame threw:
+
+    NoSuchMethodError: 'void RenderSystem.setShaderColor(float, float,
+    float, float)'
+        at me.mioclient.m$$3uGlx...m$$U07Rr2ofjRcmUA6QhPzXslX...
+        at class_329.handler$bdf000$mioclient$m$$sLWT6...
+
+com.mojang.* is not remapped to intermediary, so a Mojang-side change
+surfaces as a plain NoSuchMethodError with nothing to bridge.  Auditing
+every com.mojang member the jar calls against client.jar finds twelve
+methods and thirty calls, all one subsystem -- mio's custom HUD renderer:
+
+    RenderSystem.setShaderColor(FFFF)V          gone, colour is a uniform now
+    RenderSystem.getShaderColor()[F             gone
+    RenderSystem.setShaderTexture(int,GpuTexture)V   moved to RenderPass
+    RenderSystem.enableScissor(IIII)V           -> enableScissorForRenderTypeDraws
+    RenderSystem.disableScissor()V              -> disableScissorForRenderTypeDraws
+    RenderSystem.lineWidth(F)V                  gone
+    RenderSystem.getProjectionMatrix()          gone, it is a GpuBufferSlice now
+    RenderSystem.shaderLightDirections          gone, it is a GpuBufferSlice now
+    RenderPipeline.Builder.withUniform(String, class_10789)      changed
+    RenderPipeline.Builder.withVertexFormat(VertexFormat,...)    changed
+
+1.21.11 moved colour, texture binding, scissor and line width onto
+RenderPass and per-pipeline uniforms, and changed the builder, so this is
+a rewrite against the new GPU abstraction rather than a rename.  The
+renderer is one facade class with 23 overloads reached from 86 call
+sites, so stubbing it piecemeal would blank mio's whole custom HUD and
+still leave two non-void accessors returning float[] and Vector3f
+unresolved.  It is left alone until it can be ported properly.
+
+tools/fixmojang.py re-runs the audit against client.jar, prints what is
+missing, and can stub void methods that call removed members (it refuses
+constructors, class initialisers and anything that has to return a
+value).  Use --list before deciding.
+
