@@ -315,3 +315,19 @@ An audit of the jar against the 1.21.11 mapping finds 57 further stale ids,
 nearly all in the renderer and fog APIs 1.21.11 reworked; each needs the same
 treatment when a frame reaches it.  tools/fixids.py reports them, report-only.
 
+
+== 1.21.11 removed RenderLayer's static layer getters ==
+RenderLayer.getGui() (method_51784) is gone: 1.21.11 moved every layer factory
+into RenderLayers (class_12249) and deleted the MultiPhaseParameters builder
+(class_1921$class_4688) along with the 4- and 6-arg RenderLayer.of.
+Crash: NoSuchMethodError 'net.minecraft.class_1921 net.minecraft.class_1921.method_51784()'
+from the HUD handler (same call site that previously failed in reflection).
+Fix: MioRenderShims re-declares the 1.21.5 names on RenderLayer and forwards:
+  method_51784()           -> RenderLayers.debugQuads()   (POSITION_COLOR, QUADS)
+  method_23572(Identifier) -> RenderLayers.entitySolid(id)
+  method_23580(Identifier) -> RenderLayers.entityTranslucent(id, true)
+getGui() had no direct successor; debugQuads() was chosen because mio writes
+position+colour vertices and draws immediately, which is that layer's format.
+Still stale and needing real porting: method_62277 getGuiTextured (6 sites),
+method_24048/method_24049 RenderLayer.of (2 sites) and field_25643. Those cannot
+be shimmed by name alone because their parameter types no longer exist.
